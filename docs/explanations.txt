@@ -1,0 +1,22 @@
+1.Explanation for all the files in the alignment page
+
+
+The tophat alignment with multimappers is in
+all.sorted.bam
+this file is split into uniq.sorted.bam containing only the unique mappers and the multi.sorted.bam containing only the multi-mappers. Coverage profiles were generated from the uniq.sorted.bam file
+
+the namesorted.bam is the uniq sorted bam file that is sorted by name. This is important for a tool like htseq-count when using paired end reads.
+There is already a file containing htseq-counts per gene called "htseq-count". You could use these files to create an expression matrix for DE-tools. But htseq-count has many parameters, and maybe you want different ones. junctions_bed is a file containing the tophat discovered junctions.
+
+matched.sorted.bam contains the sequences that were filtered in the cleaning step against rRNA + ERCC the spike ins.
+
+
+
+
+
+2. Tool in new state because of missing metadata
+
+
+tools stay in new state if metadata did not complete.
+Users should set metadata manually.
+

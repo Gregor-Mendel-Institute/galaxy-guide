@@ -1,0 +1,16 @@
+Loading required package: geneplotter
+Loading required package: Biobase
+Loading required package: methods
+
+Welcome to Bioconductor
+
+  Vignettes contain introductory material. To view, type
+  'browseVignettes()'. To cite Bioconductor, see
+  'citation("Biobase")' and for packages 'citation("pkgname")'.
+
+Loading required package: annotate
+Loading required package: AnnotationDbi
+Loading required package: lattice
+Loading required package: RColorBrewer
+Warning message:
+package 'RColorBrewer' was built under R version 3.0.0 

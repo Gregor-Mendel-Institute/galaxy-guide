@@ -1,0 +1,22 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns='http://www.w3.org/1999/xhtml' xml:lang='en' lang='en'><head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8"></meta>
+<title>/projects/csfshpc/galaxy-csf/database/files/039/dataset_39619.dat</title>
+
+
+
+</head>
+<body><h2>Gene Expression Analysis: "ANOVA-like test"</h2><h3>Samples used for normalization and dispersion estimates:</h3><table border="1">
+<tr>
+<td>sample</td><td bgcolor="#FF69B4">13314_invitro_2h_GFP</td><td bgcolor="#BC67A6">13315_invitro_2h_DL1</td><td bgcolor="#796598">13316_invitro_4h_GFP</td><td bgcolor="#36648B">13317_invitro_4h_DL1</td></tr>
+<tr>
+<td>condition</td><td bgcolor="#698B69">VIT</td><td bgcolor="#698B69">VIT</td><td bgcolor="#F0F8FF">VITB</td><td bgcolor="#EEE8AA">VITC</td></tr>
+</table>
+<br/>
+Warning: non of your conditions are replicated! This may inflate the number of false positive and false negative.<br/>
+<h3>Nr of significant genes: (adjusted p-value threshold)</h3>204( 0.1 )<br/>
+<h3>Histogram of adjusted p-values</h3><img border="0" src="hist.jpg" alt="hist.jpg"></img><br/>
+<h3>Result files</h3><a href="Ftest_all.csv">list(all genes)</a><br/>
+<a href="Ftest_sigOnly.csv">list(sig. genes)</a><br/>
+<br/>
+<h5>Note on the method: This "anova" is a test for any differences between several conditions. Due to the matematical proberties of the counts distributions a genaralized Linear Model (GLM) is used. No fold changes are reported. This as the number of possible comparisons increases reapidly with the number of different samples. The Galaxy tool "moderated fold changes" can be used to estimate the more robust fold changes between specific conditions (the normal fold change can easily be caluclated "by hand"/using excel)</h5><br/>

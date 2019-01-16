@@ -1,0 +1,90 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Frameset//EN" "http://www.w3.org/TR/html4/frameset.dtd">
+<html><head>
+<meta http-equiv="content-type" content="text/html; charset=windows-1252"><title>GALAXY Workflows - main</title>
+  <meta name="author" content="Malgorzata Goiser">
+  <style type="text/css">
+body{
+ font-family: Arial, Verdana, Helvetica, sans-serif;
+ font-size: 13px;
+ }
+ h1{
+ font-family: Arial, Verdana, Helvetica, sans-serif;
+ font-size: 20px;
+ }
+ h1{
+ font:#990033;
+ }
+a:link {color:#003399;}      /* unvisited link */
+a:visited {color:#003399;}  /* visited link */
+a:hover {color:#003399;}    /* mouse over link */
+a:active {color:#003399;}  /* selected link */
+ </style></head><body>
+<p>&nbsp;</p>
+
+<h1>Files in alignment tool QUEUE</h1>
+
+<table width="850">
+  <tbody>
+    <tr>
+      <td width="150">&nbsp;<b>all.sorted.bam</b></td>
+      <td valign="top" width="700">the tophat alignment with multimappers</td>
+    </tr>
+    
+    <tr>
+      <td width="150">&nbsp;</td>
+      <td valign="top" width="700"><br>this file is split into:
+	<table>
+	  <tr>
+	    <td width="150" valign="top"><b>uniq.sorted.bam</b></td>
+	    <td valign="top" width="700">contains only unique mappers. <br>Coverage profiles were generated from the uniq.sorted.bam file.</td>
+	  </tr>
+	<tr>
+	    <td width="150" valign="top"><b>multi.sorted.bam</b></td>
+	    <td valign="top" width="700">contains only multi-mappers</td>
+	</tr>
+      </table>
+     </td>
+    </tr>
+    
+    <tr>
+      <td colspan="2">&nbsp;</td>
+    </tr>
+    
+    <tr>
+      <td width="150" valign="top">&nbsp;<b>namesorted.bam</b></td>
+      <td valign="top" width="700">is the uniq sorted bam file sorted by name. <br>This is important for a tool like htseq-count when using paired end reads.</td>
+    </tr>
+    <tr>
+      <td colspan="2">&nbsp;</td>
+    </tr>
+    
+    <tr>
+      <td width="150" valign="top">&nbsp;<b>htseq-count</b></td>
+      <td valign="top" width="700">There is already a file containing htseq-counts per gene called "htseq-count". 
+      <br>You could use these files to create an expression matrix for DE-tools. But htseq-count has many parameters, and maybe you want different ones.</td>
+    </tr>
+    <tr>
+      <td colspan="2">&nbsp;</td>
+    </tr>
+    
+    <tr>
+      <td width="150" valign="top">&nbsp;<b>junctions_bed</b></td>
+      <td valign="top" width="700">is a file containing the tophat discovered junctions.</td>
+    </tr>
+    <tr>
+      <td colspan="2">&nbsp;</td>
+    </tr>
+    
+    <tr>
+      <td width="150" valign="top">&nbsp;<b>matched.sorted.bam</b></td>
+      <td valign="top" width="700">contains the sequences that were filtered in the cleaning step against rRNA + ERCC the spike ins.</td>
+    </tr>
+    <tr>
+      <td colspan="2">&nbsp;</td>
+    </tr>
+    
+    </tbody>
+</table>
+
+</body>
+</html>

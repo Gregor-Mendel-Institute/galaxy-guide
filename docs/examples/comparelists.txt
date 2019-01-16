@@ -1,0 +1,17 @@
+GeneSymbol
+Mif4gd
+Mns1
+Opcml
+Srf
+Stx3
+Oprm1
+Tap1
+Zfp407
+Prss58
+Map3k3
+Krtap9-3
+Snw1
+Prdx3
+Fam26f
+Gucy2c
+Serpinb3c

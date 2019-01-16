@@ -1,0 +1,60 @@
+    tracknum
+code     1     2
+  XX 11830 12825
+ 'table' int [1, 1:2] 11830 12825
+ - attr(*, "dimnames")=List of 2
+  ..$ code    : chr "XX"
+  ..$ tracknum: chr [1:2] "1" "2"
+NULL
+[1] "XX"
+[1] 1
+[1] "#AAFFFF"
+[1] "#AAFFFF"
+null device 
+          1 
+[1] "plotted multovl.anc.num.jpeg"
+    tracknum
+code     1     2
+  XX 11830 12825
+ 'table' int [1, 1:2] 11830 12825
+ - attr(*, "dimnames")=List of 2
+  ..$ code    : chr "XX"
+  ..$ tracknum: chr [1:2] "1" "2"
+NULL
+[1] "XX"
+[1] 1
+[1] "#AAFFFF"
+[1] "#AAFFFF"
+null device 
+          1 
+[1] "plotted multovl.anc.num.pdf"
+    
+code   1   2
+  XX 100 100
+ num [1, 1:2] 100 100
+ - attr(*, "dimnames")=List of 2
+  ..$ code: chr "XX"
+  ..$     : chr [1:2] "1" "2"
+NULL
+[1] "XX"
+[1] 1
+[1] "#AAFFFF"
+[1] "#AAFFFF"
+null device 
+          1 
+[1] "plotted multovl.anc.perc.jpeg"
+    
+code   1   2
+  XX 100 100
+ num [1, 1:2] 100 100
+ - attr(*, "dimnames")=List of 2
+  ..$ code: chr "XX"
+  ..$     : chr [1:2] "1" "2"
+NULL
+[1] "XX"
+[1] 1
+[1] "#AAFFFF"
+[1] "#AAFFFF"
+null device 
+          1 
+[1] "plotted multovl.anc.perc.pdf"

@@ -1,0 +1,24 @@
+[1] "argument l = ../R.in"
+[1] "argument s = reads2.bed.reads1.bed"
+[1] "argument g = TRUE"
+[1] "argument q = 0"
+[1] "argument w = 0"
+[1] "../union.1.dataset_44539.dat.uniq.htseq.counts.rnd.c"
+[2] "../union.1.dataset_44540.dat.uniq.htseq.counts.rnd.c"
+[1] "reads2.bed" "reads1.bed"
+[1] "1" "2"
+[1] "reads2.bed.1" "reads1.bed.2"
+'data.frame':	770 obs. of  1 variable:
+ $ union.1.dataset_44539.dat.uniq.htseq.counts: int  2 2 2 0 0 0 0 1 2 0 ...
+NULL
+'data.frame':	770 obs. of  1 variable:
+ $ union.1.dataset_44540.dat.uniq.htseq.counts: int  0 0 0 2 2 2 2 4 1 2 ...
+NULL
+'data.frame':	770 obs. of  2 variables:
+ $ ...union.1.dataset_44539.dat.uniq.htseq.counts.rnd.c: int  2 2 2 0 0 0 0 1 2 0 ...
+ $ ../union.1.dataset_44540.dat.uniq.htseq.counts.rnd.c: int  0 0 0 2 2 2 2 4 1 2 ...
+NULL
+[1] "panel.qqplot R = 0.85"
+[1] "panel.scatter R = 0.15"
+null device 
+          1 

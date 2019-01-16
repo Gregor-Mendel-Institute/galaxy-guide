@@ -1,0 +1,1 @@
+chr1	REFSEQ	exon	3204562	3661579	.	-	.	gene_id "Xkr4";

@@ -1,0 +1,25 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns='http://www.w3.org/1999/xhtml' xml:lang='en' lang='en'><head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8"></meta>
+<title>/projects/csfshpc/galaxy-csf/database/files/039/dataset_39120.dat</title>
+
+
+
+</head>
+<body><h2>Exploratory analysis: PCA</h2>Principal component analysis (PCA) <a href="http://en.wikipedia.org/wiki/Principal_component_analysis">(wikipedia)</a> is a widly used technique used for eg data clustering and dimensionality reduction. We can think of the PCA as a way to find a simplified system with fewer dimensions that with good precision can explain our full data set. This requires tgae the data samples are correlated (which is often the case). The pca rotates the coordinate system so that in the new coordiantes the first axis covers the highest amount of variance between samples, the second axis will explain most of the remaining variance and so on. If some axis covers little variance, this means that this dimension contains little extra information and can be disregarded.<br/>
+<h3>Samples used and their conditions:</h3><table border="1">
+<tr>
+<td>sample</td><td bgcolor="#FF69B4">13314_invitro_2h_GFP</td><td bgcolor="#BC67A6">13315_invitro_2h_DL1</td><td bgcolor="#796598">13316_invitro_4h_GFP</td><td bgcolor="#36648B">13317_invitro_4h_DL1</td></tr>
+<tr>
+<td>condition</td><td bgcolor="#A6CEE3">VIT</td><td bgcolor="#A6CEE3">VIT</td><td bgcolor="#1F78B4">VITB</td><td bgcolor="#B2DF8A">VITC</td></tr>
+</table>
+<br/>
+<h3>Explained variance</h3>This plot shows how much of the variance in the data that is captured by each of the principal components. By definition the first component will have the highest explanatory value, the second component the second most and so on. The final number of principal components will be the same as the number of samples put into the analysis. In general one is mainly interested in the principal componensts that have the hightest values as those are the most informative ones.<br/>
+<img border="0" src="pca.jpg" alt="pca.jpg"></img><br/>
+<h3>Sample scores on PCs</h3>In the following levelplot we can see how the samples scores on the new coordinate system (principal components). Samples with high values of opposite signs are highly separated on that PC, whereas samples with values around 0 will fall in between. (Compare PC1 and PC2 rows with thw PCA plot below)<br/>
+<img border="0" src="x.jpg" alt="x.jpg"></img><br/>
+<h3>PC1 vs PC2 plot</h3>Here I have ploted PC1 vs PC2. In most cases those will be the most interesting axes. If you compare the numbers on the axes with the levelplot above you will see that this plot is an alternative view of the first two columns in the levelplot. To view other PC combinations and to get a bit more detailed information use the Galaxy tool "PCA-analysis". <br/>
+<img border="0" src="1-2.jpg" alt="1-2.jpg"></img><br/>
+
+<br/><br/><font size="-2">(Page generated on Wed Dec 11 13:56:56 2013 by <a href="http://www.embl.de/~gpau/hwriter/index.html">hwriter</a> 1.3)</font><br/>
+</body></html>

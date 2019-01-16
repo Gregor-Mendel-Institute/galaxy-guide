@@ -1,0 +1,80 @@
+GENAU_ROOTDIR=/groups/csf-ngs/bin/scripts/mj
+GENAU_OVLDIR=/groups/csf-ngs/bin/multovl
+GENAU_RDIR=/groups/csf-ngs/bin/scripts/mj/R
+GENAU_FUGEDIR=/groups/csf-ngs/bin/funcGen
+GENAU_BASHDIR=/groups/csf-ngs/bin/scripts/mj/bash
+GENAU_PERLDIR=/groups/csf-ngs/bin/scripts/mj/perl
+GENAU_ANNOTDIR=/groups/csf-ngs/bin/funcGen
+
+
+check_input_parameters
+
+
+# -f=tracks.lst
+# files= peaks1.bed.bed peaks2.bed.bed
+# maxl=100
+# maxs=7
+
+
+cleanup_namefield
+
+
+
+
+run_multovl
+
+
+running strict multovl (bg) ...
+running union multovl (bg) ...
+parsing union multovl ...
+parsing strict multovl ...
+multovl.union.sum.X0.igb.html written.
+multovl.union.sum.XX.igb.html written.
+multovl.union.sum.0X.igb.html written.
+multovl.union.sum.igb.index.html written.multovl.strict.sum.X0.igb.html written.
+multovl.strict.sum.XX.igb.html written.
+multovl.strict.sum.0X.igb.html written.
+multovl.strict.sum.igb.index.html written.
+ util.overlap.sh::filter_strict_multovl multovl.strict.anc.txt
+
+multovl.strictAgg.anc.X0.igb.html written.
+multovl.strictAgg.anc.XX.igb.html written.
+multovl.strictAgg.anc.0X.igb.html written.
+multovl.strictAgg.anc.igb.index.html written.multovl.strict.focus.anc.X0.igb.html written.
+multovl.strict.focus.anc.XX.igb.html written.
+multovl.strict.focus.anc.0X.igb.html written.
+multovl.strict.focus.anc.igb.index.html written.running union/strict multovl ...
+parsing union/strict multovl ...
+multovl.sum.XX.igb.html written.
+multovl.sum.igb.index.html written.
+
+plot_multovl
+
+
+
+
+plot_multovl
+
+
+
+
+plot_multovl
+
+
+
+
+plot_multovl
+
+
+
+
+plot_multovl
+
+
+
+
+multovl_write_html_summary
+
+
+wrote summary.html
+done.

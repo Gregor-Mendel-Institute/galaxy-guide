@@ -1,0 +1,36 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns='http://www.w3.org/1999/xhtml' xml:lang='en' lang='en'><head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8"></meta>
+<title>/projects/csfshpc/galaxy-csf/database/files/039/dataset_39613.dat</title>
+
+
+
+</head>
+<body><h2>Exploratory analysis: PCA</h2>Principal component analysis (PCA) <a href="http://en.wikipedia.org/wiki/Principal_component_analysis">(wikipedia)</a> is a widly used technique used for eg data clustering and dimensionality reduction.<h3>Samples used and their conditions:</h3><table border="1">
+<tr>
+<td>sample</td><td bgcolor="#FF69B4">13314_invitro_2h_GFP</td><td bgcolor="#BC67A6">13315_invitro_2h_DL1</td><td bgcolor="#796598">13316_invitro_4h_GFP</td><td bgcolor="#36648B">13317_invitro_4h_DL1</td></tr>
+<tr>
+<td>condition</td><td bgcolor="#A6CEE3">1</td><td bgcolor="#A6CEE3">1</td><td bgcolor="#1F78B4">2</td><td bgcolor="#B2DF8A">3</td></tr>
+</table>
+<br/>
+<h3>Explained variance</h3>This plot shows how much of the variance in the data that is captured by each of the principal components. By definition the first component will have the highest explanatory value, the second component the second most and so on. Due to visualization constrains, the downstream analysis is limited to the first and the second axes. Hence, the more of the total variance that is explained by PC1 and PC2, the better this analysis will work.<br/>
+<img border="0" src="pca.jpg" alt="pca.jpg"></img><br/>
+<h3>Biplots</h3>In the biplots, both the samples and the variables are shown simultaneous <a href="http://en.wikipedia.org/wiki/Biplot">(wikipedia)</a> . In the RNA-seq scenario this means that we can visualize how the different samples/conditions are separated from each other AND which of the genes are "most important" for this separation. The dots represent the samples, the color the condition of the samples and the arrows each and every one of the genes used in the analysis. The named arrows are the top contributors.<br/>
+<br/>
+Three slightly different ways to identify the main contributors are used: Length - this means that the top longest arrows are identified. P1 - the genes are ordered based on their value of the first PC of choice. P2 - the genes are ordered based on their value on the second PC of choice. (Note taht it is possible that the same gene(s) come up in several of the lists.)<br/>
+<br/>
+<table border="1">
+<tr>
+<td style="text-align:center"><img border="0" src="pcaplot.jpg" alt="pcaplot.jpg"></img></td><td style="text-align:center"><img border="0" src="bi_length.jpg" alt="bi_length.jpg"></img></td><td style="text-align:center"><img border="0" src="bi_pc1.jpg" alt="bi_pc1.jpg"></img></td><td style="text-align:center"><img border="0" src="bi_pc2.jpg" alt="bi_pc2.jpg"></img></td></tr>
+<tr>
+<td style="text-align:center">samples only</td><td style="text-align:center">length based</td><td style="text-align:center">P1 based</td><td style="text-align:center">P2 based</td></tr>
+</table>
+<br/>
+<h3>Highlighted genes</h3>Beneath you can download the gene lists corresponding to the biplots above.<br/>
+<h4></h4><a href="length.csv">length based</a><br/>
+<a href="P1.csv">P1 based</a><br/>
+<a href="P2.csv">P2 based</a><br/>
+<a href="all.csv">All genes included in PCA</a><br/>
+
+<br/><br/><font size="-2">(Page generated on Thu Jan  2 12:16:10 2014 by <a href="http://www.embl.de/~gpau/hwriter/index.html">hwriter</a> 1.3)</font><br/>
+</body></html>

@@ -1,0 +1,172 @@
+<html>
+<h3>Summary report on multiple overlap</h3>
+<table border=1>
+
+<tr><td>Input files<td >peaks1.bed.bed<br>peaks2.bed.bed<td align=center>Absolute<td align=center>Percentage
+
+<tr><td>Strict overlap viewpoint<br>(regions are splitted)
+    <td><a href=multovl.strict.gff>multovl output (GFF)</a><br>
+
+        summary table for each overlap, incl. track columns: 
+           <a href=multovl.strict.sum.txt>TAB</a>,
+           <a href=multovl.strict.sum.igb.index.html>IGB</a><br>
+
+        summary table for each overlap, incl. ancestor coords: 
+           <a href=multovl.strict.anc.txt>TAB</a><br>
+
+    <td><a href=multovl.strict.anc.num.jpeg><img src=multovl.strict.anc.num.jpeg width=100></a><br>
+        <a href=multovl.strict.anc.num.html>Data</a>
+        [<a href=multovl.strict.anc.num.pdf>pdf</a>]
+    <td><a href=multovl.strict.anc.perc.jpeg><img src=multovl.strict.anc.perc.jpeg width=100></a><br>
+        <a href=multovl.strict.anc.perc.html>Data</a>
+        [<a href=multovl.strict.anc.perc.pdf>pdf</a>]
+
+<tr><td>Ancestor viewpoint<br>(resulting from strict overlap)
+    <td>
+        summary table for each ancestor region: 
+           <a href=multovl.strict.focus.txt>TAB</a>,
+           <a href=multovl.strict.focus.anc.txt>TAB (reformat)</a>,
+           <a href=multovl.strict.focus.anc.igb.index.html>IGB</a><br>
+
+    <td><a href=multovl.strict.focus.anc.num.jpeg><img src=multovl.strict.focus.anc.num.jpeg width=100></a><br>
+        <a href=multovl.strict.focus.anc.num.html>Data</a>
+        [<a href=multovl.strict.focus.anc.num.pdf>pdf</a>]
+    <td><a href=multovl.strict.focus.anc.perc.jpeg><img src=multovl.strict.focus.anc.perc.jpeg width=100></a><br>
+        <a href=multovl.strict.focus.anc.perc.html>Data</a>
+        [<a href=multovl.strict.focus.anc.perc.pdf>pdf</a>]
+
+
+<tr><td>Ancestor viewpoint filtered<br>
+        (resulting from strict overlap)<br>
+        (filtered for max multiplicity &<br> longest overlap p. peak)
+    <td>
+        summary table for each ancestor, incl. ancestor coords: 
+        <a href=multovl.strictAgg.anc.txt>TAB</a><br>
+        <a href=multovl.strictAgg.anc.igb.index.html>IGB</a><br>
+ 
+   <td><a href=multovl.strictAgg.anc.num.jpeg><img src=multovl.strictAgg.anc.num.jpeg width=100></a><br>
+        <a href=multovl.strictAgg.anc.num.html>Data</a>
+        [<a href=multovl.strictAgg.anc.num.pdf>pdf</a>]
+    <td><a href=multovl.strictAgg.anc.perc.jpeg><img src=multovl.strictAgg.anc.perc.jpeg width=100></a><br>
+        <a href=multovl.strictAgg.anc.perc.html>Data</a>
+        [<a href=multovl.strictAgg.anc.perc.pdf>pdf</a>]
+
+<tr><td>Union overlap
+    <td><a href=multovl.union.gff>multovl output (GFF)</a><br>
+
+        summary table for each overlap, incl. track columns: 
+           <a href=multovl.union.sum.txt>TAB</a>,
+           <a href=multovl.union.sum.igb.index.html>IGB</a><br>
+
+        summary table for each overlap, incl. ancestor coords: 
+           <a href=multovl.union.anc.txt>TAB</a><br>
+
+    <td><a href=multovl.union.anc.num.jpeg><img src=multovl.union.anc.num.jpeg width=100></a><br>
+        <a href=multovl.union.anc.num.html>Data</a>
+        [<a href=multovl.union.anc.num.pdf>pdf</a>]
+    <td><a href=multovl.union.anc.perc.jpeg><img src=multovl.union.anc.perc.jpeg width=100></a><br>
+        <a href=multovl.union.anc.perc.html>Data</a>
+        [<a href=multovl.union.anc.perc.pdf>pdf</a>]
+<tr><td>Union versus strict overlap
+    <td><a href=multovl.gff>multovl output (GFF)</a><br>
+
+        summary table for each overlap, incl. track columns: 
+           <a href=multovl.sum.txt>TAB</a>,
+           <a href=multovl.sum.igb.index.html>IGB</a><br>
+
+        summary table for each overlap, incl. ancestor coords:
+           <a href=multovl.anc.txt>TAB</a><br>
+
+    <td><a href=multovl.anc.num.jpeg><img src=multovl.anc.num.jpeg width=100></a><br>
+        <a href=multovl.anc.num.html>Table</a>
+    <td><a href=multovl.anc.perc.jpeg><img src=multovl.anc.perc.jpeg width=100></a><br>
+        <a href=multovl.anc.perc.html>Table</a>
+
+
+</table>
+<p></p>
+<hr>
+<pre>
+
+
+  USAGE: multovlParse.pl [Options]
+      
+    Options:
+      
+      --g (gff)            gff output file
+      --t (table)          create a summary table
+      --a (ancestor)       creates an ancester mapping table
+      --f (focus)          creates an ancester focused mapping table
+      --v (verbose)        add full ancester info to table
+      --h help
+      
+      (c) Gen-AU/MJ 4.October.2012
+
+--a (ancestor): for each overlap, the associated ancestors are listened
+==> multovl.strict.anc.txt <== 
+chromosome	source	feature	start	end	length	multiplicity	tracknum	count	name	strand	from	to	id	id_orig	sum	code
+chr1	multovl	overlap	110	119	10	2	1	1	p1	+	100	200	chr1_110_119	chr1_100_200	2	XX0
+chr1	multovl	overlap	110	119	10	2	2	1	p2	+	110	190	chr1_110_119	chr1_110_190	2	XX0
+chr1	multovl	overlap	120	180	61	3	1	1	p1	+	100	200	chr1_120_180	chr1_100_200	3	XXX
+chr1	multovl	overlap	120	180	61	3	2	1	p2	+	110	190	chr1_120_180	chr1_110_190	3	XXX
+
+==> multovl.union.anc.txt <==
+chromosome	source	feature	start	end	length	multiplicity	tracknum	count	name	strand	from	to	id	id_orig	sum	code
+chr1	multovl	overlap	100	400	301	3	1	1	p1	+	100	200	chr1_100_400	chr1_100_200	6	XXX
+chr1	multovl	overlap	100	400	301	3	1	1	p1	-	300	400	chr1_100_400	chr1_300_400	6	XXX
+chr1	multovl	overlap	100	400	301	3	2	1	p2	+	120	180	chr1_100_400	chr1_120_180	6	XXX
+chr1	multovl	overlap	100	400	301	3	2	1	p2	+	320	380	chr1_100_400	chr1_320_380	6	XXX
+
+--t (table): for eack overlap, the number of overlaps with each track is given
+==> multovl.strict.sum.txt <==
+chromosome	source	feature	start	end	length	multiplicity	p1.bed	p2.bed	p3.bed	sum	code	id	ancestors
+chr1	multovl	overlap	110	119	10	2	1	1	0	2	XX0	chr1_110_119	1:p1:+:100-200
+chr1	multovl	overlap	120	180	61	3	1	1	1	3	XXX	chr1_120_180	1:p1:+:100-200
+chr1	multovl	overlap	181	184	4	2	1	1	0	2	XX0	chr1_181_184	1:p1:+:100-200
+chr1	multovl	overlap	185	190	6	3	1	1	1	3	XXX	chr1_185_190	1:p1:+:100-200
+
+==> multovl.union.sum.txt <==
+chromosome	source	feature	start	end	length	multiplicity	p1.bed	p2.bed	p3.bed	sum	code	id
+chr1	multovl	overlap	100	400	301	3	2	2	2	6	XXX	chr1_100_400
+chr1	multovl	overlap	500	700	201	2	0	1	1	2	0XX	chr1_500_700
+
+--f (focus): for each original track region, the number of overlaps with each track is given
+==> multovl.strict.focus.txt <==
+chromosome	start	end	strand	length	tracknum	p1.bed	p2.bed	p3.bed	code
+chr1	100	200	+	100	1	5	4	3	XXX
+chr1	300	400	-	100	1	3	2	2	XXX
+chr1	110	190	+	80	2	4	4	2	XXX
+chr1	310	390	+	80	2	2	2	1	XXX
+
+<p>
+
+multovl.strictAgg.anc.txt:
+
+Contains only one region per ancestor: the one with highest multilicity (1)
+and longest regions (2).
+
+start        = start of overlap (strict overlap)
+end          = end of overlap (strict overlap)	
+length       = length of overlap
+from         = ancestor start
+to           = ancester end
+id_orig	     = chromosome_from_to
+
+<p>
+
+Multovl version 1.2 rev. 96 [68ffa56 2012-05-25 06:44:39 +0200]
+Release build: GNU compiler on Linux
+BAM file input supported
+Built with Boost 1.44.0<br>
+
+maximum IGB linked regions reported: 100<br>
+
+maximum number of overlap sets colored (sorted by size): 7<br>
+
+Logfile: <a href=multovlParse.log.txt>multovlParse.log</a><br>
+
+</pre>
+<p></p>
+<hr>
+Page created on Tue Nov 12 11:24:48 CET 2013
+</html>

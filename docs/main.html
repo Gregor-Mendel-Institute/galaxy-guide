@@ -1,0 +1,927 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Frameset//EN" "http://www.w3.org/TR/html4/frameset.dtd">
+<html><head>
+<meta http-equiv="content-type" content="text/html; charset=windows-1252"><title>GALAXY Workflows - main</title>
+  <meta name="author" content="Malgorzata Goiser">
+  <style type="text/css">
+body{
+ font-family: Arial, Verdana, Helvetica, sans-serif;
+ font-size: 13px;
+ line-height: 18px;
+ }
+ h1{
+ font-family: Arial, Verdana, Helvetica, sans-serif;
+ font-size: 20px;
+ }
+ h1{
+ font:#990033;
+ }
+a:link {color:#003399;}      /* unvisited link */
+a:visited {color:#003399;}  /* visited link */
+a:hover {color:#003399;}    /* mouse over link */
+a:active {color:#003399;}  /* selected link */
+ </style></head>
+ <body>
+<p>&nbsp;</p>
+<h1>GALAXY ESSENTIALS</h1>
+<a name="a0"></a><br>
+<h1>Prerequisites</h1>
+<br>
+To be able to use the information on this site it is recommended to have at least BASIC KNOWLEDGE on the following tools:<br>
+<table>
+<tr>
+<td>» <b><a href="http://ngs.vbcf.ac.at/forskalle/login?return_url=/forskalle/#/" target="_blank">Forskalle</a></b></td></tr>
+<tr><td>» <b><a href="http://ngs.vbcf.ac.at/" target="_blank">QUEUE</a></b></td></tr>
+<tr><td>&nbsp;&nbsp;&nbsp;&gt; <a href="alignment.html" target="_blank">Information on provided aligned data</a></td></tr>
+<tr><td>» <b>GALAXY:</b> <br>&nbsp;&nbsp;&nbsp;&gt; <a href="http://galaxy.imp.univie.ac.at/galaxy" target="_blank">http://galaxy.imp.univie.ac.at/galaxy</a></td>
+</tr>
+</table>
+
+<br><br>
+<a name="a1"></a><br>
+<h1>File Formats</h1>
+<br>
+Galaxy-tools need files with certain file-formats. Wherever in GALAXY you can choose files from your history GALAXY recognises the formats and lets you only choose files with the right file-format.<br>
+The most important file-formats used are bam, bed and gtf/gff.<br><br>
+» You can find information on biological file formats here: <a href="https://genome.ucsc.edu/FAQ/FAQformat.html" target="_blank"><b>File Formats</b></a><br>
+» Some datatypes used on GALAXY are explained here: <a href="https://wiki.galaxyproject.org/Learn/Datatypes" target="_blank"><b>GALAXY Datatypes</b></a><br>
+&nbsp;&nbsp;&nbsp;You will also find descriptions of file formats used on GALAXY below the tool 
+<a href="http://galaxy/galaxy/tool_runner?tool_id=upload1" target="_blank">GALAXY STANDARD / Get Data / <b>Upload File from your computer</b></a><br>
+<a name="a2"></a><br><br>
+
+
+<h1>Annotation files</h1>
+<br>
+You can find most of the current annotation files in gtf- and/or bed-format when
+you follow the link below in the top menu of Galaxy:<br>
+<b><a href="http://galaxy/galaxy/library" target="_blank">Shared Data / Data Libraries</a></b><br><br>
+<a name="a3"></a><br><br>
+
+
+<h1>How to get your data to <a href="http://galaxy/galaxy" target="_blank">GALAXY</a></h1>
+<br>
+You have 2 possibilities:<br>
+<br>
+<b>1. Pushing a file to
+GALAXY from solitaire / forskalle </b><br>
+<ol>
+  <li>Log in to <b><a href="http://galaxy/galaxy" target="_blank">GALAXY</a></b> in case your are not already logged in: <b><a href="http://galaxy/galaxy" target="_blank">GALAXY</a></b>
+  </li>
+  <li>Go to your <b><a href="http://ngs.vbcf.ac.at/" target="_blank">QUEUE</a></b> and log in and find your file of interest: <b><a href="http://ngs.vbcf.ac.at/" target="_blank">QUEUE</a></b><br>
+  </li>
+  <li>Go to column called <b>"togalaxy"</b> in your queue (yellow)</li>
+  <li>Push a file shown under "togalaxy" to GALAXY by <b>clicking on
+the button</b> of the file you want to push (e.g. green):</li>
+  <img src="pics/1_pushtogalaxy.png" height="135" width="908"><br>
+  <br>
+  <li>The file you pushed will appear <b>in a new history of your GALAXY</b>-account. <br>
+      In case you want to work in another history you can copy your pushed files by going to 
+      the gear wheel icon <br>at the very top right corner of the history-panel of GALAXY and
+      choose <b>"Copy Datasets"</b> from the drop-down-menu:<p><img src="pics/copydata.png" border="0"><br><br>Now you can copy any file(s) from the chosen Source History to the chosen Destination History:<br><img src="pics/copy.png" border="0"></p></li>
+</ol>
+<br>
+<b>or:</b><br>
+<br>
+<b>2. Uploading a file from your computer</b><br>
+<br>
+Use the GALAXY-tool <a href="http://galaxy/galaxy/tool_runner?tool_id=upload1" target="_blank">GALAXY
+STANDARD / Get Data / <b>Upload File from your computer</b></a>. This
+file should have <b>less than 2GB</b> of memory otherwise it will not be uploaded!!!<br>
+You will also find descriptions of file formats used on GALAXY below this tool.<br>
+<br>
+<p>&nbsp;</p>
+
+
+<h1>GALAXY-TOOLS &amp; WORKFLOWS</h1>
+<br>
+<br>
+Usually you can use the <b>default settings</b> of the tools installed on GALAXY. <br>
+But it is recommended to read carefully what the parameters do and change them if necessary or more appropriate for your data! <br>
+If you don't know what the parameters do exactly please don't hesitate to come to us and ask. This will provide us the opportunity to improve the explanations in the tools.<br><br>
+Sometimes the results of the tools are split into some files in different formats. This allows to use some of these files in different other tools for further analysis.
+<br>
+<br>
+<table width="1300" cellpadding="5" cellspacing="1">
+  <tbody>
+    <tr style="background-color: rgb(102, 153, 255); font-size: 15px;">
+      <td width="350"><b>&nbsp;ANALYSIS / PROBLEM</b></td>
+      <td valign="top" width="50">&nbsp;</td>
+      <td width="300"><b>&nbsp;TOOL</b></td>
+      <td width="300"><b>&nbsp;What you need</b></td>
+      <td width="350"><b>&nbsp;What you get ...</b></td>
+    </tr>
+    <tr>
+      <td colspan="5">&nbsp;<a name="a5"></a></td>
+    </tr>
+    
+    
+    <tr>
+      <td valign="top"><b>Converting a BAM-file to a BED-file:</b>
+      <br>you have a <b>BAM</b>-file and need a <b><a href="https://genome.ucsc.edu/FAQ/FAQformat.html#format1" target="_blank">BED</a></b>-file
+      <br>or a paired-end <b><a href="http://bedtools.readthedocs.org/en/latest/content/general-usage.html" target="_blank">BEDPE</a></b>-file</td>
+      <td valign="top" align="center"><img src="pics/arrow_blue.jpeg"></td>
+      <td valign="top"><b style="color: rgb(73, 89, 200);">BED tools / BAM to BED converter</b></td>
+      <td valign="top">aligned <b>bam-file</b> (e.g. from your <a href="http://ngs.vbcf.ac.at/" target="_blank">queue</a>)<br>
+      <b style="color: rgb(153, 0, 34);">!</b> In case you want a
+paired-end BEDPE-file, the BAM file should be sorted by query name!</td>
+      <td valign="top" width="350">- 6-column BED file, or<br>
+- full 12-column "blocked" BED file, or <br>
+- paired-end, BEDPE format file<b>&nbsp;</b></td>
+    </tr>
+    <tr>
+      <td colspan="5">&nbsp;<br>&nbsp;<a name="a6"></a></td>
+    </tr>
+    
+    
+    <tr style="background-color: rgb(204, 204, 255);">
+      <td colspan="5" valign="top"><b>&nbsp;A possible, recommended RNA-Seq-ANALYSIS workflow on GALAXY:</b><br>
+      </td>
+    </tr>
+    <tr>
+      <td colspan="5">&nbsp;</td>
+    </tr>
+    <tr style="background-color: rgb(232, 232, 232);">
+      <td colspan="5" valign="top">&nbsp;<span style="font-weight: bold;">Prerequisites:</span></td>
+    </tr>
+    <tr>
+      <td colspan="5">&nbsp;<a name="a7"></a></td>
+    </tr>
+    
+<tr>
+      <td valign="top">1. <b>Count</b> number of read per gene <br>
+&nbsp; - based on HTSeq. <a href="more.html#count" target="_blank">more
+...</a><br>
+      </td>
+      <td valign="top" align="center"><img src="pics/arrow_blue.jpeg"></td>
+      <td valign="top">Elin's Tool for her <b>RNA-Seq workflow</b>
+(recommended for RNA-Seq):<br><br>
+      <b style="color: rgb(73, 89, 200);">RNA-Seq / Count number of read</b> <br>per gene given an annotation file and <br>an aligned bam file</td>
+      <td valign="top">1. <b>aligned bam-file</b> with your reads (from your <a href="http://ngs.vbcf.ac.at/" target="_blank">queue</a> or
+from your computer)<br>2. <b>annotation file in gtf-format like <a href="examples/gtf_format.txt" target="_blank">this</a></b> - make sure that the parameters "REFSEQ","exon"	and "gene_id" are in the file. For changing the format of a file you can also use tools under <br>"GALAXY STANDARD | Text Manipulation" or  <br>"GALAXY STANDARD | Filter and Sort"<br> Annotation files are also stored under the top menu <b>Shared Data / Data Libraries / GMI</b>, for TAIR10 you can use <b>TAIR10_annotation.gtf</b>. You can provide other files to be stored there - just send the file or a download-link to <a href="mailto:malgorzata.goiser@gmi.oeaw.ac.at">malgorzata.goiser@gmi.oeaw.ac.at</a>.<br></td>
+      <td valign="top" width="350">- file in <b>sam</b>-format, and<br>
+- table with <b>count</b>-values for each case, <a href="examples/count_number_of_read.tabular" target="_blank"><b>example</b><br>
+&nbsp;(with refseq.mm9.2014_0110.imp....gtf)</a></td>
+    </tr>
+    <tr>
+      <td valign="top">OR:&nbsp;</td>
+      <td valign="top">&nbsp;</td>
+      <td valign="top"><br>
+<br>
+    
+    <tr>
+      <td valign="top"><b>Count</b> number of read per gene <br><a href="more.html#count" target="_blank">more ...</a><br></td>
+      <td valign="top" align="center"><img src="pics/arrow_blue.jpeg"></td>
+      <td valign="top">HTSeq for <b>RNA-Seq</b>:<br><br>
+      <b style="color: rgb(73, 89, 200);">NGS: RNA Analysis / htseq-count</b></td>
+      <td valign="top">1. <b>sam- or bam-file</b> (from your <a href="http://ngs.vbcf.ac.at/" target="_blank">queue</a> or from your computer)<br>
+2. <b>annotation file in gff/gtf-format<br></td>
+      <td valign="top" width="350">Table with counts for each feature, followed by the special counters, which count reads that were not counted for any feature for various reasons<br>
+      - <a href="examples/htseqcount/htseq-count_on_data_5_and_data_3.tabular" target="_blank">counts table (tabular)</a><br> &nbsp;&nbsp;file <b>has NO header!!</b> - needs header if you want to use<br> &nbsp;&nbsp;some of the tools below; to add a header, you can use <br>&nbsp;&nbsp;the following tool: <br>&nbsp;&nbsp;<b style="color: rgb(73, 89, 200);">RNA-Seq / Adding header to a counts-file ...</b><br>
+      - <a href="examples/htseqcount/htseq-count_on_data_5_and_data_3_(no_feature).tabular" target="_blank">table (tabular)</a><br></td>
+    </tr>
+    <tr>
+      <td valign="top" align="center"><img src="pics/arrow_blue_down2.jpeg"></td>
+      <td valign="top">&nbsp;</td>
+      <td valign="top">&nbsp;</td>
+      <td valign="top">&nbsp;</td>
+      <td width="350"><b>&nbsp;</b></td>
+    </tr>
+    
+    <tr>
+      <td valign="top"><b>2. Adding header</b> to a counts file <br>- needed for some of the tools below
+      </td>
+      <td valign="top" align="center"><img src="pics/arrow_blue.jpeg"></td>
+      <td valign="top"><b style="color: rgb(73, 89, 200);">RNA-Seq / Adding header to a counts-file ... </b></td>
+      <td valign="top">result from counting-tool</td>
+      <td valign="top" width="350">counting-tool result with a header</td>
+    </tr>
+    <tr>
+      <td valign="top" align="center"><img src="pics/arrow_blue_down2.jpeg"></td>
+      <td valign="top">&nbsp;</td>
+      <td valign="top">&nbsp;</td>
+      <td valign="top">&nbsp;</td>
+      <td width="350"><b>&nbsp;</b><a name="a8"></a></td>
+    </tr>
+    
+    <tr>
+      <td valign="top"><b>3. merge ht-seq counts</b> files <br>
+      </td>
+      <td valign="top" align="center"><img src="pics/arrow_blue.jpeg"></td>
+      <td valign="top">
+      <b style="color: rgb(73, 89, 200);">NGS: RNA Analysis / merge ht-seq counts</b><br></td>
+      <td valign="top">2 or more counts table results from tool htseq-count (or another counting tool)</td>
+      <td valign="top" width="350"><a href="examples/mergehtseqcounts.tabular" target="_blank">merged counts tables (tabular)</a></td>
+    </tr>
+    <tr>
+      <td valign="top">OR</td>
+      <td valign="top">&nbsp;</td>
+      <td valign="top">&nbsp;</td>
+      <td valign="top">&nbsp;</td>
+      <td width="350">&nbsp;</td>
+    </tr>
+    
+    
+    <tr>
+      <td valign="top"><b>3. Merge</b> results from several counts (see 1.) <br> &nbsp;&nbsp;the result from this tool can be used with several of <br> &nbsp;&nbsp;the tools below which need the "Metadata <br> &nbsp;&nbsp;(conditions)" file
+      <br> &nbsp;&nbsp;<a href="more.html/merge" target="_blank">more ...</a><br>
+      </td>
+      <td valign="top" align="center"><img src="pics/arrow_blue.jpeg"></td>
+      <td valign="top"><b style="color: rgb(73, 89, 200);">RNA-Seq / Merge_V2</b></td>
+      <td valign="top">Result-<b>Table</b>s from the tool <b>"htseq-count" </b>(or from another counting-tool) <br> This tool requires counts-files with headers, so -<br><b style="color: rgb(153, 0, 34);">! make sure
+that your files have a header!</b> <br>In case your counts-files don't have a
+header - you can add them with the tool <br><b style="color: rgb(73, 89, 200);">RNA-Seq / Adding header to a counts-file</b></td>
+      <td valign="top" width="350">- <b>"<a href="examples/Merge_Header.xls" target="_blank">Header</a>"</b>-file:
+      <br>
+&nbsp;&nbsp;&nbsp;table with header-names of your samples;<br>
+- <b>"<a href="examples/Merge_Data.tabular" target="_blank">Data</a>"</b>-file:
+      <br>
+&nbsp;&nbsp;&nbsp;main result i.e. table with counts of all the files
+merged; <br>
+&nbsp;&nbsp;&nbsp;to be used with many other tools coming below;<br>
+- <b>"<a href="examples/Merge_Metadata.interval" target="_blank">Metadata</a>"</b>-file:
+      <br>
+&nbsp;&nbsp;&nbsp;table with condition-names</td>
+    </tr>
+    <tr>
+      <td colspan="5">&nbsp;</td>
+    </tr>
+    <tr style="background-color: rgb(232, 232, 232); font-weight: bold;">
+      <td colspan="5" valign="top">&nbsp;With the results of the tools
+1. or 3. (Counting or Merging) you can continue your analysis by using
+any of the following tools in arbitrary order</td>
+    </tr>
+    
+ <tr>
+      <td colspan="5">&nbsp;</td>
+    </tr>
+    <tr style="background-color: rgb(232, 232, 232);">
+      <td colspan="5" valign="top">&nbsp;<span style="font-weight: bold;">Statistical Tests for Differences:</span></td>
+    </tr>
+    
+    
+    <tr>
+      <td colspan="5">&nbsp;<a name="a10"></a></td>
+    </tr>
+    <tr>
+      <td valign="top"><b>Differential expression using DESeq2 for exactly 2 conditions<br>
+</b><a href="more.html#deseq2" target="_blank">more ...</a><b><br></b></td>
+      <td valign="top" align="center"><img src="pics/arrow_blue.jpeg"></td>
+      <td valign="top"><b style="color: rgb(73, 89, 200);">NGS: RNA Analysis / deseq2 ...</b></td>
+      <td valign="top"><b>Result</b> from the tool <b>"merge ht-seq counts"</b> <br>» the datasets <b>need</b> to have a <b>header</b></td>
+      <td valign="top" width="350">- <a href="examples/deseq2/deseq.pdf" target="_blank">pdf-file</a><br>
+      <img src="examples/deseq2/deseq1.png" target="_blank">
+      <img src="examples/deseq2/deseq2.png" target="_blank">
+      <img src="examples/deseq2/deseq3.png" target="_blank">
+      <br><br>
+      - <a href="examples/deseq2/deseq.tabular" target="_blank">table</a> (tabular-format)</td>
+    </tr>
+    
+    
+    
+ <tr>
+      <td colspan="5">
+      <hr><a name="a13"></a><br></td>
+    </tr>
+    <tr>
+      <td valign="top"><b>Test for differentially expressed genes between several groups of samples</b> (GLM ANOVA) - uses a generalized linear model to identify genes that are significantly changing in a data set consisting of more than 2 conditions.</td>
+      <td valign="top" align="center"><img src="pics/arrow_blue.jpeg"></td>
+      <td valign="top"><b style="color: rgb(73, 89, 200);">RNA-Seq / GLM ANOVA </b> <br>NOT INSTALLED YET</td>
+      <td valign="top">Results from the tool <b>"Merge_V2"</b> i.e. <br>
+1. <b>"Data"</b> (data table) and <br>
+2. <b>"Metadata"</b> (conditions)</td>
+      <td valign="top" width="350">- 1 (html): <a href="examples/GLM/html/1_glm_RNA.html" target="_blank">example</a><br>
+      <a href="examples/GLM/html/hist.jpg" target="_blank"><img style="border: 0px solid ; width: 160px; height: 160px;" alt="glm" src="examples/GLM/html/hist_s.jpg"></a><br>
+- 2 (csv): <a href="examples/GLM/2_glm_RNA.csv" target="_blank">example</a><br>
+- 3 (csv): <a href="examples/GLM/3_glm_RNA.csv" target="_blank">example</a><br>
+- log file (showing errors and job description)</td>
+    </tr>   
+    
+    <tr>
+      <td colspan="5">
+      <hr><a name="a12"></a></td>
+    </tr>
+    <tr>
+      <td valign="top"><b>Variance stabilizing transformation</b> and <b>moderated fold change calculation</b> for counts data<br>
+      <a href="more.html#vst" target="_blank">more ...</a><br></td>
+      <td valign="top" align="center"><img src="pics/arrow_blue.jpeg"></td>
+      <td valign="top"><b style="color: rgb(73, 89, 200);">RNA-Seq / VST and Moderated Fold Changes ...</b></td>
+      <td valign="top">Results from the tool <b>"Merge_V2"</b> i.e. <br>
+1. <b>"Data"</b> (data table) and <br>
+2. <b>"Metadata"</b> (conditions)<br>! exactly 2 datasets and conditions <br>are required</td>
+      <td valign="top" width="350">- 1 (html): <a href="examples/VST/html/1_vst_RNA.html" target="_blank">example</a><br>
+      <br>
+      <a href="examples/VST/html/box.jpg" target="_blank"><img style="border: 0px solid ; width: 140px; height: 131px;" alt="box" src="examples/VST/html/box_s.jpg"></a><a href="examples/VST/html/n1.jpg" target="_blank"><img style="border: 0px solid ; width: 150px; height: 144px;" alt="vst" src="examples/VST/html/n1_s.jpg"></a><br>
+- 2 (csv): <a href="examples/VST/2_vst_RNA.csv" target="_blank">example</a><br>
+- 3 (csv): <a href="examples/VST/3_vst_RNA.csv" target="_blank">example</a><br>
+- log file (showing errors and job description)</td>
+    </tr>
+    
+    
+    <tr>
+      <td colspan="5">
+      <hr></td>
+    </tr>
+    
+    
+    <tr>
+      <td valign="top"><b>Investigate relationships between samples based on a set of most variable genes (Principle component analysis, PCA):</b></td>
+      <td valign="top" align="center">&nbsp;</td>
+      <td valign="top">&nbsp;</td>
+      <td valign="top">&nbsp;</td>
+      <td width="350"><b>&nbsp;</b></td>
+    </tr>
+    
+    <tr>
+      <td colspan="5">&nbsp;<a name="a15"></a></td>
+    </tr>
+    
+    
+    <tr>
+      <td valign="top"><b>a. PCA Overview</b> <br>&nbsp;&nbsp;&nbsp; <a href="more.html#pcao" target="_blank">more ...</a>
+      <br>
+      </td>
+      <td valign="top" align="center"><img src="pics/arrow_blue.jpeg"></td>
+      <td valign="top"><b style="color: rgb(73, 89, 200);">RNA-Seq / <b>PCA Overview ...</b></td>
+      <td valign="top">Results from the tool <b>"Merge_V2"</b> i.e. <br>
+1. <b>"Data"</b> (data table) and <br>
+2. <b>"Metadata"</b> (conditions)</td>
+      <td valign="top" width="350">- 1 - html: <a href="examples/PCAo/html/1_pcao_RNA.html" target="_blank">example</a><br>
+      <a href="examples/PCAo/html/x.jpg" target="_blank"><img style="border: 0px solid ; width: 160px; height: 160px;" alt="pca overview" src="examples/PCAo/html/x_s.jpg"></a><br>
+- 2 - <b>RData</b> (rdata)<br>
+- log file (showing errors and job description)</td>
+    </tr>
+    
+    <tr>
+      <td valign="top" align="center"><img src="pics/arrow_blue_down2.jpeg"></td>
+      <td valign="top">&nbsp;</td>
+      <td valign="top">&nbsp;</td>
+      <td valign="top">&nbsp;</td>
+      <td width="350"><b>&nbsp;</b><a name="a16"></a></td>
+    </tr>
+    
+    
+    <tr>
+      <td valign="top"><b>b. PCA Analysis</b>: <br>
+&nbsp;&nbsp;&nbsp; detailed analysis on results of a.<br>&nbsp;&nbsp;&nbsp; <a href="more.html#pcaa" target="_blank">more ...</a><br></td>
+      <td valign="top" align="center"><img src="pics/arrow_blue.jpeg"></td>
+      <td valign="top"><b style="color: rgb(73, 89, 200);">RNA-Seq / <b>PCA Analysis ...</b></td>
+      <td valign="top"><b>"RData"</b>-Result from the tool <b>"PCA
+Overview"</b></td>
+      <td valign="top" width="350">- 1 - html: <a href="examples/PCA1/html/1_pca1_RNA.html" target="_blank">example</a><br>
+      <a href="examples/PCA1/html/bi_length.jpg" target="_blank"><img style="border: 0px solid ; width: 160px; height: 160px;" alt="pca" src="examples/PCA1/html/bi_length_s.jpg"></a><br>
+- 2 - length based (csv): <a href="examples/PCA1/2_pca1_RNA.csv" target="_blank">example</a><br>
+- 3 - P1 based (csv): <a href="examples/PCA1/3_pca1_RNA.csv" target="_blank">example</a><br>
+- 4 - P2 based (csv): <a href="examples/PCA1/4_pca1_RNA.csv" target="_blank">example</a><br>
+- 5 - all genes included in PCS (csv): <a href="examples/PCA1/5_pca1_RNA.csv" target="_blank">example</a><br>
+- log file (showing errors and job description)</td>
+    </tr>
+    
+    
+    <tr>
+      <td colspan="5">&nbsp;<a name="a9"></a></td>
+    </tr>
+
+    <tr style="background-color: rgb(232, 232, 232);">
+      <td colspan="5" valign="top">&nbsp;<span style="font-weight: bold;">Descriptive Statistics:</span></td>
+    </tr>
+    <tr>
+      <td colspan="5">&nbsp;</td>
+    </tr>
+    <tr>
+      <td valign="top"><b>All-against-all pairwise scatterplot (Matrix Scatterplot</b>) <br>
+with boxplots for each scatterplot and histograms for each case. <a href="more.html#matrixscatter" target="_blank">more ...</a><br>
+</td>
+      <td valign="top" align="center"><img src="pics/arrow_blue.jpeg"></td>
+      <td valign="top"><b style="color: rgb(73, 89, 200);">IMP: Data Manipulation / <br>Matrix Scatterplot V2</b></td>
+      <td valign="top">Table containing columns with values, a header
+is required: <a href="examples/matrixscatter/matrixscatterplot.txt" target="_blank">example</a><br>
+accepted formats: tabular, txt, csv</td>
+      <td valign="top" width="350"><span style="font-weight: bold;">html-file</span> with graph in jpeg and pdf
+format. The pdf-file should be downloaded to be viewed. <a href="examples/matrixscatter/example.png" target="_blank"><img src="examples/matrixscatter/example_sm.png" border="0"></a></td>
+    </tr>
+    
+    <tr>
+      <td colspan="5">
+      <hr><a name="a11"></a></td>
+    </tr>
+    <tr>
+      <td valign="top"><b>Calculate gene expression values (RPKMs & TPMs)</b><br>
+      <a href="more.html#rpkm" target="_blank">more ...</a><b><br></b></td>
+      <td valign="top" align="center"><img src="pics/arrow_blue.jpeg"></td>
+      <td valign="top"><b style="color: rgb(73, 89, 200);">RNA-Seq / RPKM_TPM ...</b></td>
+      <td valign="top">Result <b>"Table" </b> from tool <b>"Count number of read per gene_V2"</b> (including a header!!)  <br><b>or</b> 
+result <b>"Data"</b> from tool <b>"Merge_V2"</b> <br><b>and</b> an <b>Annotation</b> file in <b>gtf</b>-format like <a href="examples/gtf_format.txt" target="_blank">this</a></b> <br>- make sure that the parameters "REFSEQ", "exon" and "gene_id" are in the file. <br><br>For changing the format of a file you can also use tools under <br>"Text Manipulation" or  <br>"Filter and Sort"<br> Annotation files are also stored under the top menu <b>Shared Data / Data Libraries / GMI</b>, for TAIR10 you can use <b>TAIR10_annotation.gtf</b>. You can provide other files to be stored there - just send the file or a download-link to <a href="mailto:malgorzata.goiser@gmi.oeaw.ac.at">malgorzata.goiser@gmi.oeaw.ac.at</a>.<br></td>
+      <td valign="top" width="350">Table with RPKM- & TPM-Values </td>
+    </tr>
+    
+    <tr>
+      <td colspan="5">&nbsp;</td>
+    </tr>
+    <tr>
+      <td colspan="5">&nbsp;</td>
+    </tr>
+    
+    <tr style="background-color: rgb(102, 153, 255); font-size: 15px;">
+      <td width="350"><b>&nbsp;ANALYSIS / PROBLEM</b></td>
+      <td valign="top" width="50">&nbsp;</td>
+      <td width="300"><b>&nbsp;TOOL</b></td>
+      <td width="300"><b>&nbsp;What you need</b></td>
+      <td width="250"><b>&nbsp;What you get ...</b></td>
+    </tr>
+    
+    <tr>
+      <td colspan="5">&nbsp;<a name="a17"></a></td>
+    </tr>
+    
+    <tr style="background-color: rgb(204, 204, 255);">
+      <td colspan="5" valign="top"><b>&nbsp;A possible, recommended ChIP-Seq ANALYSIS workflow:<br></b></td>
+    </tr>
+    
+    <tr>
+      <td colspan="5">&nbsp;</td>
+    </tr>
+    
+    
+    <tr style="background-color: rgb(232, 232, 232); font-weight: bold;" &gt;="">
+      <td colspan="5" valign="top">&nbsp;Peak calling:</td>
+    </tr>
+    <tr>
+      <td colspan="5">&nbsp;<a name="a18"></a></td>
+    </tr>
+    
+   
+    
+     <tr>
+      <td valign="top"><b>Peak calling with MACS2</b><br> for wide peaks <br><a href="more.html#macs2" target="_blank">more ...</a><br>
+      </td>
+      <td valign="top" align="center"><img src="pics/arrow_blue.jpeg"></td>
+      <td valign="top"><b style="color: rgb(73, 89, 200);">NGS: Peak Calling / MACS2 callpeak ...</b></td>
+      <td valign="top">1. <b>ChIP-Seq Tag File</b><br> accepted formats: <b>bam</b><br>
+2. ChIP-Seq Control File (optional)<br> accepted formats: bam<br>Effective genome size for TAIR 10: 119146348 (golden path)<br> 
+<a href="pics/TAIR10_chr_length.pdf" target="_blank">TAIR10 chromosome lengths in pdf format</a><br>In case of <b>errors</b> try <b>"Do not build the shifting model (--nomodel enabled)"</b></td>
+      <td valign="top" width="350">- peaks (bed-file)<br>
+      - <a href="examples/macs2/html/macs2.html" target="_blank">html-report</a><br>
+      - <a href="examples/macs2/macs2.xls" target="_blank">peaks (xls-file)</a><br>
+      - peaks (encodePeak)</td>
+    </tr>
+    
+    <tr>
+      <td valign="top" align="center"><img src="pics/arrow_blue_down2.jpeg"></td>
+      <td valign="top">&nbsp;</td>
+      <td valign="top">&nbsp;</td>
+      <td valign="top">&nbsp;</td>
+      <td width="350"><b>&nbsp;</b><a name="a20"></a></td>
+    </tr>
+    
+    
+    <tr>
+      <td valign="top"><b>Radar chart for MACS2 based peak parameters</b><br>
+This tool visualises the parameters of the output from tool "MACS2" on a so called radar chart. <a href="more.html#radar" target="_blank">more ...</a><br><br></td>
+      <td valign="top" align="center"><img src="pics/arrow_blue.jpeg"></td>
+      <td valign="top"><b style="color: rgb(73, 89, 200);">IMP: Peaks / Radar chart for MACS2 parameters ...</b></td>
+      <td valign="top"><b>"<a href="examples/radarchart/Text_File.txt" target="_blank">xls File</a>"</b> result from tool <b>"MACS2"</b> - remove rows with # in front i.e. 25 rows with tool:<br>
+      <b style="color: rgb(73, 89, 200);">Text manipulation / Remove beginning of a file</b></td>
+      <td valign="top" width="350"><a href="examples/radarchart/call_macs_iter_graphs.html" target="_blank">html-file with a radarchart and boxplots</a><br>
+      <br>Radar chart:<br>
+      <a href="pics/radarChart.jpg" target="_blank"><img src="pics/radarChart_s.jpg" border="0" height="160" width="150"></a></td>
+    </tr>
+    
+    <tr>
+      <td colspan="5">
+      <hr><a name="a21"></a></td>
+    </tr>
+    
+    
+    <tr>
+      <td valign="top"><b>Annotate peaks</b> with the refSeq data from a genome with CEAS<br><a href="more.html#ceas" target="_blank">more ...</a><br></td>
+      <td valign="top" align="center"><img src="pics/arrow_blue.jpeg"></td>
+      <td valign="top"><b style="color: rgb(73, 89, 200);">NGS: Annotation / CEAS ...</b></td>
+      <td valign="top">- <span style="font-weight: bold;">bed</span> file to annotate<br>
+      </td>
+      <td valign="top" width="350">- <b><a href="examples/ceas/annotation.pdf" target="_blank">annotation pdf</a></b> (report)<br>
+      <img src="examples/ceas/ceas1.png" border="0"><br>
+      <img src="examples/ceas/ceas2.png" border="0"><img src="examples/ceas/ceas3.png" border="0"><br>
+- <b><a href="examples/ceas/annotation.xls" target="_blank">annotation xls</a></b> files (tab delimited) with each gene <br>&nbsp;&nbsp;and its relation to the peaks (distance, occupancy)<br><br></td>
+    </tr>
+    
+    
+    <tr>
+      <td colspan="5">
+      <hr><a name="a57"></a></td>
+    </tr>
+    
+    
+    <tr>
+      <td valign="top"><b>ChIP peak Annotation, Comparison and Visualization</b> with Bioconductor package <b>"ChIPseeker"</b><br><a href="more.html#chipseeker" target="_blank">more ...</a><br></td>
+      <td valign="top" align="center"><img src="pics/arrow_blue.jpeg"></td>
+      <td valign="top"><b style="color: rgb(73, 89, 200);">GMI: chip-seq / ChIPseeker</b><br>NOT INSTALLED YET</td>
+      <td valign="top">- <span style="font-weight: bold;">bed</span> file<br>
+      </td>
+      <td valign="top" width="350">- <b>html-file</b> including <b>several plots</b> and a <b>summary pdf-file</b>.<br><br>
+      Examples:<br>
+      <br><a href="examples/chipseeker/Plots.pdf" target="_blank">!! <b>PDF-file</b></a> with all the plots<br><br>
+      <img src="examples/chipseeker/Anno_Pie_plots.jpg" border="0"><br>
+      <img src="examples/chipseeker/TSS_Average_Profile_plots.jpg" border="0"><br>
+      <img src="examples/chipseeker/Vennpie_plotss.jpg" border="0"><br>
+      
+      
+</tr>
+    
+    
+    <tr>
+      <td colspan="5">
+      <hr><a name="a22"></a></td>
+    </tr>
+    
+    
+    <tr>
+      <td valign="top"><b>Compare Lists<br>
+      </b>compares 2 or more lists of items (e.g. Gene Symbols) and finds all combinations of overlaps<br><a href="more.html#complists" target="_blank">more ...</a><br><br></td>
+      <td valign="top" align="center"><img src="pics/arrow_blue.jpeg"></td>
+      <td valign="top"><b style="color: rgb(73, 89, 200);">IMP: Data Manipulation / compareLists ...</b></td>
+      <td valign="top"><span style="font-weight: bold;">at least 2 files</span>
+in <span style="font-weight: bold;">gff</span>, <span style="font-weight: bold;">bed</span>, <span style="font-weight: bold;">txt</span> or <span style="font-weight: bold;">csv</span> format - each file with 1 column
+of items <br>e.g. <a href="examples/comparelist1.txt" target="_blank">file1</a>
++ <a href="examples/comparelist2.txt" target="_blank">file2</a> </td>
+      <td valign="top" width="350">- result table in <a target="_blank" href="examples/comparelist/resulttable.csv">csv-format<br>
+      </a>- <a href="examples/comparelist/html/compareLists_on_data_2_and_data_1__html.html" target="_blank">html-file</a> with graphical output<br><br>
+      <img style="width: 249px; height: 170px;" alt="comparelists" src="examples/comparelist/comparelist.png"><br>
+      </td>
+    </tr>
+    
+    <tr>
+      <td colspan="5"><hr></td>
+    </tr>
+
+<tr>
+      <td colspan="5">&nbsp;<a name="a31"></a></td>
+    </tr>
+    
+    
+    <tr>
+      <td valign="top"><b>Retrieve best peaks</b><br>
+calculates new peak-starts and -ends based on a certain number of bps around the summit. <br><a href="more.html#tops" target="_blank">more ...</a><br></td>
+      <td valign="top" align="center"><img src="pics/arrow_blue.jpeg"></td>
+      <td valign="top"><b style="color: rgb(73, 89, 200);">GMI: Peaks / Top summits TAIR10</b><br>NOT INSTALLED YET
+      </b></a></td>
+      <td valign="top"><b>xls</b> result-file from tool <b>"MACS2"</b></td>
+      <td valign="top" width="350">1. <b>bed-file</b>: <a href="examples/topsummits/bed_file.txt" target="_blank">example (changed to a txt-format)</a><br>
+2. <b>html-file</b> with results for top regions and for all regions in bed-, gtf- and txt-formats: <a href="examples/topsummits/html/topsummits.html" target="_blank">example</a></td>
+    </tr>
+    
+
+<tr>
+      <td colspan="5">&nbsp;</td>
+    </tr>
+    <tr>
+      <td colspan="5">&nbsp;</td>
+    </tr>
+    
+    
+    <tr style="background-color: rgb(232, 232, 232); font-weight: bold;" &gt;="">
+      <td colspan="5" valign="top">&nbsp;Multiple Overlaps:</td>
+    </tr>
+    
+    <tr>
+      <td colspan="5">&nbsp;<a name="a23"></a></td>
+    </tr>
+    
+    
+    <tr>
+      <td valign="top"><b>Detect multiple overlaps</b>
+      <span style="font-weight: bold;">of peaks</span><br> reads genomic regions from several tracks and detects overlaps between them<br><a href="more.html#multovl" target="_blank">more ...</a></td>
+      <td valign="top" align="center"><img src="pics/arrow_blue.jpeg"></td>
+      <td valign="top"><b style="color: rgb(73, 89, 200);">IMP: Peaks / <b>Multovl<br>
+      </b></a></td>
+      <td valign="top">e.g. <b>bed</b> file result from tool <b>"MACS2"</b>
+or other data which you want to detect overlaps with;<br> accepted formats: bed, gff</td>
+      <td valign="top" width="350">Table with overlapping regions: <a href="examples/multovl.gff" target="_blank">example in gff-format</a></td>
+    </tr>
+    
+    <tr>
+      <td colspan="5">
+      <hr><a name="a24"></a></td>
+    </tr>
+    
+    
+    <tr>
+      <td valign="top"><span style="font-weight: bold;">Extract ancestor track from Multovl output</span><br><a href="more.html#anctrack" target="_blank">more ...</a></td>
+      <td valign="top" align="center"><img src="pics/arrow_blue.jpeg"></td>
+      <td valign="top"><b style="color: rgb(73, 89, 200);">IMP: Data Manipulation / anctrack<b></td>
+      <td valign="top">Output from tool multovl in gff-format <br>
+      </td>
+      <td valign="top" width="350">Table with gff ending, but actually in a bed-format - to use it remove the first row (<b style="color: rgb(73, 89, 200);">Text Manipulation / Remove beginning of a file</b>) and change the format (pencil icon): <a target="_blank" href="examples/anctrack.gff">example</a><br>
+      </td>
+    </tr>
+    
+    <tr>
+      <td colspan="5">
+      <hr><a name="a25"></a></td>
+    </tr>
+    
+    
+    <tr>
+      <td valign="top"><b>Detect multiple overlaps</b>,
+      <span style="font-weight: bold;">enhanced output</span> <br>
+calls multovl on a set of region tracks and plots a summary. Simple
+overlaps and union overlaps are reported.<br><a href="more.html#multview" target="_blank">more ...</a></td>
+      <td valign="top" align="center"><img src="pics/arrow_blue.jpeg"></td>
+      <td valign="top"><b style="color: rgb(73, 89, 200);">IMP: Data Manipulation / Multovl View</b></td>
+      <td valign="top">chromosomal regions in BED format (peaks)</td>
+      <td valign="top" width="350">HTML-File: <a href="examples/MultovlView/MultovlView.html" target="_blank">example<br>
+      </a><br>
+      <img style="width: 217px; height: 170px;" alt="multovl" src="pics/multovlview.png"><br>
+      </td>
+    </tr>
+    
+    <tr>
+      <td colspan="5">&nbsp;<a name="a26"></a></td>
+    </tr>
+    
+    
+    <tr style="background-color: rgb(232, 232, 232); font-weight: bold;" &gt;="">
+      <td colspan="5" valign="top">&nbsp;Density-Heatmap:</td>
+    </tr>
+
+
+    <tr>
+      <td colspan="5">&nbsp;</td>
+    </tr>
+    <tr>
+      <td valign="top"><b>1 - a) Read density over peaks/TSS</b> <br>calculates read densities for all tracks over all given peaks-regions<br><a href="more.html#readdenspeak" target="_blank">more ...</a></td>
+      <td valign="top" align="center"><img src="pics/arrow_blue.jpeg"></td>
+      <td valign="top"><b style="color: rgb(73, 89, 200);">GMI: Density Heatmap / read density over peaks</b><br>NOT INSTALLED YET</td>
+      <td valign="top">- input <b>peak BED</b> file<br>OR TSS regions annotation file from the top menu <a href="http://galaxy/galaxy/library/browse_libraries?sort=name&f-description=All&f-name=All&operation=browse&id=f7a912a99d6d5bb3" target="_blank">"Shared Data / Data Libraries / RNA"</a><br> - at least 2 input <b>read BED</b> files</td>
+      <td valign="top" width="350"><a href="examples/densityH/Density-Heatmap__read_density_over_peaks_on_data_3,_data_10,_and_data_9_[calculation_result].tabular" target="_blank">matrix in tabular format (example)</a></td>
+    </tr>
+    
+    <tr>
+      <td valign="top" align="center"><img src="pics/arrow_blue_down2.jpeg"></td>
+      <td valign="top">&nbsp;</td>
+      <td valign="top">&nbsp;</td>
+      <td valign="top">&nbsp;</td>
+      <td width="350"><b>&nbsp;</b><a name="a27"></a></td>
+    </tr>
+    
+    
+    <tr>
+      <td valign="top"><b>1 - b) Plotting for peaks/TSS</b><br>plots various heatmaps, profiles and boxplots to visualize the results from the tool <i>Density-Heatmap: read density over peaks</i><br><a href="more.html#plotpeak" target="_blank">more ...</a></td>
+      <td valign="top" align="center"><img src="pics/arrow_blue.jpeg"></td>
+      <td valign="top"><b style="color: rgb(73, 89, 200);">GMI: Density Heatmap / plotting for peaks</b><br>NOT INSTALLED YET</td>
+      <td valign="top"><b>Result</b> from <b>DH: read density over peaks</b></td>
+      <td valign="top" width="350"><a href="examples/densityH/plotpeaks/index.html" target="_blank"><b>HTML-page</b></a> with links to plotting results <br>
+      <img src="examples/densityH/dh_peaks_html_s.png" border="0"><br>
+      <img src="examples/densityH/peaks_png_s/refseq_mm9_29Apr2010_IMP_BED_merged_TSS_norand_bed.ct_partition_qt.st_max.sc_1.c.log2.hm.png" border="0">
+      <img src="examples/densityH/peaks_png_s/refseq_mm9_29Apr2010_IMP_BED_merged_TSS_norand_bed.partition_qt.subcluster_5.mean.profile.png" border="0">
+      <img src="examples/densityH/peaks_png_s/refseq_mm9_29Apr2010_IMP_BED_merged_TSS_norand_bed.refseq_mm9_29Apr2010_IMP_BED_merged_TSS_norand_bed.DNase1HS_8846_bed.boxplot.png" border="0">
+      <img src="examples/densityH/peaks_png_s/refseq_mm9_29Apr2010_IMP_BED_merged_TSS_norand_bed.scatter.MaxDensityIndex.png" border="0">
+      </td>
+    </tr>
+    
+    <tr>
+      <td colspan="5">
+      <hr><a name="a28"></a></td>
+    </tr>
+
+    <tr>
+      <td valign="top"><b>2 - a) Read density over transcripts/genes</b> <br>calculates read densities for all tracks over all given transcript-regions - the results are ment to be used with the tool <i>Density-Heatmap-Plot:
+plotting for transcripts</i><br><a href="more.html#readdenstrans" target="_blank">more ...</a></td>
+      <td valign="top" align="center"><img src="pics/arrow_blue.jpeg"></td>
+      <td valign="top"><b style="color: rgb(73, 89, 200);">GMI: Density Heatmap / read density over transcripts</b><br>NOT INSTALLED YET</td>
+      <td valign="top">- input <b>transcript BED</b> file<br>OR genes regions annotation file from the top menu <a href="http://galaxy/galaxy/library/browse_libraries?sort=name&f-description=All&f-name=All&operation=browse&id=f7a912a99d6d5bb3" target="_blank">"Shared Data / Data Libraries / RNA"</a><br> - at least 2 input <b>read BED</b> files</td>
+      <td valign="top" width="350">matrix in tabular format (see example above)</td>
+    </tr>
+    
+    <tr>
+      <td valign="top" align="center"><img src="pics/arrow_blue_down2.jpeg"></td>
+      <td valign="top">&nbsp;</td>
+      <td valign="top">&nbsp;</td>
+      <td valign="top">&nbsp;</td>
+      <td width="350"><b>&nbsp;</b><a name="a29"></a></td>
+    </tr>
+    
+    
+    <tr>
+      <td valign="top"><b>2 - b) Plotting for transcripts/genes </b> <br>plots various heatmaps, profiles and boxplots to visualize the results from the tool <i>Density-Heatmap: read density over transcripts</i><br><a href="more.html#plottrans" target="_blank">more ...</a></td>
+      <td valign="top" align="center"><img src="pics/arrow_blue.jpeg"></td>
+      <td valign="top"><b style="color: rgb(73, 89, 200);">GMI: Density Heatmap / plotting for transcripts</b><br>NOT INSTALLED YET</td>
+      <td valign="top"><b>Result</b> from <b>DH: read density over transcripts</b></td>
+      <td valign="top" width="350"><b>HTML-page</b> with links to plotting results <br>
+      <img src="examples/densityH/dh_transcr_html_s.png" border="0"><br>
+      <img src="examples/densityH/transcripts_png_s/refseq_mm9_29Apr2010_IMP_BED_merged_bed.ct_partition_qt.st_max.sc_1.nc.log2.hm.png" border="0">
+      <img src="examples/densityH/transcripts_png_s/refseq_mm9_29Apr2010_IMP_BED_merged_bed.density.MaxDensityIndex.png" border="0">
+      <img src="examples/densityH/transcripts_png_s/refseq_mm9_29Apr2010_IMP_BED_merged_bed.density.Sum.png" border="0">
+      <img src="examples/densityH/transcripts_png_s/refseq_mm9_29Apr2010_IMP_BED_merged_bed.partition_qt.subcluster_3.boxplot.png" border="0">
+</td>
+    </tr>
+    
+
+    
+    <tr>
+      <td colspan="5">&nbsp;</td>
+    </tr>
+    
+     <tr>
+      <td colspan="5">&nbsp;<a name="a53"></a></td>
+    </tr>
+     <tr>
+      <td valign="top"><span style="font-weight: bold;">Select random lines<br> </span>from a file<br>In order to reduce the number of lines in your dataset.<br><br></td>
+      <td valign="top" align="center"><img src="pics/arrow_blue.jpeg"></td>
+      <td valign="top"><b style="color: rgb(73, 89, 200);">Text Manipulation / Select random lines</b></td>
+      <td valign="top">any file (e.g. BAM or BED)<br>
+NOTES:<br>- Randomly select: number of random lines you want to extract<br>- If you set a random seed (any number or string, even blank "" works here) the random selection will be exactly reproduced when you use the same random seed again</td>
+      <td valign="top" width="350"><b>your table </b>with reduced number of lines i.e. with the number of lines set<br></b></td>
+    </tr>
+    <tr>
+      <td colspan="5">&nbsp;</td>
+    </tr>
+    
+    
+    <tr>
+      <td colspan="5"><a name="a41"></a></td>
+    </tr>
+    
+  
+    
+    <tr style="background-color: rgb(102, 153, 255); font-size: 15px;">
+      <td width="350"><b>&nbsp;ANALYSIS / PROBLEM</b></td>
+      <td valign="top" width="50">&nbsp;</td>
+      <td width="300"><b>&nbsp;TOOL</b></td>
+      <td width="300"><b>&nbsp;What you need</b></td>
+      <td width="250"><b>&nbsp;What you get ...</b></td>
+    </tr>
+    
+    <tr>
+      <td colspan="5">&nbsp;<a name="a36"></a></td>
+    </tr>
+    
+    
+    <tr style="background-color: rgb(204, 204, 255);">
+      <td colspan="5" valign="top"><b>&nbsp;Graphical Visualisation</b></td>
+    </tr>
+    <tr>
+      <td colspan="5">&nbsp;<a name="a37"></a></td>
+    </tr>
+    
+    
+    <tr>
+      <td valign="top"><b>All-against-all pairwise scatterplot (Matrix Scatterplot</b>) <br>with boxplots for each scatterplot and histograms for each case.<br><a href="more.html#matrixscatter" target="_blank">more ...</a></td>
+      <td valign="top" align="center"><img src="pics/arrow_blue.jpeg"></td>
+      <td valign="top"><b style="color: rgb(73, 89, 200);">IMP: Data Manipulation / <br>Matrix Scatterplot V2</b></td>
+      <td valign="top">Table containing columns with values, a header is required, no rownames should be included: <a href="examples/matrixscatter/matrixscatterplot.txt" target="_blank">example</a><br>accepted formats: tabular, txt, csv</td>
+      <td valign="top" width="350"><span style="font-weight: bold;">html-file</span> with graph in jpeg and pdf format. The pdf-file should be downloaded to be viewed. <a href="examples/matrixscatter/example.png" target="_blank"><img src="examples/matrixscatter/example_sm.png" border="0"></a></td>
+    </tr>
+    
+    <tr>
+      <td colspan="5">
+      <hr><a name="a38"></a></td>
+    </tr>
+    
+    
+    <tr>
+      <td valign="top"><b>Island Scatterplot<br></b>plots read counts accross read islands<br><a href="more.html#island" target="_blank">more ...</a><br></td>
+      <td valign="top" align="center"><img src="pics/arrow_blue.jpeg"></td>
+      <td valign="top"><b style="color: rgb(73, 89, 200);">IslandScatter</b><br>NOT INSTALLED YET</td>
+      <td valign="top"><span style="font-weight: bold;">2 bed</span>-files with reads<br></td>
+      <td valign="top" width="350"><a href="examples/islandscatter/html/subsets.100000.summary.10000.html" target="_blank"><span style="font-weight: bold;">html-file</span></a><br>when you download the data you will find many <span style="font-weight: bold;">subset-files</span> and <span style="font-weight: bold;">plots</span> not shown on the html-file<br>
+      <br>
+      <a href="examples/islandscatter/islandscatter.jpeg" target="_blank"><img style="border: 0px solid ; width: 250px; height: 250px;" alt="" src="examples/islandscatter/islandscatter_s.jpeg"></a><br>
+      <a href="examples/islandscatter/html/subsets.100000.union.1.dataset_44540.dat.uniq.union.1.exon.gff.csv.norm_sigmoid.qu.jpeg" target="_blank"><img style="border: 0px solid ; width: 300px; height: 150px;" alt="" src="examples/islandscatter/html/subsets.100000.union.1.dataset_44540.dat.uniq.union.1.exon.gff.csv.norm_sigmoid.qu_s.jpeg"></a><br>
+      </td>
+    </tr>
+    
+    <tr>
+      <td colspan="5">
+      <hr><a name="a39"></a>
+      </td>
+    </tr>
+    
+    
+    <tr>
+      <td valign="top"><b>Correlation </b>of coverage<b><br>(Spearman or Pearson)<br><a href="more.html#corr" target="_blank">more ...</a><br></b></td>
+      <td valign="top" align="center"><img src="pics/arrow_blue.jpeg"></td>
+      <td valign="top"><b style="color: rgb(73, 89, 200);">NGS: deeptools / plotCorrelation ...</b></td>
+      <td valign="top">Output <b>Matrix</b> file from the <b>multiBamSummary</b> tool:<br><b style="color: rgb(73, 89, 200);">NGS: deeptools / multiBamSummary calculates average read coverages for a list of two or more BAM files</b> (Input here: Bam file(s))</td>
+      <td valign="top" width="350">- correlation matrix<br>- correlation plot<br>
+      <a href="pics/heatmap_SpearmanCorr.png" target="_blank"><img style="border: 0px solid ; width: 250px; height: 230px;" alt="" src="pics/heatmap_SpearmanCorr.png"></a><br>
+      </td>
+    </tr>
+    
+
+    <tr>
+      <td colspan="5">
+      <hr><a name="a58"></a>
+      </td>
+    </tr>
+    
+    
+    <tr>
+      <td valign="top"><b>Plotting Genomic Regions (TSS, TES, genebody, exon, cgi)</b><br>TAIR10 Annotation is included</td>
+      <td valign="top" align="center"><img src="pics/arrow_blue.jpeg"></td>
+      <td valign="top"><b style="color: rgb(73, 89, 200);">NGS: Visualization / ngs.plot</b></a> <br>for 1 or more samples</td>
+      <td valign="top">1 or more bam-files</td>
+      <td valign="top" width="350">e.g. TSS Profiles & Heatmaps - ngs.plot for 2 samples:<br>
+      - TSS Profile(s)</a><br>
+      <a href="examples/ngsmultiplot/ngs.multiplot.pdf" target="_blank"><img src="examples/ngsmultiplot/pic1.jpg"></a><br>
+      - Heatmap(s)<br>
+      <a href="examples/ngsmultiplot/ngs.multiplot_heat.pdf" target="_blank"><img src="examples/ngsmultiplot/pic2.jpg"></a><br>
+
+      </td>
+    </tr> 
+    
+<tr>
+      <td colspan="5">
+      <hr><a name="a35"></a>
+      </td>
+    </tr>
+
+  <tr>
+      <td colspan="5"><b>PLOTTING PROFILES with deeptools</b></td>
+    </tr>
+
+    <tr>
+      <td valign="top"><b>1.</b> <b>Preparing</b> samples for calculation of a matrix:<br><br>- <b>bamCompare</b> normalizes and compares two BAM files to obtain the ratio, log2ratio or difference between them </td>
+      <td valign="top" align="center"><br><br><img src="pics/arrow_blue.jpeg"></td>
+      <td valign="top"><br><br><b style="color: rgb(73, 89, 200);">NGS: deeptools / bamCompare</b></a> <br>calculates the coverage for a sample over its input/control<br>
+<br>If you don't have an input/control file use:<br><b style="color: rgb(73, 89, 200);">NGS: deeptools / bamCoverage</b></td>
+      <td valign="top"><br><br>- treated sample in bam-format<br>- control (input) sample in bam-format<br><br><b>bin size</b> (default: 50) - a mean is being calculated for each bin, the higher the value the smoother will be the curve, the higher the value the more precise will it be<br><br>How to comapre the two files:<br>Recommended > <br>"Compute <b>log2</b> of the number of reads <b>ratio</b>"<br><br>Coverage file format:<br>- <b>bigwig</b> (binary format) - recommended to use for the following tool (computeMatrix)<br>- <b>bedgraph</b> (tabular format) - recommended for viewing and converting to bed-format<br>> Both formats can be used to be viewed in Genome Browsers showing the coverage of the samples</td>
+      <td valign="top" width="350"><br><br>- <b>bigwig</b> file or<br>- <b>bedgraph</b> file <br>with <b>coverage</b> values</td>
+    </tr> 
+
+  <tr>
+      <td colspan="5">&nbsp;</td>
+    </tr>
+
+ <tr>
+      <td valign="top"><b>2.</b> Compute a <b>matrix</b>:<br><br><b>computeMatrix</b> prepares data for plotting a heatmap or a profile of given regions<br>e.g. different variants over all TEs or over all genes</td>
+      <td valign="top" align="center"><br><br><img src="pics/arrow_blue.jpeg"></td>
+      <td valign="top" style="color: rgb(73, 89, 200);"><br><br><b>NGS: deeptools / computeMatrix</b><br>prepares data for plotting a heatmap or a profile of given regions</td>
+      <td valign="top"><br><br>- <b>Score file(s)</b>: <b>bigwig-file(s)</b> to be plotted (the coverage information of each sample over its input => output from bamCompare tool) <br><br>- <b>Region(s) to plot</b>: <b>bed-file(s)</b> with the coordinates of <b>regions</b> over which the samples shall be plotted </td>
+      <td valign="top" width="350"><br><br>- <b>Matrix</b> file to be used for plotting a heatmap or a profile of the given regions<br><br>[- <b>Heatmap values</b> (if chosen "yes" under "Show advanced output settings")] <br><br>[- <b>sorted/filtered regions</b> (if chosen "yes" under "Show advanced output settings")]</td>
+    </tr> 
+
+<tr>
+      <td colspan="5">&nbsp;</td>
+    </tr>
+
+ <tr>
+      <td valign="top"><b>3a.</b> Plot <b>heatmap</b> from matrix:<br><br><b>plotHeatmap</b> creates a heatmap for score distributions across genomic regions</td>
+      <td valign="top" align="center"><br><br><img src="pics/arrow_blue.jpeg"></td>
+      <td valign="top" style="color: rgb(73, 89, 200);"><br><br><b>NGS: deeptools / plotHeatmap</b><br>creates a heatmap for score distributions across genomic regions</td>
+      <td valign="top"><br><br>- <b>Matrix</b> from tool <b>computeMatrix</b></td>
+      <td valign="top" width="350"><br><br>- <b>Heatmap</b> - example: <br><img src="pics/plotheatmap.png" width="193" height="400"></td>
+    </tr> 
+
+<tr>
+      <td colspan="5">&nbsp;</td>
+    </tr>
+
+ <tr>
+      <td valign="top"><b>3b.</b> Plot <b>profile</b> from matrix:<br><br><b>plotProfile</b> creates a profile plot for score distributions across genomic regions</td>
+      <td valign="top" align="center"><br><br><img src="pics/arrow_blue.jpeg"></td>
+      <td valign="top" style="color: rgb(73, 89, 200);"><br><br><b>NGS: deeptools / plotProfile</b><br>creates a profile plot for score distributions across genomic regions</td>
+      <td valign="top"><br><br>- <b>Matrix</b> from tool <b>computeMatrix</b></td>
+      <td valign="top" width="350"><br><br>- <b>Profile</b> - example: <br><img src="pics/plotprofile.png" width="230" height="200"></td>
+    </tr> 
+
+  <tr>
+      <td colspan="5">&nbsp;</td>
+    </tr>
+
+     <tr>
+      <td colspan="5">&nbsp;<a name="a55"></a></td>
+    </tr>
+    
+    
+    <tr style="background-color: rgb(204, 204, 255);">
+      <td colspan="5" valign="top"><b>&nbsp;Other useful tools</b></td>
+    </tr>
+    
+  
+    <tr>
+      <td colspan="5">&nbsp;<a name="a56"></a></td>
+    </tr>
+    <tr>
+      <td valign="top"><span style="font-weight: bold;">Select random lines<br> </span>from a file<br>In order to reduce the number of lines in your dataset.<br><br></td>
+      <td valign="top" align="center"><img src="pics/arrow_blue.jpeg"></td>
+      <td valign="top" style="color: rgb(73, 89, 200);"><b>Text Manipulation / Select random lines</b><br></td>
+      <td valign="top">any file (e.g. BAM or BED)<br>
+NOTES:<br>- Randomly select: number of random lines you want to extract<br>- If you set a random seed (any number or string, even blank "" works here) the random selection will be exactly reproduced when you use the same random seed again</td>
+      <td valign="top" width="350"><b>your table </b>with reduced number of lines i.e. with the number of lines set<br></b></td>
+    </tr>
+    <tr>
+      <td colspan="5">&nbsp;</td>
+    </tr>
+  </tbody>
+</table>
+
+<p>&nbsp;</p>
+<p>&nbsp;</p>
+<p>&nbsp;</p>
+<p>&nbsp;</p>
+<p>&nbsp;</p>
+<p>&nbsp;</p>
+<p>&nbsp;</p>
+<span align="center">(c) 2016, GMI<span>
+
+</body>
+</html>

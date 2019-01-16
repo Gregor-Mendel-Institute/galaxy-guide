@@ -1,0 +1,65 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns='http://www.w3.org/1999/xhtml' xml:lang='en' lang='en'><head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8"></meta>
+<title>/projects/csfshpc/galaxy-csf/database/files/039/dataset_39623.dat</title>
+
+
+
+</head>
+<body><h2 style="color:red">Please note that some genes occured more then once in input data. Those genes are not included in the analysis.</h2><h2>Moderated log2 fold changes</h2><a href="#s1">Samples and conditions</a><br/>
+<a href="#s2">Read statistics</a><br/>
+<a href="#s4">Normalization comparison</a><br/>
+<a href="#s6">Results section</a><br/>
+<a href="#s3">Moderation method</a><br/>
+<h3><a name="s1">Samples used and assigned conditions:</a></h3><table width="150px" border="1">
+<tr>
+<td>sample</td><td bgcolor="#FF69B4">sample1</td><td bgcolor="#36648B">sample2</td></tr>
+<tr>
+<td>condition</td><td bgcolor="darkseagreen2">VIT</td><td bgcolor="palegoldenrod">VITB</td></tr>
+</table>
+<br/>
+<h3><a name="s2">Simple read statistics per sample:</a></h3><table border="1">
+<tr>
+<td></td><td bgcolor="#FF69B4">c.16678595..16678595.</td><td bgcolor="#36648B">c.7838039..7838039.</td></tr>
+<tr>
+<td>tot_counted</td><td ncol="2" byrow="TRUE">16678595</td><td ncol="2" byrow="TRUE">7838039</td></tr>
+<tr>
+<td>tot_read</td><td ncol="2" byrow="TRUE">16678595</td><td ncol="2" byrow="TRUE">7838039</td></tr>
+</table>
+<br/>
+<h3><a name="s4">Normalization comparisons</a></h3>With this tool, two different normalization methods are used. The first is the normal RLE normalization used in the DESeq package <a href="http://bioconductor.org/packages/2.11/bioc/vignettes/DESeq/inst/doc/DESeq.pdf">[1]</a> . The method is described in <a href="http://genomebiology.com/2010/11/10/r106">[2]</a> .<span style="font-weight: bold"> !!For RNA-seq applications this is the superior method!!</span><br/>
+As it is not obvious how one should normalize sequencing data from other applications (ChIP-seq, GRO-seq etc.) an additional normalization method is used. Normalization 2 is based on the total number of reads per sample. (The sum of all counted reads and all reads not counted).<br/>
+The main reason for including both normalization methods is to visualize how much the normalization affects the results. If there is no or only little difference between the methods the results are robust. If, however, there are large differences one have to think hard about how to continue.<br/>
+<h4>Size factor comparison</h4>Linear normalization methods (such as RLE and the size normalization) work by finding a constant number for each sample. Multipling the raw counts in each sample with this facor should then bring all samples to the same scale. The size factor is this sample specific number. For each normalization method, each sample is assigned a specific size factor. The relation between size factors within a normalization method will decide how the data is transformed. <br/>
+For simplicity (in this figure), the size factor of the first sample is always set to 1. Of interest is to see how the size factors for the remaining samples varies across the two methods.<br/>
+<img border="0" src="scale.jpg" alt="scale.jpg"></img><h4>Comparisons of moderated counts</h4>After moderation we can compare the moderated counts from the two normalization methods. Here we plot the two sets of moderated counts against each other. If the dots lie close to the red line, the two normalization methods result in similar results. If not, one should take care when choosing normalization method and when interpreting the the results!<br/>
+<img border="0" src="transform.jpg" alt="transform.jpg"></img><br/>
+<h4>Scatter plot comparisons</h4>Here the mean counts for each of the two condition are plotted against each other. This is done for the raw counts and the two normalization methods separately. If the global pattern change between the two normalization methods, one should take care!<br/>
+<br/>
+<table border="1">
+<tr>
+<td style="text-align:center"><img border="0" src="r.jpg" alt="r.jpg"></img></td><td style="text-align:center"><img border="0" src="n1.jpg" alt="n1.jpg"></img></td><td style="text-align:center"><img border="0" src="n2.jpg" alt="n2.jpg"></img></td></tr>
+<tr>
+<td style="text-align:center">raw counts</td><td style="text-align:center">RLE normalization</td><td style="text-align:center">total size normalization</td></tr>
+</table>
+<br/>
+<h4>Moderated log2 fold changes comparison</h4>Finally, it is of interest to see how the normalization affect the moderated fold change estimates. A boxplot and a scatterplot summarize the differences. If the box sizes and the locations in the boxplot are similar the results are robust. The points will then lie close to the red line in the scatterplot.<br/>
+<br/>
+<table border="1">
+<tr>
+<td><img border="0" src="box.jpg" alt="box.jpg"></img></td><td><img border="0" src="fc.jpg" alt="fc.jpg"></img></td></tr>
+</table>
+<br/>
+<h3><a name="s6">Results</a></h3>The result files are available below. The files contain three columns, first the moderated fold change (log2) between the two conditions, then the moderated counts (log2) per condition in the following two columns.<br/>
+<br/>
+<a href="RLEmod.csv">Normalization version 1 (RLE)</a><br/>
+<a href="Sizemod.csv">Normalization version 2 (total number of read)</a><br/>
+<h3><a name="s3">Short note on the moderation method</a></h3>The method comes from the DESeq package and is well described in section 6 <a href="http://bioconductor.org/packages/2.11/bioc/vignettes/DESeq/inst/doc/DESeq.pdf">[1]</a> .<br/>
+<br/>
+In short, what the moderation does is that it adds a small number to the genes with low counts and removes a small number to the genes with high counts. That way it is possible to take the log of the genes with 0 counts in some condition <span style="font-style: italic">(remember:log(0) is -Inf)</span> and to get a finite fold change <span style="font-style: italic">(remember: 1/0 is Inf)</span>. However,the moderation does not just add/remove an arbritary small number. Instead it used a "variance stabilizing transformation" (described in reference above). This means that the variance in the transformed data is not related to the mean (remember:in the nbinom distribution the variance is the mean plus the dispersion.). Many algorithms assume that the data show no mean-variance dependency and hence one should use the moderated data instead of the normal counts when applying those methods.<br/>
+<img border="0" src="norm_vs_modFC.jpg" alt="norm_vs_modFC.jpg"></img><br/>
+Plot of "normal" fold changes verses the moderated foldchanges. The range of the moderated fold changes is smaller than for the normal fold changes.<br/>
+<img border="0" src="norm_stabil.jpeg" alt="norm_stabil.jpeg"></img> <img border="0" src="mod_stabil.jpeg" alt="mod_stabil.jpeg"></img><br/>
+The moderated fold changes tend to be more robust then the "normal" fold changes and hence better suited for e.g ranking of genes. This can be seen in the following two plots. In the one to the left I plot how the normalized fold changes (log2) are affected by just adding one extra count to one of the conditions. The plot to teh right shows the same for the moderated fold changes (log2).
+<br/><br/><font size="-2">(Page generated on Thu Jan  2 12:17:07 2014 by <a href="http://www.embl.de/~gpau/hwriter/index.html">hwriter</a> 1.3)</font><br/>
+</body></html>

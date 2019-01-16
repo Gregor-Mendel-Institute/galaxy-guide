@@ -1,0 +1,6 @@
+Warning message:
+In mosaicplot.default(x, xlab = xlab, ylab = ylab, main = xnam,  :
+  extra argument(s) ‘axes’, ‘ann’ will be disregarded
+Warning message:
+In mosaicplot.default(x, xlab = xlab, ylab = ylab, main = xnam,  :
+  extra argument(s) ‘axes’, ‘ann’ will be disregarded

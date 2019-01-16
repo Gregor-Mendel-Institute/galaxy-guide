@@ -1,0 +1,608 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01//EN" "http://www.w3.org/TR/html4/strict.dtd">
+<html><head>
+  <title>GALAXY Workflows - more about ...</title>
+  <meta name="author" content="Malgorzata Goiser">  
+  <style type="text/css">
+body{
+font-family: Arial, Verdana, Helvetica, sans-serif;
+font-size: 13px;
+}
+h1{
+font-family: Arial, Verdana, Helvetica, sans-serif;
+font-size: 20px;
+}
+h1{
+font:#990033;
+}
+
+a:link {color:#003399;} /* unvisited link */
+a:visited {color:#003399;} /* visited link */
+a:hover {color:#003399;} /* mouse over link */
+a:active {color:#003399;} /* selected link */
+  </style>
+</head><body>
+
+
+<a name="count"><br></a><p><big><b><span style="font-weight: bold; color: rgb(153, 0, 34);">Count number of read per gene </span></b></big><br><br>
+Counts number of reads per gene given an annotation file and an aligned bam file.<br>
+Currently you can choose between 4 mm9-annotations.<br><br>
+The counting is done by <b>HTSeq.count</b> using options <b>-s no -m union</b>.
+<br><br>
+-s (strandedness): whether the data is from a strand-specific assay (default: yes)<br>
+-m (mode): mode to handle reads overlapping more than one feature. Possible values: union, intersection-strict and intersection-nonempty (default: union)
+</p>
+<br>
+For more information please visit the <a href="http://www-huber.embl.de/users/anders/HTSeq/doc/count.html#count" target="_blank">HT-Seq counting page</a>
+<br><br>
+<b>Overview:</b><br><br>
+<img src="pics/htseq.png"><br>
+From: http://www-huber.embl.de/users/anders/HTSeq/doc/count.html#count
+<br><br>
+<hr>
+<br>
+
+
+<a name="merge"></a><br><big><span style="font-weight: bold; color: rgb(153, 0, 34);">Merge</span></big><b><br>
+</b><br>
+Merge the second column of two or more files. A metadata file is
+added giving the conditions for each file or column in the table.
+The first column will be taken from the first input file.
+<br>
+<p><strong>Example</strong></p>
+<ul>
+  <li>
+    <p class="first">Input file1:</p>
+    <pre class="literal-block">Sample ID   A<br>0610007C21RIK:NM_027855     1<br>0610007L01RIK:NM_001081394  7<br>0610007P08RIK:NM_001013608:NM_023507        0<br>0610007P14RIK:NM_021446     14<br>0610007P22RIK:NM_026676:NM_001163718        0<br>0610008F07RIK:NR_027970     0<br></pre>
+  </li>
+  <li>
+    <p class="first">Condition1 VIT</p>
+  </li>
+  <li>
+    <p class="first">Input file2:</p>
+    <pre class="literal-block">Sample ID   B<br>0610007C21RIK:NM_027855     5<br>0610007L01RIK:NM_001081394  10<br>0610007P08RIK:NM_001013608:NM_023507        1<br>0610007P14RIK:NM_021446     13<br>0610007P22RIK:NM_026676:NM_001163718        3<br>0610008F07RIK:NR_027970     0<br></pre>
+  </li>
+  <li>
+    <p class="first">Condition2 VIT</p>
+  </li>
+  <li>
+    <p class="first">Output table:</p>
+    <pre class="literal-block">Sample ID   A       B<br>0610007C21RIK:NM_027855     1       5<br>0610007L01RIK:NM_001081394  7       10<br>0610007P08RIK:NM_001013608:NM_023507        0       1<br>0610007P14RIK:NM_021446     14      13<br>0610007P22RIK:NM_026676:NM_001163718        0       3<br>0610008F07RIK:NR_027970     0       0<br></pre>
+  </li>
+  <li>
+    <p class="first">Output metadata:</p>
+    <pre class="literal-block">VIT     VIT<br></pre>
+  </li>
+</ul>
+<br>
+<b>
+<hr>
+<br>
+
+
+<a name="matrixscatter"></a><br></b><big><b><span style="font-weight: bold; color: rgb(153, 0, 34);">All-against-all pairwise scatterplot (Matrix Scatterplot) </span></b></big><br><br>
+with boxplots for each scatterplot and histograms for each case.<br>
+<p>This tool creates a matrix of scatterplots with regression line and
+R-value in the lower panel, additionally showing boxplots of each
+scatterplot in the upper panel and histograms for each case in the
+diagonal panel.</p>
+<ul>
+  <li>
+    <p class="first">The Inputfile should be tab delimited and should have at least 2 columns of values with a header and no rownames, e.g.:</p>
+    <pre class="literal-block">sample1     sample2 sample3 sample4<br>506         610     567     622<br>2485        2978    2204    2928<br>577         696     413     701<br>497         417     442<br>562         659     578     727<br>0           0       0       0<br>194         212     148     166<br>669         717     648     645<br>1163        1286    1358    1298<br>0           1       0       0<br>6           1       1       0<br></pre>
+  </li>
+</ul>
+<p>In case your file has rownames they can be automatically removed by
+activating "yes" under the question "Data table has rownames?"</p>
+<strong>Parameter-Adjustment</strong>
+<p>In order to be able to compare the data in a better way, a 1 is
+added to each value and a log2 is calculated, i.e.:</p>
+<pre class="literal-block">log2(value+1)<br></pre>
+<p><span style="font-weight: bold;">Example of output:</span><br>
+</p>
+<p><img alt="" src="examples/matrixscatter/example_sm.png"></p>
+<hr>
+<br>
+
+
+<a name="pairwcomp"></a><br><span style="font-weight: bold; color: rgb(153, 0, 34);"><b><big>Test for differentially expressed genes between two groups of samples (Pairwise comparison)</big>
+</b></span><br>
+<span style="font-weight: bold;"><br>
+Tool</span>: Pairwise RNA seq analysis V2<br>
+<br>
+This is the third tool in a set of three tools. The tools are
+<ol class="arabic simple">
+  <li><strong>Count number of read</strong> per gene given an annotation file and an aligned bam file.</li>
+  <li><strong>Merge</strong> the second column of two or more files</li>
+  <li><strong>Pairwise RNA seq analysis</strong> Statistical analysis of RNA seq data</li>
+</ol>
+<p>Statistical analysis of RNA seq data.</p>
+<p>The analysis is done using the bioconductor package DEseq. The normalization is done using the whole dataset and the dispersion is
+estimated using the conditions info given in the metadata. If dispersion argument is set to 'pooled' the call in DESeq will be
+'estimateDispersions(cds,'pooled','maximum'), if argument is set to 'blind', the call is 'estimateDispersions(cds, 'blind', 'fit-only').</p>
+<p>For more info see <a class="reference external" href="http://bioconductor.org/packages/release/bioc/vignettes/DESeq/inst/doc/DESeq.pdf" target="_blank">http://bioconductor.org/packages/release/bioc/vignettes/DESeq/inst/doc/DESeq.pdf</a></p>
+<p>Please turn to <a href="mailto:elin.axelsson@gmi.oeaw.ac.at">Elin
+Axelsson</a> in case of problems or suggestions for this tool.</p>
+<br>
+<hr>
+<br>
+
+
+<a name="deseq2"></a><br><span style="font-weight: bold; color: rgb(153, 0, 34);"><b><big>Differential expression using DESeq2 for exactly 2 conditions)</big>
+</b></span><br>
+<span style="font-weight: bold;"><br>
+Tool</span>: deseq2<br>
+<br>
+Differential expression using DESeq2 for exactly 2 conditions. The main point is to estimate the variance for each gene between replicates. <br><br>For genes with the same difference in averages between 2 conditions: <br>High variance => difficult to make an inference wether this gene is differentially expressed => high p-values Low variance => easier to make an inference => low p-values (if the difference is also measurable).
+<br><br><b>REQUIREMENTS:</b><br>
+
+- tab delimited file with genes (ids) and counts per sample<br>
+- for each gene each sample column needs one integer value<br>
+- generate the column values using htSeq-count then merge them together )<br><br>
+
+<b>PARAMETERS:</b><br><br>
+<b>conditions:</b><br>
+
+- 2 labels for your samples e.g. wt,wt,mut,mut<br>
+- the lables can be arbitrary, avoid special characters<br>
+- each sample column needs a condition (label)<br>
+- you can make the program drop columns by specifying them as NULL. e.g. wt,wt,NULL,mut,mut drops the 3. column in a 5 column (excluding gene names) counts table.
+
+<br><br><b>comparison:</b><br>
+
+- directionality of the comparison e.g. wt,mut or mut,wt<br>
+- you have to use the labels<br>
+- put your baseline as the first parameter e.g. wt,mut or control,treatment. Then a negative log2FC means down from wt, a positive up from wt.
+
+<br><br><b>adjusted p-value cutoff:</b><br>
+
+What should the cutoff for the adjusted p-value be?<br>
+
+Personal communication says that 0.05 is conservative for DESeq. 0.1 is used e.g. in the examples (vignette). This only affects plots and report tables, all genes are reported in the output table.
+<br><br><b>filter mean:</b><br>
+
+Filtering removes the lowest expressed fraction (calculated across all samples) of the genes for the p-value adjustment calculation resulting in more power to detect significant changes. <br>In most comparisons a large fraction of the genes is not or almost not at all expressed across all samples. By the removal of these genes prior to testing, less tests are made, resulting in lower (i.e. more significant) adjusted p-values.
+<br><br><b>filter outliers:</b><br>
+
+Some samples show high variance between replicates. This filter sets the resulting p-values to NA.
+<br><br><b>OUTPUTS:</b><br>
+
+- pdf report with diagnostic plots and explanations.<br>
+- tab delimited file with p-values and log2FC for each gene and the normalized counts adjacent to the gene name.
+
+<br><br>Please turn to Ido Tamir in case of problems or suggestions for this tool. This tool wraps DESeq2, and follows the DESeq2 vignette with nicer plots.
+<br>
+<br>
+<hr>
+<br>
+
+
+<a name="rpkm"></a><br><span style="font-weight: bold; color: rgb(153, 0, 34);"><b><big>Calculate
+gene expression
+values (RPKMs)</big></b></span><b><br>
+<br>
+</b>To run this tool you need the output from one of these tools - including a header. If your result file doesn't have a header, please
+use the tool <strong>Adding header to a counts-file</strong> before using this tool
+<ol class="arabic simple">
+  <li><strong>Count number of read</strong> per gene given an annotation file and an aligned bam file. In case you have a counts-file
+already and it doesn't have a header - please add it with the tool <strong>Adding header to a counts-file</strong></li>
+  <li><strong>Merge</strong> the second column of two or more files (make sure that your files have a header!)</li>
+</ol>
+<br><strong>What it does</strong>
+<p>Calculates the RPKM using the table from the tool "Count number of read" or "Merge" as input.</p>
+<p><strong>Import gtf-files</strong></p>
+<p>You can find gtf-files in the top menu of Galaxy under "Shared Data" &gt; "Data Libraries" &gt; "RNA": select the required dataset, choose
+"Import it to current history" and click on "Go"!</p>
+<p>Please turn to Elin Axelsson in case of problems or suggestions for this tool.</p>
+<br><strong>Definition of RPKM</strong>
+<p>RPKM, Reads Per Kilobase of exon model per Million mapped reads<br></p>
+<p>Total exon reads</p>
+<dl class="docutils">
+  <dd>This is the number in the column with header Total exon reads in the row for the gene. This is the number of reads that have been mapped
+to a region in which an exon is annotated for the gene or across the boundaries of two exons or an intron and an exon for an annotated
+transcript of the gene. For eukaryotes, exons and their internal relationships are defined by annotations of type mRNA.</dd>
+  <dt><br>
+  </dt>
+  <dt>Exon length</dt>
+  <dd><br>
+  </dd>
+  <dd>This is the number in the column with the header Exon length in the row for the gene, divided by 1000. This is calculated as the sum of
+the lengths of all exons annotated for the gene. Each exon is included only once in this sum, even if it is present in more annotated
+transcripts for the gene. Partly overlapping exons will count with their full length, even though they share the same region.</dd>
+  <dt><br>
+  </dt>
+  <dt>Mapped reads</dt>
+  <dd><br>
+  </dd>
+  <dd>The sum of all the numbers in the column with header Total gene reads. The Total gene reads for a gene is the total number of reads
+that after mapping have been mapped to the region of the gene. Thus this includes all the reads uniquely mapped to the region of the gene
+as well as those of the reads which match in more places (below the limit set in the dialog in figure 27.4) that have been allocated to
+this gene's region. A gene's region is that comprised of the flanking regions (if it was specified in figure 27.4), the exons, the introns
+and across exon-exon boundaries of all transcripts annotated for the gene. Thus, the sum of the total gene reads numbers is the number of
+mapped reads for the sample. This number can be found in the RNA-seq report's table 3.1, in the 'Total' entry of the row 'Counted
+fragments'. (The term 'fragment' is used in place of the term 'read', because if you analyze paired reads and have chosen the 'Default
+counting scheme' it is 'fragments' that is counted, rather than reads (two reads in a pair will be counted as one fragment).</dd>
+</dl>
+<a href="http://www.mi.fu-berlin.de/wiki/pub/ABI/GenomicsLecture13Materials/rnaseq2.pdf" target="_blank">
+http://www.mi.fu-berlin.de/wiki/pub/ABI/GenomicsLecture13Materials/rnaseq2.pdf</a><br>
+<br>
+<br>
+<hr>
+<br>
+
+
+<a name="vst"></a><br><span style="font-weight: bold; color: rgb(153, 0, 34);"><b><big>Variance
+stabilizing transformation</big></b> and <big><b>moderated fold change calculation</b></big> for counts data</span><br><br>
+<p>The method comes from the DESeq package and is well described in section 6:
+<a class="reference external" href="http://bioconductor.org/packages/2.11/bioc/vignettes/DESeq/inst/doc/DESeq.pdf">http://bioconductor.org/packages/2.11/bioc/vignettes/DESeq/inst/doc/DESeq.pdf</a></p>
+<p>In short, what the moderation does is that it adds a small number to the genes with low counts and removes a small number to the genes with
+high counts. That way it is possible to take the log of the genes with 0 counts in some condition</p>
+<p>However,the moderation does not just add/remove an arbitrary small number. Instead it used a "variance stabilizing transformation"
+(described in reference above). This means that the variance in the transformed data is not related to the mean (remember:in the nbinom
+distribution the variance is the mean plus the dispersion.). Many algorithms assume that the data show no mean-variance dependency and
+hence one should use the moderated data instead of the normal counts when applying those methods.</p>
+<p>The moderated fold changes tend to be more robust then the "normal" fold changes and hence better suited for e.g ranking of genes. This can
+be seen in the following two plots. In the one to the left I plot how the normalized fold changes (log2) are affected by just adding one
+extra count to one of the conditions. The plot to teh right shows the same for the moderated fold changes (log2).</p>
+<br>
+<hr>
+<br>
+
+
+<a name="pcao"></a><br><span style="font-weight: bold; color: rgb(153, 0, 34);"><b><big>PCA Overview</b></big></span><br>
+<p>performs pca on a set of samples and returns overallsummaries.
+for counts data.</p>
+<p>PRINCIPLE COMPONENT ANALYSIS (PCA) - Overview: The samples are treated as observations and the chosen number of top variable genes as variables. 
+Summary includes barplots of variance per PC (principle component) and visualizations of the sample scores on the different PC. 
+Further, an Robject is returned. This can be used in the tool "PCA Analysis" for a more in depth follow up PCA.</p>
+<br>
+<hr>
+<br>
+
+
+<a name="pcaa"></a><br><span style="font-weight: bold; color: rgb(153, 0, 34);"><b><big>PCA Analysis</b></big></span><br>
+<p>Principal component specific PCA analysis.</p>
+<p>PRINCIPLE COMPONENT ANALYSIS (PCA): Using the output from tool "PCA Overview", the tool focuses on the two PC (principle components) given as input. 
+To identify genes with high influence on the PC, biplots are returned as are gene lists with the PC specific loadings.</p>
+<br>
+<hr>
+<br>
+
+
+<a name="readdup"></a><br><span style="font-weight: bold; color: rgb(153, 0, 34);"><b><big>Analysis of read duplication</big></b> (genau_uniqueBED)</span><br>
+<p>
+The genau_uniqueBED script extracts the following subsets of reads from a BED format file:<br><br>
+   1. total number of reads<br>
+   2. number of reads which have no duplication [unique]<br>
+   3. number of reads with at least one duplication event [non-redundant]<br>
+   4. [2+3]<br>
+   5. [1-2] total number of all duplicated reads (redundant): 910596 (91.05 %)<br><br>
+For sets 2-5, individual BED files and BEDGRAPH files are created. A summary table and two read frequency tables will also be generated.
+</p>
+<br>
+<hr>
+<br>
+
+
+<a name="macsiter"></a><br><span style="font-weight: bold; color: rgb(153, 0, 34);"><b><big>Peak calling</big></b> (Call MACS iteratively)</span><br>
+<p>
+This tool allows ChIP-seq peak calling using MACS iteratively. <br>MACS ist called as long as there is no error in the model peak selection (sufficient model peaks). <br>Otherwise, the mfold value is lowered by five, and MACS is re-run. <br>Finally, the output is post-processed to generate several descriptive statistics plots (peak attribute histograms and scatter plots).
+<br>
+<br>View the original MACS documentation: http://liulab.dfci.harvard.edu/MACS/00README.html.
+</p>
+<br>
+<hr>
+<br>
+
+
+<a name="radar"></a><br><span style="font-weight: bold; color: rgb(153, 0, 34);"><b><big>Radar chart for MACS based peak parameters</big></b></span><br><br>
+This tool visualises the parameters of the output from tool "Call MACS iteratively" on a so called radar chart.<br>
+For more information 2 boxplot-charts are also shown - one with the
+original data and one with the adjusted parameter-data.
+<p><strong style="font-weight: normal;">The parameters are adjusted - </strong>in
+order to be able to
+better compare the data - in the following way:</p>
+<pre class="literal-block">- length: length/10<br>- summit: 2*summit/10<br>- tags (unchanged)<br>- p-value.log10 (unchanged)<br>- fold enrichment: fold-enrichtment*10<br>- FDR: 100-FDR<br></pre>
+<br>
+<hr>
+<br>
+
+
+<a name="ceas"></a><br><span style="font-weight: bold; color: rgb(153, 0, 34);"><b><big>CEAS</big></b></span><br><br>
+
+
+annotate peaks with the refSeq data from a genome.<br><br>
+<b>REQUIREMENTS:</b><br>
+
+    input file should be bed<br><br>
+
+<b>Parameters:</b><br><br>
+<b>promter sizes:</b><br>
+
+- one or three comma separated upstream and downstream lengths by which promoter intervals are defined. When given one, it will be divided into three equally spaced intervals.
+<br>- one or two comma ceparated upstream length by which bidirectional promoter intervals are defined. When given one, it will be divided into two equally spaced intervals.
+<br><br><b>outputs:</b><br>
+
+- pdf report<br>
+- xls files (tab delimited) with each gene and its relation to the peaks (distance, occupancy).<br><br>
+
+Please turn to Ido Tamir in case of problems or suggestions for this tool. This tool wraps annotate from CEAS.<br>
+
+</p>
+<br>
+<hr>
+<br>
+
+<a name="chipseeker"></a><br><span style="font-weight: bold; color: rgb(153, 0, 34);"><b><big>ChIPseeker</big></b></span><br><br>
+
+
+The ChIPseeker bioconductor-package implements functions to retrieve the nearest genes around the peak, and to annotate genomic regions of the peak. 
+It provides statstical methods to estimate the significance of overlaps among ChIP peak data sets, and incorporate GEO database for users to compare 
+their own datasets with those deposited in the database. The comparison can be used to infer cooperative regulation and thus can be used to generate hypotheses. <br><br>
+
+Several visualization functions are implemented to summarize the coverage of the peak experiment, average profile and heatmap of peaks binding to TSS regions, 
+genomic annotation, distance to TSS, and overlap of peaks or genes.<br><br>
+
+For more information visit <a href="https://bioconductor.org/packages/release/bioc/html/ChIPseeker.html" target="_blank">https://bioconductor.org/packages/release/bioc/html/ChIPseeker.html</a>
+
+</p>
+<br>
+<hr>
+<br>
+
+<a name="idr"></a><br><span style="font-weight: bold; color: rgb(153, 0, 34);"><b><big>IDR Consistency Analysis on a pair of narrowPeak files</big></b></span><br><br>
+Reproducibility is essential to reliable scientiﬁc discovery in high-throughput experiments. 
+The IDR (Irreproducible Discovery Rate) framework is a uniﬁed approach to measure the reproducibility of ﬁndings identiﬁed from replicate experiments 
+and provide highly stable thresholds based on reproducibility. Unlike the usual scalar measures of reproducibility, the IDR approach creates a curve, 
+which quantitatively assesses when the ﬁndings are no longer consistent across replicates. In layman's terms, the IDR method compares a pair of ranked 
+lists of identifications (such as ChIP-seq peaks). These ranked lists should not be pre-thresholded i.e. they should provide identifications across the 
+entire spectrum of high confidence/enrichment (signal) and low confidence/enrichment (noise). The IDR method then fits the bivariate rank distributions 
+over the replicates in order to separate signal from noise based on a defined confidence of rank consistency and reproducibility of identifications i.e the IDR threshold. 
+For more information on IDR, see <href="https://sites.google.com/site/anshulkundaje/projects/idr" target="_blank">HERE</a>
+
+</p>
+<br>
+<hr>
+<br>
+
+
+<a name="complists"></a><br><span style="font-weight: bold; color: rgb(153, 0, 34);"><b><big>Compare Lists</big></b></span><br><br>
+This tool compares 2 or more lists of items (e.g. Gene Symbols) and finds all combinations of overlaps.<br><br>
+Inputfiles:<br><br>
+1 column of items in each input file.<br><br>
+Example for an inputfile:<br><br>
+GeneSymbol<br>
+Mif4gd<br>
+Mns1<br>
+Opcml<br>
+Srf<br>
+Stx3<br>
+Oprm1<br>
+Tap1<br>
+Zfp407<br>
+Prss58<br>
+Map3k3<br>
+Krtap9-3<br>
+Snw1<br>
+Prdx3<br>
+Fam26f<br>
+Gucy2c<br>
+Serpinb3c
+</p>
+<br>
+<hr>
+<br>
+
+
+<a name="multovl"></a><br><span style="font-weight: bold; color: rgb(153, 0, 34);"><b><big>Detect multiple overlaps of peaks</big></b> (Multovl)</span><br><br>
+version 1.0:<br>
+Multiple Chromosome / Multiple Region Overlaps<br>
+Usage: multovl [options] regfile1 [ regfile2 ... ]<br>
+Output goes to stdout in GFF2 format.<br><br>
+version 1.1:<br>
+Multiple Chromosome / Multiple Region Overlaps<br>
+Usage: multovl [options] infile1 [ infile2 ... ]<br>
+Accepted input file formats: BED, GFF/GTF, BAM (detected from extension)<br>
+Output goes to stdout, select format with the -f option
+</p>
+<br>
+<hr>
+<br>
+
+
+<a name="anctrack"></a><br><span style="font-weight: bold; color: rgb(153, 0, 34);"><b><big>Extract ancestor track from Multovl output</big></b> (anctrack)</span><br><br>
+script to extract an ancestor track from the multovl output
+</p>
+<br>
+<hr>
+<br>
+
+
+<a name="multview"></a><br><span style="font-weight: bold; color: rgb(153, 0, 34);"><b><big>Detect multiple overlaps, enhanced output </big></b> (Multovl-View)</span><br><br>
+calls multovl on a set of region tracks and plots a summary. <b>Simple</b> overlaps and <b>union overlaps</b> are reported.
+<br>
+<br>Usage: multovlParse.sh options<br>
+-f text file with single column of files in BED format <br>
+-m max lines reported with html links [100] <br>
+-n max overlap sets shown separately in graph [10]<br>
+</p>
+<b>Overview overlaps in ht-seq:</b><br><br>
+<img src="pics/htseq.png"><br>
+From: http://www-huber.embl.de/users/anders/HTSeq/doc/count.html#count
+<br><br>
+<br>
+<hr>
+<br>
+
+<a name="readdenspeak"></a><br><span style="font-weight: bold; color: rgb(153, 0, 34);"><b><big>Read density over peaks </big></b></span><br><br>
+calculates read densities for all tracks over all given peaks-regions using jnomics coverageRegions.<br>
+Creates a folder with density values for each region/read track combination, and a (usually huge!) summary tab delimited file holding density values in the following format:<br>
+[region name]t[read track name]t[annotation cols ...]t[denisty cols ...]<br><br>
+Info: This is the first tool in a set of 2 tools. The tools are:<br>
+&nbsp;&nbsp;&nbsp;1. Density-Heatmap: read density over peaks<br>
+&nbsp;&nbsp;&nbsp;2. Density-Heatmap-Plot: plotting for peaks<br>
+</p>
+<br>
+<hr>
+<br>
+
+<a name="plotpeak"></a><br><span style="font-weight: bold; color: rgb(153, 0, 34);"><b><big>Plotting for peaks  </big></b></span><br><br>
+plots various heatmaps, profiles and boxplots to visualize the results from the tool <i>Density-Heatmap: read density over peaks</i>
+</p>
+<br>
+<hr>
+<br>
+
+<a name="readdenstrans"></a><br><span style="font-weight: bold; color: rgb(153, 0, 34);"><b><big>Read density over transcripts</big></b></span><br><br>
+calculates read densities for all tracks over all given transcript-regions  using jnomics coverageRegions- the results are ment to be used with the tool Density-Heatmap-Plot: plotting for transcripts;<br>
+Creates a folder with density values for each region/read track combination, and a (usually huge!) summary tab delimited file holding density values in the following format:<br>
+[region name]t[read track name]t[annotation cols ...]t[denisty cols ...]<br><br>
+Info: This is the first tool in a set of 2 tools. The tools are:<br>
+&nbsp;&nbsp;&nbsp;1. Density-Heatmap: read density over transcripts<br>
+&nbsp;&nbsp;&nbsp;2. Density-Heatmap-Plot: plotting for transcripts<br>
+</p>
+<br>
+<hr>
+<br>
+
+
+<a name="plottrans"></a><br><span style="font-weight: bold; color: rgb(153, 0, 34);"><b><big>Plotting for transcripts </big></b></span><br><br>
+plots various heatmaps, profiles and boxplots to visualize the results from the tool <i>Density-Heatmap: read density over transcripts</i>
+</p>
+<br>
+<hr>
+<br>
+
+
+<a name="tops"></a><br><b><big><span style="font-weight: bold; color: rgb(153, 0, 34);">Retrieve best peaks with the tool "Top summits TAIR10"</span></big></b><br>
+<p>This tool takes the <em>xls</em> outputfile from the tool <em>"MACS2"</em> and calculates new peak-starts and -ends based
+on a certain number of bps around the summit (default 150 - ie. 150 bp
+before and after the summit as the new start and end). It sorts the
+file by the parameter chosen by the user i.e. p-value, foldenrichment
+or tags and finally selects a certain number of top regions (default
+300) and saves them in a bed-file.</p>
+<p>The result can be for example used to achieve a better motif prediction by focusing
+on the best (by default 300) peaks.</p>
+<br>
+
+<p><strong><br>
+<hr>
+<br>
+
+
+<a name="gimmemotifs"></a><br><span style="font-weight: bold; color: rgb(153, 0, 34);"><big><b>Motif prediction using Gimme Motifs</b></big></span><br>
+<br>
+This tool predicts sequence motifs using various methods. It is recommended to use the result from tool "Top summits".<br>
+! <span style="font-weight: bold;">IMPORTANT</span> !: You get best results if you take <span style="font-weight: bold;">sequences</span> of approx. 
+<span style="font-weight: bold;">300 - 400 bp </span>and approx. <span style="font-weight: bold;">300 - 500 sequences</span>.<br>
+Otherwise the analysis may take very long!<br>
+<br>
+<hr>
+<br>
+
+
+<a name="extrgdna"></a><br><span style="font-weight: bold; color: rgb(153, 0, 34);"><big><b>Extract Genomic DNA</b></big></span><br>
+<br>using coordinates from assembled/unassembled genomes.<br><br>
+This tool requires interval or gff (special tabular formatted data). If your data is not TAB delimited, first use Text Manipulation->Convert.<br><br>
+Make sure that the genome build is specified for the dataset from which you are extracting sequences (click the pencil icon in the history item if it is not specified).<br><br>
+All of the following will cause a line from the input dataset to be skipped and a warning generated. The number of warnings and skipped lines is documented in the resulting history item.<br>
+        - Any lines that do not contain at least 3 columns, a chromosome and numerical start and end coordinates.<br>
+        - Sequences that fall outside of the range of a line's start and end coordinates.<br>
+        - Chromosome, start or end coordinates that are invalid for the specified build.<br>
+        - Any lines whose data columns are not separated by a TAB character ( other white-space characters are invalid ).<br><br>
+Extract genomic DNA using coordinates from ASSEMBLED genomes and UNassembled genomes previously were achieved by two separate tools.<br><br>
+This tool uses coordinate, strand, and build information to fetch genomic DNAs in FASTA or interval format.<br><br>
+If strand is not defined, the default value is "+".<br><br>
+<b>Example</b><br><br>
+If the input dataset is:<br><br>
+chr7  127475281  127475310  NM_000230  0  +<br>
+chr7  127485994  127486166  NM_000230  0  +<br>
+chr7  127486011  127486166  D49487     0  +<br><br>
+Extracting sequences with FASTA output data type returns:<br><br>
+>hg17_chr7_127475281_127475310_+<br>
+GTAGGAATCGCAGCGCCAGCGGTTGCAAG<br>
+>hg17_chr7_127485994_127486166_+<br>
+GCCCAAGAAGCCCATCCTGGGAAGGAAAATGCATTGGGGAACCCTGTGCG<br>
+GATTCTTGTGGCTTTGGCCCTATCTTTTCTATGTCCAAGCTGTGCCCATC<br>
+CAAAAAGTCCAAGATGACACCAAAACCCTCATCAAGACAATTGTCACCAG<br>
+GATCAATGACATTTCACACACG<br>
+>hg17_chr7_127486011_127486166_+<br>
+TGGGAAGGAAAATGCATTGGGGAACCCTGTGCGGATTCTTGTGGCTTTGG<br>
+CCCTATCTTTTCTATGTCCAAGCTGTGCCCATCCAAAAAGTCCAAGATGA<br>
+CACCAAAACCCTCATCAAGACAATTGTCACCAGGATCAATGACATTTCAC<br>
+ACACG<br><br>
+Extracting sequences with Interval output data type returns:<br>
+chr7    127475281       127475310       NM_000230       0       +       GTAGGAATCGCAGCGCCAGCGGTTGCAAG<br>
+chr7    127485994       127486166       NM_000230       0       +       GCCCAAGAAGCCCATCCTGGGAAGGAAAATGCATTGGGGAACCCTGTGCGGATTCTTGTGGCTTTGGCCCTATCTTTTCTATGTCCAAGCTGTGCCCATCCAAAAAGTCCAAGATGACACCAAAACCCTCATCAAGACAATTGTCACCAGGATCAATGACATTTCACACACG<br>
+chr7    127486011       127486166       D49487  0       +       TGGGAAGGAAAATGCATTGGGGAACCCTGTGCGGATTCTTGTGGCTTTGGCCCTATCTTTTCTATGTCCAAGCTGTGCCCATCCAAAAAGTCCAAGATGACACCAAAACCCTCATCAAGACAATTGTCACCAGGATCAATGACATTTCACACACG<br>
+<br>
+<hr>
+<br>
+
+
+<a name="denovo"></a><br><big><span style="font-weight: bold; color: rgb(153, 0, 34);">DE NOVO Motif prediction using MEME </span></big><br><br>
+If you want to specify sequence weights, you must include them at the top of your input FASTA file.<br>
+<br>
+<hr>
+<br>
+
+
+<a name="extrmotif"></a><br><big><span style="font-weight: bold; color: rgb(153, 0, 34);">Extract Motif</span></big><br><br>
+extracts a motif from a multi motif Position weight matrix (pwm).<br>
+Please select the pwm output and not the html formated, 
+usually you can only select the correct input format, this does not work correctly here!<br>
+<br>
+<hr>
+<br>
+
+
+<a name="scan4motif"></a><br><big><span style="font-weight: bold; color: rgb(153, 0, 34);">Scan for motifs in a set of sequences</span></big><br><br>
+pwm format example:<br><br>
+>GimmeMotifs_1 0.999869587898 4.34707007477e-05 4.34707007477e-05 4.34707007477e-05 0.0869848721961 4.34707007477e-05 0.912928186402 4.34707007477e-05 4.34707007477e-05 4.34707007477e-05 0.999869587898 4.34707007477e-05 4.34707007477e-05 0.999869587898 4.34707007477e-05 4.34707007477e-05 0.217396974439 4.34707007477e-05 4.34707007477e-05 0.782516084159 4.34707007477e-05 4.34707007477e-05 0.999869587898 4.34707007477e-05 0.565162580421 4.34707007477e-05 0.434750478178 4.34707007477e-05
+<br><br>
+<hr>
+<br>
+
+
+<a name="srpkm"></a><br><big><span style="font-weight: bold; color: rgb(153, 0, 34);">Simple RPKM</span></big><br><br>
+Normalised read counts for peaks - calculates the RPKM in contigous regions.<br><br>
+<b>Requirements:</b><br>
+    The annotation file that gets covered should be a bed file (or interval file).<br>
+    The covering file should be a bed file.<br><br>
+<b>Outputs:</b><br>
+    Interval file with the counts and rpkms of the regions appended as the last 2 columns.<br>
+    Please turn to <a href="mailto:ido.tamir@csf.ac.at">Ido Tamir</a> in case of problems or suggestions for this tool.
+
+<br><br>
+<hr>
+<br>
+
+
+<a name="island"></a><br><big><span style="font-weight: bold; color: rgb(153, 0, 34);">Island Scatterplot</span></big><br><br>
+(1) Subsamples the given number of reads (-r)<br>
+(1) Removes all duplicated reads to speedup island finding<br>
+(2) Derives all islands (overlapping reads) found in a track<br>
+(3) Combines all islands from both tracks (union)<br>
+(4) Counts all reads (uniq) associated with these islands<br>
+(5) Plots result<br>
+<br>
+<hr>
+<br>
+
+
+<a name="corr"></a><br><big><span style="font-weight: bold; color: rgb(153, 0, 34);">Correlation of coverage
+</span></big><br><br>
+Takes at least two files and calculates the correlation of the coverage. The correlation is calculated by using the union of all the regions that are covered in the tracks.<br>
+<br>Requirements:<br>
+At least two files of 6 column bed, wig(?) or bigWig format<br><br>
+Outputs:<br>
+Plot of pearson clustering of correlation coefficient. Matrix of pearson correlation coefficients.<br>
+Please turn to <a href="mailto:ido.tamir@csf.ac.at">Ido Tamir</a> in case of problems or suggestions for this tool.<br><br>
+TODO:<br>
+    Add mappability track option<br>
+    Add bam as input<br>
+<br>
+<br>
+<hr>
+<br>
+
+</body></html>

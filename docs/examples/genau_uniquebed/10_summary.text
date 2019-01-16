@@ -1,0 +1,5 @@
+# (1) 21428 [100.00 %] total number of reads
+# (2) 21428 [100.00 %] number of reads which have no duplication (unique)
+# (3) 0 [0 %] number of reads with at least one duplication event (non-redundant)
+# (4=2+3) 21428 [100.00 %]
+# (5=1-2) 0 [0 %] total number of all duplicated reads (redundant)

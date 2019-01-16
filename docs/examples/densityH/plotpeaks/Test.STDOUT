@@ -1,0 +1,1605 @@
+[1] "tfile (m) = /groups/csf-ngs/wfsys/galaxy/database/files/045/dataset_45438.dat"
+[1] "data.type (d) set to default!"
+[1] "data.type (d) = txt"
+[1] "sort.col (a) = 1"
+[1] "sort.type (s) = max"
+[1] "cluster.type (ct) = partition_qt"
+[1] "cluster.num (n) set to default!"
+[1] "cluster.num (n) = 5"
+[1] "title (ti) = 1_max_5_partition"
+[1] "profile.ymax (y) = 0.01"
+[1] "v1 (l1) = 50"
+[1] "v2 (l2) = 0"
+[1] "genes.upDownBins (u) = 0"
+[1] "plot.xrange (r) = +2500" "plot.xrange (r) = -2500"
+[1] "centerBins (cb) =  100"
+[1] "scale.type (sc) = trimlog2"
+[1] "hm.trim.quantile (qtt) = 0.9"
+[1] "cray.color.num (cn) = 10"
+[1] "region strand plotting type (rgst) = TRUE"
+[1] "read strand plotting type (rast) = TRUE"
+[1] "region plot option (rgyx) = TRUE"
+[1] "read density driections (rd) not set, will be ignored!"
+[1] "read density directions (rd) ="
+NULL
+[1] "read.matrices ..."
+[1] 42856   108
+[1] "data columns: 100"
+[1] "annotation columns: 8"
+[1] "get the position index of the maximum of each row ..."
+[1] 42856   108
+[1] "9908_bed"          "DNase1HS_8846_bed"
+[1] "we calc the distance to the middle position ..."
+[1] "get the maximum value of each row ..."
+[1] "get the sum of each row ..."
+[1] 42856   114
+   MaxDensityIndex MaxDensityDiff MaxIndex      Max SumIndex      Sum                                                 V1                V2   V3      V4      V5                                        V6 V7 V8
+1               70             20  12044.0 0.001685   6500.5 0.024152 refseq_mm9_29Apr2010_IMP_BED_merged_TSS_norand_bed DNase1HS_8846_bed chr1 3659078 3664078                         XKR4:NM_001011874  0  -
+2               99             49   1184.0 0.000493   2975.0 0.013475 refseq_mm9_29Apr2010_IMP_BED_merged_TSS_norand_bed DNase1HS_8846_bed chr1 4347972 4352972                             RP1:NM_011283  0  -
+3               47              3  34317.0 0.011464  33287.0 0.156145 refseq_mm9_29Apr2010_IMP_BED_merged_TSS_norand_bed DNase1HS_8846_bed chr1 4483993 4488993                           SOX17:NM_011441  0  -
+4               47              3  37291.0 0.019525  36374.0 0.242235 refseq_mm9_29Apr2010_IMP_BED_merged_TSS_norand_bed DNase1HS_8846_bed chr1 4773306 4778306   MRPL15:NM_025300:NM_001177658:NR_033530  0  -
+5               56              6  32405.5 0.007462  32499.0 0.134928 refseq_mm9_29Apr2010_IMP_BED_merged_TSS_norand_bed DNase1HS_8846_bed chr1 4795473 4800473                          LYPLA1:NM_008866  0  +
+6               48              2  39127.0 0.026486  36381.0 0.242478 refseq_mm9_29Apr2010_IMP_BED_merged_TSS_norand_bed DNase1HS_8846_bed chr1 4845274 4850274 TCEA1:NM_001159750:NM_011541:NM_001159751  0  +
+7               16             34   9674.5 0.001565  13803.0 0.041490 refseq_mm9_29Apr2010_IMP_BED_merged_TSS_norand_bed DNase1HS_8846_bed chr1 5006959 5011959                           RGS20:NM_021374  0  -
+8               47              3  33534.0 0.009853  30991.0 0.099097 refseq_mm9_29Apr2010_IMP_BED_merged_TSS_norand_bed DNase1HS_8846_bed chr1 5070753 5075753                         ATP6V1H:NM_133826  0  +
+9               60             10   7474.5 0.001444   6094.0 0.022924 refseq_mm9_29Apr2010_IMP_BED_merged_TSS_norand_bed DNase1HS_8846_bed chr1 5576073 5581073                           OPRK1:NM_011011  0  +
+10              78             28   3516.5 0.000963   7881.0 0.027942 refseq_mm9_29Apr2010_IMP_BED_merged_TSS_norand_bed DNase1HS_8846_bed chr1 5904978 5909978                          NPBWR1:NM_010342  0  -
+[1] "refseq_mm9_29Apr2010_IMP_BED_merged_TSS_norand_bed.9908_bed.ext.tab written"
+[1] "refseq_mm9_29Apr2010_IMP_BED_merged_TSS_norand_bed.DNase1HS_8846_bed.ext.tab written"
+[1] "pr.plot.readDirs set to:"
+[1] "p" "p"
+
+plotDensityLines
+
+[1] "Sum"
+[1] "xmin= -2"
+[1] "xmax= 1.13803644932606"
+[1] "ymax= 2.68990959409679"
+[1] "region= refseq_mm9_29Apr2010_IMP_BED_merged_TSS_norand_bed"
+
+plotDensityLinesPlot
+
+[1] "refseq_mm9_29Apr2010_IMP_BED_merged_TSS_norand_bed.9908_bed"          "refseq_mm9_29Apr2010_IMP_BED_merged_TSS_norand_bed.DNase1HS_8846_bed"
+[1] "refseq_mm9_29Apr2010_IMP_BED_merged_TSS_norand_bed.9908_bed Sum"
+[1] "refseq_mm9_29Apr2010_IMP_BED_merged_TSS_norand_bed.DNase1HS_8846_bed Sum"
+
+plotDensityLinesPlot
+
+[1] "refseq_mm9_29Apr2010_IMP_BED_merged_TSS_norand_bed.9908_bed"          "refseq_mm9_29Apr2010_IMP_BED_merged_TSS_norand_bed.DNase1HS_8846_bed"
+[1] "refseq_mm9_29Apr2010_IMP_BED_merged_TSS_norand_bed.9908_bed Sum"
+[1] "refseq_mm9_29Apr2010_IMP_BED_merged_TSS_norand_bed.DNase1HS_8846_bed Sum"
+[1] "Max"
+[1] "xmin= -2"
+[1] "xmax= -0.104857127971994"
+[1] "ymax= 18.42351421182"
+[1] "region= refseq_mm9_29Apr2010_IMP_BED_merged_TSS_norand_bed"
+
+plotDensityLinesPlot
+
+[1] "refseq_mm9_29Apr2010_IMP_BED_merged_TSS_norand_bed.9908_bed"          "refseq_mm9_29Apr2010_IMP_BED_merged_TSS_norand_bed.DNase1HS_8846_bed"
+[1] "refseq_mm9_29Apr2010_IMP_BED_merged_TSS_norand_bed.9908_bed Max"
+[1] "refseq_mm9_29Apr2010_IMP_BED_merged_TSS_norand_bed.DNase1HS_8846_bed Max"
+
+plotDensityLinesPlot
+
+[1] "refseq_mm9_29Apr2010_IMP_BED_merged_TSS_norand_bed.9908_bed"          "refseq_mm9_29Apr2010_IMP_BED_merged_TSS_norand_bed.DNase1HS_8846_bed"
+[1] "refseq_mm9_29Apr2010_IMP_BED_merged_TSS_norand_bed.9908_bed Max"
+[1] "refseq_mm9_29Apr2010_IMP_BED_merged_TSS_norand_bed.DNase1HS_8846_bed Max"
+[1] "MaxDensityIndex"
+[1] "xmin= 1"
+[1] "xmax= 100"
+[1] "ymax= 0.0500311333414687"
+[1] "region= refseq_mm9_29Apr2010_IMP_BED_merged_TSS_norand_bed"
+
+plotDensityLinesPlot
+
+[1] "refseq_mm9_29Apr2010_IMP_BED_merged_TSS_norand_bed.9908_bed"          "refseq_mm9_29Apr2010_IMP_BED_merged_TSS_norand_bed.DNase1HS_8846_bed"
+[1] "refseq_mm9_29Apr2010_IMP_BED_merged_TSS_norand_bed.9908_bed MaxDensityIndex"
+[1] "refseq_mm9_29Apr2010_IMP_BED_merged_TSS_norand_bed.DNase1HS_8846_bed MaxDensityIndex"
+
+plotDensityLinesPlot
+
+[1] "refseq_mm9_29Apr2010_IMP_BED_merged_TSS_norand_bed.9908_bed"          "refseq_mm9_29Apr2010_IMP_BED_merged_TSS_norand_bed.DNase1HS_8846_bed"
+[1] "refseq_mm9_29Apr2010_IMP_BED_merged_TSS_norand_bed.9908_bed MaxDensityIndex"
+[1] "refseq_mm9_29Apr2010_IMP_BED_merged_TSS_norand_bed.DNase1HS_8846_bed MaxDensityIndex"
+
+plotPairsScatter
+
+[1] "gud= 0"
+[1] "centerBins= 100"
+[1] "matrix_id= refseq_mm9_29Apr2010_IMP_BED_merged_TSS_norand_bed.9908_bed"
+[1] 21428   114
+[1] "annotation columns:  14"
+[1] "stat= Sum"
+[1] "matrix_id= refseq_mm9_29Apr2010_IMP_BED_merged_TSS_norand_bed.DNase1HS_8846_bed"
+[1] 21428   114
+[1] "annotation columns:  14"
+[1] "stat= Sum"
+
+plotting scatter...
+
+[1] "min= -2"
+[1] "max= 1.13803644932606"
+[1] "panel.scatter R = 0.46"
+[1] "panel.scatter R = 0.46"
+
+writing data ...
+[1] "matrix_id= refseq_mm9_29Apr2010_IMP_BED_merged_TSS_norand_bed.9908_bed"
+[1] 21428   114
+[1] "annotation columns:  14"
+[1] "stat= Max"
+[1] "matrix_id= refseq_mm9_29Apr2010_IMP_BED_merged_TSS_norand_bed.DNase1HS_8846_bed"
+[1] 21428   114
+[1] "annotation columns:  14"
+[1] "stat= Max"
+
+plotting scatter...
+
+[1] "min= -2"
+[1] "max= -0.104857127971994"
+[1] "panel.scatter R = 0.14"
+[1] "panel.scatter R = 0.14"
+
+writing data ...
+[1] "matrix_id= refseq_mm9_29Apr2010_IMP_BED_merged_TSS_norand_bed.9908_bed"
+[1] 21428   114
+[1] "annotation columns:  14"
+[1] "stat= MaxDensityIndex"
+[1] "matrix_id= refseq_mm9_29Apr2010_IMP_BED_merged_TSS_norand_bed.DNase1HS_8846_bed"
+[1] 21428   114
+[1] "annotation columns:  14"
+[1] "stat= MaxDensityIndex"
+
+plotting scatter...
+
+[1] "min= 1"
+[1] "max= 100"
+[1] "panel.scatter R = 0.074"
+[1] "panel.scatter R = 0.074"
+
+writing data ...
+
+html.summary.densityLines.PairsScatter
+
+[1] "density_scatter.html output written."
+
+plotUnclusteredRegions ...
+
+[1] "refseq_mm9_29Apr2010_IMP_BED_merged_TSS_norand_bed"
+
+profile.plot
+
+[1] "title= 1_max_5_partition"
+[1] "final ymax= 0.01"
+
+profile.plotPlot
+
+[1] "plotRegionStrand: TRUE"
+[1] "plotReadStrand: TRUE"
+[1] "readDirs: p" "readDirs: p"
+[1] "PlotRegionStrandOnY: TRUE"
+[1] "refseq_mm9_29Apr2010_IMP_BED_merged_TSS_norand_bed.9908_bed"          "refseq_mm9_29Apr2010_IMP_BED_merged_TSS_norand_bed.DNase1HS_8846_bed"
+[1] "y-axis adjusted to:"
+[1] -0.01  0.01
+[1] "id= refseq_mm9_29Apr2010_IMP_BED_merged_TSS_norand_bed.9908_bed i= 1"
+[1] "data matrix for refseq_mm9_29Apr2010_IMP_BED_merged_TSS_norand_bed.9908_bed"
+[1] 21428   114
+[1] "m.readDir= p"
+[1] "annot colnumber: 14"
+[1] "guessing strand column ..."
+[1] "strand column predicted to be (+):"
+[1] 14
+[1] "removing annotation columns ..."
+[1] "id= refseq_mm9_29Apr2010_IMP_BED_merged_TSS_norand_bed.DNase1HS_8846_bed i= 2"
+[1] "data matrix for refseq_mm9_29Apr2010_IMP_BED_merged_TSS_norand_bed.DNase1HS_8846_bed"
+[1] 21428   114
+[1] "m.readDir= p"
+[1] "annot colnumber: 14"
+[1] "guessing strand column ..."
+[1] "strand column predicted to be (+):"
+[1] 14
+[1] "removing annotation columns ..."
+
+profile.plotPlot
+
+[1] "plotRegionStrand: TRUE"
+[1] "plotReadStrand: TRUE"
+[1] "readDirs: p" "readDirs: p"
+[1] "PlotRegionStrandOnY: TRUE"
+[1] "refseq_mm9_29Apr2010_IMP_BED_merged_TSS_norand_bed.9908_bed"          "refseq_mm9_29Apr2010_IMP_BED_merged_TSS_norand_bed.DNase1HS_8846_bed"
+[1] "y-axis adjusted to:"
+[1] -0.01  0.01
+[1] "id= refseq_mm9_29Apr2010_IMP_BED_merged_TSS_norand_bed.9908_bed i= 1"
+[1] "data matrix for refseq_mm9_29Apr2010_IMP_BED_merged_TSS_norand_bed.9908_bed"
+[1] 21428   114
+[1] "m.readDir= p"
+[1] "annot colnumber: 14"
+[1] "guessing strand column ..."
+[1] "strand column predicted to be (+):"
+[1] 14
+[1] "removing annotation columns ..."
+[1] "id= refseq_mm9_29Apr2010_IMP_BED_merged_TSS_norand_bed.DNase1HS_8846_bed i= 2"
+[1] "data matrix for refseq_mm9_29Apr2010_IMP_BED_merged_TSS_norand_bed.DNase1HS_8846_bed"
+[1] 21428   114
+[1] "m.readDir= p"
+[1] "annot colnumber: 14"
+[1] "guessing strand column ..."
+[1] "strand column predicted to be (+):"
+[1] 14
+[1] "removing annotation columns ..."
+
+profile.plot
+
+[1] "title= 1_max_5_partition"
+[1] "final ymax= 0.01"
+
+profile.plotPlot
+
+[1] "plotRegionStrand: TRUE"
+[1] "plotReadStrand: TRUE"
+[1] "readDirs: p" "readDirs: p"
+[1] "PlotRegionStrandOnY: TRUE"
+[1] "refseq_mm9_29Apr2010_IMP_BED_merged_TSS_norand_bed.9908_bed"          "refseq_mm9_29Apr2010_IMP_BED_merged_TSS_norand_bed.DNase1HS_8846_bed"
+[1] "y-axis adjusted to:"
+[1] -0.01  0.01
+[1] "id= refseq_mm9_29Apr2010_IMP_BED_merged_TSS_norand_bed.9908_bed i= 1"
+[1] "data matrix for refseq_mm9_29Apr2010_IMP_BED_merged_TSS_norand_bed.9908_bed"
+[1] 21428   114
+[1] "m.readDir= p"
+[1] "annot colnumber: 14"
+[1] "guessing strand column ..."
+[1] "strand column predicted to be (+):"
+[1] 14
+[1] "removing annotation columns ..."
+[1] "id= refseq_mm9_29Apr2010_IMP_BED_merged_TSS_norand_bed.DNase1HS_8846_bed i= 2"
+[1] "data matrix for refseq_mm9_29Apr2010_IMP_BED_merged_TSS_norand_bed.DNase1HS_8846_bed"
+[1] 21428   114
+[1] "m.readDir= p"
+[1] "annot colnumber: 14"
+[1] "guessing strand column ..."
+[1] "strand column predicted to be (+):"
+[1] 14
+[1] "removing annotation columns ..."
+
+profile.plotPlot
+
+[1] "plotRegionStrand: TRUE"
+[1] "plotReadStrand: TRUE"
+[1] "readDirs: p" "readDirs: p"
+[1] "PlotRegionStrandOnY: TRUE"
+[1] "refseq_mm9_29Apr2010_IMP_BED_merged_TSS_norand_bed.9908_bed"          "refseq_mm9_29Apr2010_IMP_BED_merged_TSS_norand_bed.DNase1HS_8846_bed"
+[1] "y-axis adjusted to:"
+[1] -0.01  0.01
+[1] "id= refseq_mm9_29Apr2010_IMP_BED_merged_TSS_norand_bed.9908_bed i= 1"
+[1] "data matrix for refseq_mm9_29Apr2010_IMP_BED_merged_TSS_norand_bed.9908_bed"
+[1] 21428   114
+[1] "m.readDir= p"
+[1] "annot colnumber: 14"
+[1] "guessing strand column ..."
+[1] "strand column predicted to be (+):"
+[1] 14
+[1] "removing annotation columns ..."
+[1] "id= refseq_mm9_29Apr2010_IMP_BED_merged_TSS_norand_bed.DNase1HS_8846_bed i= 2"
+[1] "data matrix for refseq_mm9_29Apr2010_IMP_BED_merged_TSS_norand_bed.DNase1HS_8846_bed"
+[1] 21428   114
+[1] "m.readDir= p"
+[1] "annot colnumber: 14"
+[1] "guessing strand column ..."
+[1] "strand column predicted to be (+):"
+[1] 14
+[1] "removing annotation columns ..."
+[1] "refseq_mm9_29Apr2010_IMP_BED_merged_TSS_norand_bed.9908_bed"
+[1] "p"
+[1] "refseq_mm9_29Apr2010_IMP_BED_merged_TSS_norand_bed"
+
+profile.plot
+
+[1] "title= refseq_mm9_29Apr2010_IMP_BED_merged_TSS_norand_bed"
+[1] "final ymax= 0.01"
+
+profile.plotPlot
+
+[1] "plotRegionStrand: TRUE"
+[1] "plotReadStrand: TRUE"
+[1] "readDirs: p"
+[1] "PlotRegionStrandOnY: TRUE"
+[1] "refseq_mm9_29Apr2010_IMP_BED_merged_TSS_norand_bed.9908_bed"
+[1] "y-axis adjusted to:"
+[1] -0.01  0.01
+[1] "id= refseq_mm9_29Apr2010_IMP_BED_merged_TSS_norand_bed.9908_bed i= 1"
+[1] "data matrix for refseq_mm9_29Apr2010_IMP_BED_merged_TSS_norand_bed.9908_bed"
+[1] 21428   114
+[1] "m.readDir= p"
+[1] "annot colnumber: 14"
+[1] "guessing strand column ..."
+[1] "strand column predicted to be (+):"
+[1] 14
+[1] "removing annotation columns ..."
+
+profile.plotPlot
+
+[1] "plotRegionStrand: TRUE"
+[1] "plotReadStrand: TRUE"
+[1] "readDirs: p"
+[1] "PlotRegionStrandOnY: TRUE"
+[1] "refseq_mm9_29Apr2010_IMP_BED_merged_TSS_norand_bed.9908_bed"
+[1] "y-axis adjusted to:"
+[1] -0.01  0.01
+[1] "id= refseq_mm9_29Apr2010_IMP_BED_merged_TSS_norand_bed.9908_bed i= 1"
+[1] "data matrix for refseq_mm9_29Apr2010_IMP_BED_merged_TSS_norand_bed.9908_bed"
+[1] 21428   114
+[1] "m.readDir= p"
+[1] "annot colnumber: 14"
+[1] "guessing strand column ..."
+[1] "strand column predicted to be (+):"
+[1] 14
+[1] "removing annotation columns ..."
+
+profile.plot
+
+[1] "title= refseq_mm9_29Apr2010_IMP_BED_merged_TSS_norand_bed"
+[1] "final ymax= 0.01"
+
+profile.plotPlot
+
+[1] "plotRegionStrand: TRUE"
+[1] "plotReadStrand: TRUE"
+[1] "readDirs: p"
+[1] "PlotRegionStrandOnY: TRUE"
+[1] "refseq_mm9_29Apr2010_IMP_BED_merged_TSS_norand_bed.9908_bed"
+[1] "y-axis adjusted to:"
+[1] -0.01  0.01
+[1] "id= refseq_mm9_29Apr2010_IMP_BED_merged_TSS_norand_bed.9908_bed i= 1"
+[1] "data matrix for refseq_mm9_29Apr2010_IMP_BED_merged_TSS_norand_bed.9908_bed"
+[1] 21428   114
+[1] "m.readDir= p"
+[1] "annot colnumber: 14"
+[1] "guessing strand column ..."
+[1] "strand column predicted to be (+):"
+[1] 14
+[1] "removing annotation columns ..."
+
+profile.plotPlot
+
+[1] "plotRegionStrand: TRUE"
+[1] "plotReadStrand: TRUE"
+[1] "readDirs: p"
+[1] "PlotRegionStrandOnY: TRUE"
+[1] "refseq_mm9_29Apr2010_IMP_BED_merged_TSS_norand_bed.9908_bed"
+[1] "y-axis adjusted to:"
+[1] -0.01  0.01
+[1] "id= refseq_mm9_29Apr2010_IMP_BED_merged_TSS_norand_bed.9908_bed i= 1"
+[1] "data matrix for refseq_mm9_29Apr2010_IMP_BED_merged_TSS_norand_bed.9908_bed"
+[1] 21428   114
+[1] "m.readDir= p"
+[1] "annot colnumber: 14"
+[1] "guessing strand column ..."
+[1] "strand column predicted to be (+):"
+[1] 14
+[1] "removing annotation columns ..."
+
+profile.boxplot
+
+[1] "profileymax= 0.01"
+[1] "plotwidth= 400"
+[1] "final ymax= 0.01"
+[1] 21428    20
+[1] 21428    20
+[1] "refseq_mm9_29Apr2010_IMP_BED_merged_TSS_norand_bed.DNase1HS_8846_bed"
+[1] "p"
+[1] "refseq_mm9_29Apr2010_IMP_BED_merged_TSS_norand_bed"
+
+profile.plot
+
+[1] "title= refseq_mm9_29Apr2010_IMP_BED_merged_TSS_norand_bed"
+[1] "final ymax= 0.01"
+
+profile.plotPlot
+
+[1] "plotRegionStrand: TRUE"
+[1] "plotReadStrand: TRUE"
+[1] "readDirs: p"
+[1] "PlotRegionStrandOnY: TRUE"
+[1] "refseq_mm9_29Apr2010_IMP_BED_merged_TSS_norand_bed.DNase1HS_8846_bed"
+[1] "y-axis adjusted to:"
+[1] -0.01  0.01
+[1] "id= refseq_mm9_29Apr2010_IMP_BED_merged_TSS_norand_bed.DNase1HS_8846_bed i= 1"
+[1] "data matrix for refseq_mm9_29Apr2010_IMP_BED_merged_TSS_norand_bed.DNase1HS_8846_bed"
+[1] 21428   114
+[1] "m.readDir= p"
+[1] "annot colnumber: 14"
+[1] "guessing strand column ..."
+[1] "strand column predicted to be (+):"
+[1] 14
+[1] "removing annotation columns ..."
+
+profile.plotPlot
+
+[1] "plotRegionStrand: TRUE"
+[1] "plotReadStrand: TRUE"
+[1] "readDirs: p"
+[1] "PlotRegionStrandOnY: TRUE"
+[1] "refseq_mm9_29Apr2010_IMP_BED_merged_TSS_norand_bed.DNase1HS_8846_bed"
+[1] "y-axis adjusted to:"
+[1] -0.01  0.01
+[1] "id= refseq_mm9_29Apr2010_IMP_BED_merged_TSS_norand_bed.DNase1HS_8846_bed i= 1"
+[1] "data matrix for refseq_mm9_29Apr2010_IMP_BED_merged_TSS_norand_bed.DNase1HS_8846_bed"
+[1] 21428   114
+[1] "m.readDir= p"
+[1] "annot colnumber: 14"
+[1] "guessing strand column ..."
+[1] "strand column predicted to be (+):"
+[1] 14
+[1] "removing annotation columns ..."
+
+profile.plot
+
+[1] "title= refseq_mm9_29Apr2010_IMP_BED_merged_TSS_norand_bed"
+[1] "final ymax= 0.01"
+
+profile.plotPlot
+
+[1] "plotRegionStrand: TRUE"
+[1] "plotReadStrand: TRUE"
+[1] "readDirs: p"
+[1] "PlotRegionStrandOnY: TRUE"
+[1] "refseq_mm9_29Apr2010_IMP_BED_merged_TSS_norand_bed.DNase1HS_8846_bed"
+[1] "y-axis adjusted to:"
+[1] -0.01  0.01
+[1] "id= refseq_mm9_29Apr2010_IMP_BED_merged_TSS_norand_bed.DNase1HS_8846_bed i= 1"
+[1] "data matrix for refseq_mm9_29Apr2010_IMP_BED_merged_TSS_norand_bed.DNase1HS_8846_bed"
+[1] 21428   114
+[1] "m.readDir= p"
+[1] "annot colnumber: 14"
+[1] "guessing strand column ..."
+[1] "strand column predicted to be (+):"
+[1] 14
+[1] "removing annotation columns ..."
+
+profile.plotPlot
+
+[1] "plotRegionStrand: TRUE"
+[1] "plotReadStrand: TRUE"
+[1] "readDirs: p"
+[1] "PlotRegionStrandOnY: TRUE"
+[1] "refseq_mm9_29Apr2010_IMP_BED_merged_TSS_norand_bed.DNase1HS_8846_bed"
+[1] "y-axis adjusted to:"
+[1] -0.01  0.01
+[1] "id= refseq_mm9_29Apr2010_IMP_BED_merged_TSS_norand_bed.DNase1HS_8846_bed i= 1"
+[1] "data matrix for refseq_mm9_29Apr2010_IMP_BED_merged_TSS_norand_bed.DNase1HS_8846_bed"
+[1] 21428   114
+[1] "m.readDir= p"
+[1] "annot colnumber: 14"
+[1] "guessing strand column ..."
+[1] "strand column predicted to be (+):"
+[1] 14
+[1] "removing annotation columns ..."
+
+profile.boxplot
+
+[1] "profileymax= 0.01"
+[1] "plotwidth= 400"
+[1] "final ymax= 0.01"
+[1] 21428    20
+[1] 21428    20
+[1] "starting plot loop for:"
+[1] "refseq_mm9_29Apr2010_IMP_BED_merged_TSS_norand_bed"
+[1] "refseq_mm9_29Apr2010_IMP_BED_merged_TSS_norand_bed.9908_bed"          "refseq_mm9_29Apr2010_IMP_BED_merged_TSS_norand_bed.DNase1HS_8846_bed"
+
+plotHeatmaps ...
+
+[1] "partition cluster, sort col = 1 , sort type = max"
+[1] "getMaxIndex sort col: 1"
+[1] "partition.matrices, scale= FALSE"
+
+concat.matrices
+
+[1] 21428   200
+clusterType==partition_qt
+[1] "final clustering:"
+List of 2
+ $ cluster: num [1:21428] 3 5 2 3 4 4 3 3 3 3 ...
+ $ size   : int [1:5] 4285 4286 4285 4286 4286
+NULL
+List of 5
+ $ matrix     : num [1:21428, 1:200] 0 0.000182 0 0.000364 0 0.000911 0.000364 0 0.000364 0.000182 ...
+  ..- attr(*, "dimnames")=List of 2
+  .. ..$ : chr [1:21428] "21429" "21430" "21431" "21432" ...
+  .. ..$ : chr [1:200] "V9" "V10" "V11" "V12" ...
+ $ kmeans     :List of 2
+  ..$ cluster: num [1:21428] 3 5 2 3 4 4 3 3 3 3 ...
+  ..$ size   : int [1:5] 4285 4286 4285 4286 4286
+ $ ids        : chr [1:2] "refseq_mm9_29Apr2010_IMP_BED_merged_TSS_norand_bed.9908_bed" "refseq_mm9_29Apr2010_IMP_BED_merged_TSS_norand_bed.DNase1HS_8846_bed"
+ $ scale      : logi FALSE
+ $ clustertype: chr "partition_qt"
+NULL
+[1] "getMaxIndex sort col: 1"
+[1] 21428
+[1] 0.002005 0.001276 0.002551 0.002022 0.001822 0.001822
+    Min.  1st Qu.   Median     Mean  3rd Qu.     Max. 
+0.000000 0.001640 0.002006 0.002109 0.002541 0.105900 
+
+heatmap.plot
+
+[1] "xmax= 100"
+[1] "ymax= 21428"
+[1] "vlines= NA"
+[1] "mid= "
+[1] "o= refseq_mm9_29Apr2010_IMP_BED_merged_TSS_norand_bed.ct_partition_qt.st_max.sc_1.nc"
+[1] "ylab= regions"
+[1] "title= refseq_mm9_29Apr2010_IMP_BED_merged_TSS_norand_bed"
+[1] "gud= 0"
+[1] "scaleType= trimlog2"
+[1] "trimQt= 0.9"
+[1] "grayColorNum= 10"
+[1] "matrix dimension of ordered matrix:"
+[1]   200 21428
+[1] "plotwidth= 1000"
+[1] "plotting image ..."
+[1] "positions of cluster lines:"
+    1     2     3     4     5 
+ 4285  8571 12856 17142 21428 
+[1] "vlines:"
+[1] FALSE
+[1] "black matrix borders:"
+[1] 100 200
+
+html.plot.igb.links
+
+[1] "id= refseq_mm9_29Apr2010_IMP_BED_merged_TSS_norand_bed.9908_bed"
+[1] "centerBins= 100"
+[1] "annot.colnumber = 14"
+[1] "annot:"
+[1] "refseq_mm9_29Apr2010_IMP_BED_merged_TSS_norand_bed.ct_partition_qt.st_max.sc_1.nc.log2.igb.txt written."
+[1] "html output written."
+
+heatmap.plot
+
+[1] "xmax= 100"
+[1] "ymax= 21428"
+[1] "vlines= 50" "vlines= 0" 
+[1] "mid= "
+[1] "o= refseq_mm9_29Apr2010_IMP_BED_merged_TSS_norand_bed.ct_partition_qt.st_max.sc_1.c"
+[1] "ylab= regions"
+[1] "title= refseq_mm9_29Apr2010_IMP_BED_merged_TSS_norand_bed"
+[1] "gud= 0"
+[1] "scaleType= trimlog2"
+[1] "trimQt= 0.9"
+[1] "grayColorNum= 10"
+[1] "matrix dimension of ordered matrix:"
+[1]   200 21428
+[1] "plotwidth= 1000"
+[1] "plotting image ..."
+[1] "positions of cluster lines:"
+    1     2     3     4     5 
+ 4285  8571 12856 17142 21428 
+[1] "vlines:"
+[1] TRUE TRUE
+[1] "red matrix borders:"
+[1]  50 150   0 100 200
+[1] "black matrix borders:"
+[1] 100 200
+
+html.plot.igb.links
+
+[1] "id= refseq_mm9_29Apr2010_IMP_BED_merged_TSS_norand_bed.9908_bed"
+[1] "centerBins= 100"
+[1] "annot.colnumber = 14"
+[1] "annot:"
+[1] "refseq_mm9_29Apr2010_IMP_BED_merged_TSS_norand_bed.ct_partition_qt.st_max.sc_1.c.log2.igb.txt written."
+[1] "html output written."
+
+plotProfiles ...
+
+[1] "sortindex:"
+ num [1:21428] 0.002 0.00128 0.00255 0.00202 0.00182 ...
+NULL
+ num [1:4285] 0.00292 0.00273 0.00364 0.00292 0.00256 ...
+NULL
+[1] "cluster index:"
+ num [1:21428] 3 5 2 3 4 4 3 3 3 3 ...
+NULL
+ num [1:4285] 1 1 1 1 1 1 1 1 1 1 ...
+NULL
+[1] "title= 1_max_5_partition"
+[1] "j= 1"
+[1] "size= 4285"
+
+profile.boxplot
+
+[1] "profileymax= 0.01"
+[1] "plotwidth= 400"
+[1] "final ymax= 0.01"
+[1] 4285   20
+[1] 4285   20
+[1] 4285   20
+[1] 4285   20
+
+profile.plot
+
+[1] "title= 1_max_5_partition \ncluster: 1 rows: 4285"
+[1] "final ymax= 0.01"
+
+profile.plotPlot
+
+[1] "plotRegionStrand: TRUE"
+[1] "plotReadStrand: TRUE"
+[1] "readDirs: p" "readDirs: p"
+[1] "PlotRegionStrandOnY: TRUE"
+[1] "refseq_mm9_29Apr2010_IMP_BED_merged_TSS_norand_bed.9908_bed"          "refseq_mm9_29Apr2010_IMP_BED_merged_TSS_norand_bed.DNase1HS_8846_bed"
+[1] "y-axis adjusted to:"
+[1] -0.01  0.01
+[1] "id= refseq_mm9_29Apr2010_IMP_BED_merged_TSS_norand_bed.9908_bed i= 1"
+[1] "data matrix for refseq_mm9_29Apr2010_IMP_BED_merged_TSS_norand_bed.9908_bed"
+[1] 4285  114
+[1] "m.readDir= p"
+[1] "annot colnumber: 14"
+[1] "guessing strand column ..."
+[1] "strand column predicted to be (+):"
+[1] 14
+[1] "removing annotation columns ..."
+[1] "id= refseq_mm9_29Apr2010_IMP_BED_merged_TSS_norand_bed.DNase1HS_8846_bed i= 2"
+[1] "data matrix for refseq_mm9_29Apr2010_IMP_BED_merged_TSS_norand_bed.DNase1HS_8846_bed"
+[1] 4285  114
+[1] "m.readDir= p"
+[1] "annot colnumber: 14"
+[1] "guessing strand column ..."
+[1] "strand column predicted to be (+):"
+[1] 14
+[1] "removing annotation columns ..."
+
+profile.plotPlot
+
+[1] "plotRegionStrand: TRUE"
+[1] "plotReadStrand: TRUE"
+[1] "readDirs: p" "readDirs: p"
+[1] "PlotRegionStrandOnY: TRUE"
+[1] "refseq_mm9_29Apr2010_IMP_BED_merged_TSS_norand_bed.9908_bed"          "refseq_mm9_29Apr2010_IMP_BED_merged_TSS_norand_bed.DNase1HS_8846_bed"
+[1] "y-axis adjusted to:"
+[1] -0.01  0.01
+[1] "id= refseq_mm9_29Apr2010_IMP_BED_merged_TSS_norand_bed.9908_bed i= 1"
+[1] "data matrix for refseq_mm9_29Apr2010_IMP_BED_merged_TSS_norand_bed.9908_bed"
+[1] 4285  114
+[1] "m.readDir= p"
+[1] "annot colnumber: 14"
+[1] "guessing strand column ..."
+[1] "strand column predicted to be (+):"
+[1] 14
+[1] "removing annotation columns ..."
+[1] "id= refseq_mm9_29Apr2010_IMP_BED_merged_TSS_norand_bed.DNase1HS_8846_bed i= 2"
+[1] "data matrix for refseq_mm9_29Apr2010_IMP_BED_merged_TSS_norand_bed.DNase1HS_8846_bed"
+[1] 4285  114
+[1] "m.readDir= p"
+[1] "annot colnumber: 14"
+[1] "guessing strand column ..."
+[1] "strand column predicted to be (+):"
+[1] 14
+[1] "removing annotation columns ..."
+
+html.plot.igb.links
+
+[1] "id= refseq_mm9_29Apr2010_IMP_BED_merged_TSS_norand_bed.9908_bed"
+[1] "centerBins= 100"
+[1] "annot.colnumber = 14"
+[1] "annot:"
+[1] "refseq_mm9_29Apr2010_IMP_BED_merged_TSS_norand_bed.partition_qt.igb.subcluster_1.txt written."
+[1] "html output written."
+
+profile.plot
+
+[1] "title= 1_max_5_partition \ncluster: 1 rows: 4285"
+[1] "final ymax= 0.01"
+
+profile.plotPlot
+
+[1] "plotRegionStrand: TRUE"
+[1] "plotReadStrand: TRUE"
+[1] "readDirs: p" "readDirs: p"
+[1] "PlotRegionStrandOnY: TRUE"
+[1] "refseq_mm9_29Apr2010_IMP_BED_merged_TSS_norand_bed.9908_bed"          "refseq_mm9_29Apr2010_IMP_BED_merged_TSS_norand_bed.DNase1HS_8846_bed"
+[1] "y-axis adjusted to:"
+[1] -0.01  0.01
+[1] "id= refseq_mm9_29Apr2010_IMP_BED_merged_TSS_norand_bed.9908_bed i= 1"
+[1] "data matrix for refseq_mm9_29Apr2010_IMP_BED_merged_TSS_norand_bed.9908_bed"
+[1] 4285  114
+[1] "m.readDir= p"
+[1] "annot colnumber: 14"
+[1] "guessing strand column ..."
+[1] "strand column predicted to be (+):"
+[1] 14
+[1] "removing annotation columns ..."
+[1] "id= refseq_mm9_29Apr2010_IMP_BED_merged_TSS_norand_bed.DNase1HS_8846_bed i= 2"
+[1] "data matrix for refseq_mm9_29Apr2010_IMP_BED_merged_TSS_norand_bed.DNase1HS_8846_bed"
+[1] 4285  114
+[1] "m.readDir= p"
+[1] "annot colnumber: 14"
+[1] "guessing strand column ..."
+[1] "strand column predicted to be (+):"
+[1] 14
+[1] "removing annotation columns ..."
+
+profile.plotPlot
+
+[1] "plotRegionStrand: TRUE"
+[1] "plotReadStrand: TRUE"
+[1] "readDirs: p" "readDirs: p"
+[1] "PlotRegionStrandOnY: TRUE"
+[1] "refseq_mm9_29Apr2010_IMP_BED_merged_TSS_norand_bed.9908_bed"          "refseq_mm9_29Apr2010_IMP_BED_merged_TSS_norand_bed.DNase1HS_8846_bed"
+[1] "y-axis adjusted to:"
+[1] -0.01  0.01
+[1] "id= refseq_mm9_29Apr2010_IMP_BED_merged_TSS_norand_bed.9908_bed i= 1"
+[1] "data matrix for refseq_mm9_29Apr2010_IMP_BED_merged_TSS_norand_bed.9908_bed"
+[1] 4285  114
+[1] "m.readDir= p"
+[1] "annot colnumber: 14"
+[1] "guessing strand column ..."
+[1] "strand column predicted to be (+):"
+[1] 14
+[1] "removing annotation columns ..."
+[1] "id= refseq_mm9_29Apr2010_IMP_BED_merged_TSS_norand_bed.DNase1HS_8846_bed i= 2"
+[1] "data matrix for refseq_mm9_29Apr2010_IMP_BED_merged_TSS_norand_bed.DNase1HS_8846_bed"
+[1] 4285  114
+[1] "m.readDir= p"
+[1] "annot colnumber: 14"
+[1] "guessing strand column ..."
+[1] "strand column predicted to be (+):"
+[1] 14
+[1] "removing annotation columns ..."
+
+html.plot.igb.links
+
+[1] "id= refseq_mm9_29Apr2010_IMP_BED_merged_TSS_norand_bed.9908_bed"
+[1] "centerBins= 100"
+[1] "annot.colnumber = 14"
+[1] "annot:"
+[1] "refseq_mm9_29Apr2010_IMP_BED_merged_TSS_norand_bed.partition_qt.igb.subcluster_1.txt written."
+[1] "html output written."
+[1] "sortindex:"
+ num [1:4285] 0.00292 0.00273 0.00364 0.00292 0.00256 ...
+NULL
+ num [1:4286] 0.00364 0.00292 0.0031 0.00309 0.00311 ...
+NULL
+[1] "cluster index:"
+ num [1:21428] 3 5 2 3 4 4 3 3 3 3 ...
+NULL
+ num [1:4286] 2 2 2 2 2 2 2 2 2 2 ...
+NULL
+[1] "title= 1_max_5_partition"
+[1] "j= 2"
+[1] "size= 4286"
+
+profile.boxplot
+
+[1] "profileymax= 0.01"
+[1] "plotwidth= 400"
+[1] "final ymax= 0.01"
+[1] 4286   20
+[1] 4286   20
+[1] 4286   20
+[1] 4286   20
+
+profile.plot
+
+[1] "title= 1_max_5_partition \ncluster: 2 rows: 4286"
+[1] "final ymax= 0.01"
+
+profile.plotPlot
+
+[1] "plotRegionStrand: TRUE"
+[1] "plotReadStrand: TRUE"
+[1] "readDirs: p" "readDirs: p"
+[1] "PlotRegionStrandOnY: TRUE"
+[1] "refseq_mm9_29Apr2010_IMP_BED_merged_TSS_norand_bed.9908_bed"          "refseq_mm9_29Apr2010_IMP_BED_merged_TSS_norand_bed.DNase1HS_8846_bed"
+[1] "y-axis adjusted to:"
+[1] -0.01  0.01
+[1] "id= refseq_mm9_29Apr2010_IMP_BED_merged_TSS_norand_bed.9908_bed i= 1"
+[1] "data matrix for refseq_mm9_29Apr2010_IMP_BED_merged_TSS_norand_bed.9908_bed"
+[1] 4286  114
+[1] "m.readDir= p"
+[1] "annot colnumber: 14"
+[1] "guessing strand column ..."
+[1] "strand column predicted to be (-): 14"
+[1] "removing annotation columns ..."
+[1] "id= refseq_mm9_29Apr2010_IMP_BED_merged_TSS_norand_bed.DNase1HS_8846_bed i= 2"
+[1] "data matrix for refseq_mm9_29Apr2010_IMP_BED_merged_TSS_norand_bed.DNase1HS_8846_bed"
+[1] 4286  114
+[1] "m.readDir= p"
+[1] "annot colnumber: 14"
+[1] "guessing strand column ..."
+[1] "strand column predicted to be (-): 14"
+[1] "removing annotation columns ..."
+
+profile.plotPlot
+
+[1] "plotRegionStrand: TRUE"
+[1] "plotReadStrand: TRUE"
+[1] "readDirs: p" "readDirs: p"
+[1] "PlotRegionStrandOnY: TRUE"
+[1] "refseq_mm9_29Apr2010_IMP_BED_merged_TSS_norand_bed.9908_bed"          "refseq_mm9_29Apr2010_IMP_BED_merged_TSS_norand_bed.DNase1HS_8846_bed"
+[1] "y-axis adjusted to:"
+[1] -0.01  0.01
+[1] "id= refseq_mm9_29Apr2010_IMP_BED_merged_TSS_norand_bed.9908_bed i= 1"
+[1] "data matrix for refseq_mm9_29Apr2010_IMP_BED_merged_TSS_norand_bed.9908_bed"
+[1] 4286  114
+[1] "m.readDir= p"
+[1] "annot colnumber: 14"
+[1] "guessing strand column ..."
+[1] "strand column predicted to be (-): 14"
+[1] "removing annotation columns ..."
+[1] "id= refseq_mm9_29Apr2010_IMP_BED_merged_TSS_norand_bed.DNase1HS_8846_bed i= 2"
+[1] "data matrix for refseq_mm9_29Apr2010_IMP_BED_merged_TSS_norand_bed.DNase1HS_8846_bed"
+[1] 4286  114
+[1] "m.readDir= p"
+[1] "annot colnumber: 14"
+[1] "guessing strand column ..."
+[1] "strand column predicted to be (-): 14"
+[1] "removing annotation columns ..."
+
+html.plot.igb.links
+
+[1] "id= refseq_mm9_29Apr2010_IMP_BED_merged_TSS_norand_bed.9908_bed"
+[1] "centerBins= 100"
+[1] "annot.colnumber = 14"
+[1] "annot:"
+[1] "refseq_mm9_29Apr2010_IMP_BED_merged_TSS_norand_bed.partition_qt.igb.subcluster_2.txt written."
+[1] "html output written."
+
+profile.plot
+
+[1] "title= 1_max_5_partition \ncluster: 2 rows: 4286"
+[1] "final ymax= 0.01"
+
+profile.plotPlot
+
+[1] "plotRegionStrand: TRUE"
+[1] "plotReadStrand: TRUE"
+[1] "readDirs: p" "readDirs: p"
+[1] "PlotRegionStrandOnY: TRUE"
+[1] "refseq_mm9_29Apr2010_IMP_BED_merged_TSS_norand_bed.9908_bed"          "refseq_mm9_29Apr2010_IMP_BED_merged_TSS_norand_bed.DNase1HS_8846_bed"
+[1] "y-axis adjusted to:"
+[1] -0.01  0.01
+[1] "id= refseq_mm9_29Apr2010_IMP_BED_merged_TSS_norand_bed.9908_bed i= 1"
+[1] "data matrix for refseq_mm9_29Apr2010_IMP_BED_merged_TSS_norand_bed.9908_bed"
+[1] 4286  114
+[1] "m.readDir= p"
+[1] "annot colnumber: 14"
+[1] "guessing strand column ..."
+[1] "strand column predicted to be (-): 14"
+[1] "removing annotation columns ..."
+[1] "id= refseq_mm9_29Apr2010_IMP_BED_merged_TSS_norand_bed.DNase1HS_8846_bed i= 2"
+[1] "data matrix for refseq_mm9_29Apr2010_IMP_BED_merged_TSS_norand_bed.DNase1HS_8846_bed"
+[1] 4286  114
+[1] "m.readDir= p"
+[1] "annot colnumber: 14"
+[1] "guessing strand column ..."
+[1] "strand column predicted to be (-): 14"
+[1] "removing annotation columns ..."
+
+profile.plotPlot
+
+[1] "plotRegionStrand: TRUE"
+[1] "plotReadStrand: TRUE"
+[1] "readDirs: p" "readDirs: p"
+[1] "PlotRegionStrandOnY: TRUE"
+[1] "refseq_mm9_29Apr2010_IMP_BED_merged_TSS_norand_bed.9908_bed"          "refseq_mm9_29Apr2010_IMP_BED_merged_TSS_norand_bed.DNase1HS_8846_bed"
+[1] "y-axis adjusted to:"
+[1] -0.01  0.01
+[1] "id= refseq_mm9_29Apr2010_IMP_BED_merged_TSS_norand_bed.9908_bed i= 1"
+[1] "data matrix for refseq_mm9_29Apr2010_IMP_BED_merged_TSS_norand_bed.9908_bed"
+[1] 4286  114
+[1] "m.readDir= p"
+[1] "annot colnumber: 14"
+[1] "guessing strand column ..."
+[1] "strand column predicted to be (-): 14"
+[1] "removing annotation columns ..."
+[1] "id= refseq_mm9_29Apr2010_IMP_BED_merged_TSS_norand_bed.DNase1HS_8846_bed i= 2"
+[1] "data matrix for refseq_mm9_29Apr2010_IMP_BED_merged_TSS_norand_bed.DNase1HS_8846_bed"
+[1] 4286  114
+[1] "m.readDir= p"
+[1] "annot colnumber: 14"
+[1] "guessing strand column ..."
+[1] "strand column predicted to be (-): 14"
+[1] "removing annotation columns ..."
+
+html.plot.igb.links
+
+[1] "id= refseq_mm9_29Apr2010_IMP_BED_merged_TSS_norand_bed.9908_bed"
+[1] "centerBins= 100"
+[1] "annot.colnumber = 14"
+[1] "annot:"
+[1] "refseq_mm9_29Apr2010_IMP_BED_merged_TSS_norand_bed.partition_qt.igb.subcluster_2.txt written."
+[1] "html output written."
+[1] "sortindex:"
+ num [1:4286] 0.00364 0.00292 0.0031 0.00309 0.00311 ...
+NULL
+ num [1:4285] 0.00364 0.00309 0.00292 0.00273 0.00309 ...
+NULL
+[1] "cluster index:"
+ num [1:21428] 3 5 2 3 4 4 3 3 3 3 ...
+NULL
+ num [1:4285] 3 3 3 3 3 3 3 3 3 3 ...
+NULL
+[1] "title= 1_max_5_partition"
+[1] "j= 3"
+[1] "size= 4285"
+
+profile.boxplot
+
+[1] "profileymax= 0.01"
+[1] "plotwidth= 400"
+[1] "final ymax= 0.01"
+[1] 4285   20
+[1] 4285   20
+[1] 4285   20
+[1] 4285   20
+
+profile.plot
+
+[1] "title= 1_max_5_partition \ncluster: 3 rows: 4285"
+[1] "final ymax= 0.01"
+
+profile.plotPlot
+
+[1] "plotRegionStrand: TRUE"
+[1] "plotReadStrand: TRUE"
+[1] "readDirs: p" "readDirs: p"
+[1] "PlotRegionStrandOnY: TRUE"
+[1] "refseq_mm9_29Apr2010_IMP_BED_merged_TSS_norand_bed.9908_bed"          "refseq_mm9_29Apr2010_IMP_BED_merged_TSS_norand_bed.DNase1HS_8846_bed"
+[1] "y-axis adjusted to:"
+[1] -0.01  0.01
+[1] "id= refseq_mm9_29Apr2010_IMP_BED_merged_TSS_norand_bed.9908_bed i= 1"
+[1] "data matrix for refseq_mm9_29Apr2010_IMP_BED_merged_TSS_norand_bed.9908_bed"
+[1] 4285  114
+[1] "m.readDir= p"
+[1] "annot colnumber: 14"
+[1] "guessing strand column ..."
+[1] "strand column predicted to be (+):"
+[1] 14
+[1] "removing annotation columns ..."
+[1] "id= refseq_mm9_29Apr2010_IMP_BED_merged_TSS_norand_bed.DNase1HS_8846_bed i= 2"
+[1] "data matrix for refseq_mm9_29Apr2010_IMP_BED_merged_TSS_norand_bed.DNase1HS_8846_bed"
+[1] 4285  114
+[1] "m.readDir= p"
+[1] "annot colnumber: 14"
+[1] "guessing strand column ..."
+[1] "strand column predicted to be (+):"
+[1] 14
+[1] "removing annotation columns ..."
+
+profile.plotPlot
+
+[1] "plotRegionStrand: TRUE"
+[1] "plotReadStrand: TRUE"
+[1] "readDirs: p" "readDirs: p"
+[1] "PlotRegionStrandOnY: TRUE"
+[1] "refseq_mm9_29Apr2010_IMP_BED_merged_TSS_norand_bed.9908_bed"          "refseq_mm9_29Apr2010_IMP_BED_merged_TSS_norand_bed.DNase1HS_8846_bed"
+[1] "y-axis adjusted to:"
+[1] -0.01  0.01
+[1] "id= refseq_mm9_29Apr2010_IMP_BED_merged_TSS_norand_bed.9908_bed i= 1"
+[1] "data matrix for refseq_mm9_29Apr2010_IMP_BED_merged_TSS_norand_bed.9908_bed"
+[1] 4285  114
+[1] "m.readDir= p"
+[1] "annot colnumber: 14"
+[1] "guessing strand column ..."
+[1] "strand column predicted to be (+):"
+[1] 14
+[1] "removing annotation columns ..."
+[1] "id= refseq_mm9_29Apr2010_IMP_BED_merged_TSS_norand_bed.DNase1HS_8846_bed i= 2"
+[1] "data matrix for refseq_mm9_29Apr2010_IMP_BED_merged_TSS_norand_bed.DNase1HS_8846_bed"
+[1] 4285  114
+[1] "m.readDir= p"
+[1] "annot colnumber: 14"
+[1] "guessing strand column ..."
+[1] "strand column predicted to be (+):"
+[1] 14
+[1] "removing annotation columns ..."
+
+html.plot.igb.links
+
+[1] "id= refseq_mm9_29Apr2010_IMP_BED_merged_TSS_norand_bed.9908_bed"
+[1] "centerBins= 100"
+[1] "annot.colnumber = 14"
+[1] "annot:"
+[1] "refseq_mm9_29Apr2010_IMP_BED_merged_TSS_norand_bed.partition_qt.igb.subcluster_3.txt written."
+[1] "html output written."
+
+profile.plot
+
+[1] "title= 1_max_5_partition \ncluster: 3 rows: 4285"
+[1] "final ymax= 0.01"
+
+profile.plotPlot
+
+[1] "plotRegionStrand: TRUE"
+[1] "plotReadStrand: TRUE"
+[1] "readDirs: p" "readDirs: p"
+[1] "PlotRegionStrandOnY: TRUE"
+[1] "refseq_mm9_29Apr2010_IMP_BED_merged_TSS_norand_bed.9908_bed"          "refseq_mm9_29Apr2010_IMP_BED_merged_TSS_norand_bed.DNase1HS_8846_bed"
+[1] "y-axis adjusted to:"
+[1] -0.01  0.01
+[1] "id= refseq_mm9_29Apr2010_IMP_BED_merged_TSS_norand_bed.9908_bed i= 1"
+[1] "data matrix for refseq_mm9_29Apr2010_IMP_BED_merged_TSS_norand_bed.9908_bed"
+[1] 4285  114
+[1] "m.readDir= p"
+[1] "annot colnumber: 14"
+[1] "guessing strand column ..."
+[1] "strand column predicted to be (+):"
+[1] 14
+[1] "removing annotation columns ..."
+[1] "id= refseq_mm9_29Apr2010_IMP_BED_merged_TSS_norand_bed.DNase1HS_8846_bed i= 2"
+[1] "data matrix for refseq_mm9_29Apr2010_IMP_BED_merged_TSS_norand_bed.DNase1HS_8846_bed"
+[1] 4285  114
+[1] "m.readDir= p"
+[1] "annot colnumber: 14"
+[1] "guessing strand column ..."
+[1] "strand column predicted to be (+):"
+[1] 14
+[1] "removing annotation columns ..."
+
+profile.plotPlot
+
+[1] "plotRegionStrand: TRUE"
+[1] "plotReadStrand: TRUE"
+[1] "readDirs: p" "readDirs: p"
+[1] "PlotRegionStrandOnY: TRUE"
+[1] "refseq_mm9_29Apr2010_IMP_BED_merged_TSS_norand_bed.9908_bed"          "refseq_mm9_29Apr2010_IMP_BED_merged_TSS_norand_bed.DNase1HS_8846_bed"
+[1] "y-axis adjusted to:"
+[1] -0.01  0.01
+[1] "id= refseq_mm9_29Apr2010_IMP_BED_merged_TSS_norand_bed.9908_bed i= 1"
+[1] "data matrix for refseq_mm9_29Apr2010_IMP_BED_merged_TSS_norand_bed.9908_bed"
+[1] 4285  114
+[1] "m.readDir= p"
+[1] "annot colnumber: 14"
+[1] "guessing strand column ..."
+[1] "strand column predicted to be (+):"
+[1] 14
+[1] "removing annotation columns ..."
+[1] "id= refseq_mm9_29Apr2010_IMP_BED_merged_TSS_norand_bed.DNase1HS_8846_bed i= 2"
+[1] "data matrix for refseq_mm9_29Apr2010_IMP_BED_merged_TSS_norand_bed.DNase1HS_8846_bed"
+[1] 4285  114
+[1] "m.readDir= p"
+[1] "annot colnumber: 14"
+[1] "guessing strand column ..."
+[1] "strand column predicted to be (+):"
+[1] 14
+[1] "removing annotation columns ..."
+
+html.plot.igb.links
+
+[1] "id= refseq_mm9_29Apr2010_IMP_BED_merged_TSS_norand_bed.9908_bed"
+[1] "centerBins= 100"
+[1] "annot.colnumber = 14"
+[1] "annot:"
+[1] "refseq_mm9_29Apr2010_IMP_BED_merged_TSS_norand_bed.partition_qt.igb.subcluster_3.txt written."
+[1] "html output written."
+[1] "sortindex:"
+ num [1:4285] 0.00364 0.00309 0.00292 0.00273 0.00309 ...
+NULL
+ num [1:4286] 0.00309 0.00273 0.00255 0.00383 0.0031 ...
+NULL
+[1] "cluster index:"
+ num [1:21428] 3 5 2 3 4 4 3 3 3 3 ...
+NULL
+ num [1:4286] 4 4 4 4 4 4 4 4 4 4 ...
+NULL
+[1] "title= 1_max_5_partition"
+[1] "j= 4"
+[1] "size= 4286"
+
+profile.boxplot
+
+[1] "profileymax= 0.01"
+[1] "plotwidth= 400"
+[1] "final ymax= 0.01"
+[1] 4286   20
+[1] 4286   20
+[1] 4286   20
+[1] 4286   20
+
+profile.plot
+
+[1] "title= 1_max_5_partition \ncluster: 4 rows: 4286"
+[1] "final ymax= 0.01"
+
+profile.plotPlot
+
+[1] "plotRegionStrand: TRUE"
+[1] "plotReadStrand: TRUE"
+[1] "readDirs: p" "readDirs: p"
+[1] "PlotRegionStrandOnY: TRUE"
+[1] "refseq_mm9_29Apr2010_IMP_BED_merged_TSS_norand_bed.9908_bed"          "refseq_mm9_29Apr2010_IMP_BED_merged_TSS_norand_bed.DNase1HS_8846_bed"
+[1] "y-axis adjusted to:"
+[1] -0.01  0.01
+[1] "id= refseq_mm9_29Apr2010_IMP_BED_merged_TSS_norand_bed.9908_bed i= 1"
+[1] "data matrix for refseq_mm9_29Apr2010_IMP_BED_merged_TSS_norand_bed.9908_bed"
+[1] 4286  114
+[1] "m.readDir= p"
+[1] "annot colnumber: 14"
+[1] "guessing strand column ..."
+[1] "strand column predicted to be (+):"
+[1] 14
+[1] "removing annotation columns ..."
+[1] "id= refseq_mm9_29Apr2010_IMP_BED_merged_TSS_norand_bed.DNase1HS_8846_bed i= 2"
+[1] "data matrix for refseq_mm9_29Apr2010_IMP_BED_merged_TSS_norand_bed.DNase1HS_8846_bed"
+[1] 4286  114
+[1] "m.readDir= p"
+[1] "annot colnumber: 14"
+[1] "guessing strand column ..."
+[1] "strand column predicted to be (+):"
+[1] 14
+[1] "removing annotation columns ..."
+
+profile.plotPlot
+
+[1] "plotRegionStrand: TRUE"
+[1] "plotReadStrand: TRUE"
+[1] "readDirs: p" "readDirs: p"
+[1] "PlotRegionStrandOnY: TRUE"
+[1] "refseq_mm9_29Apr2010_IMP_BED_merged_TSS_norand_bed.9908_bed"          "refseq_mm9_29Apr2010_IMP_BED_merged_TSS_norand_bed.DNase1HS_8846_bed"
+[1] "y-axis adjusted to:"
+[1] -0.01  0.01
+[1] "id= refseq_mm9_29Apr2010_IMP_BED_merged_TSS_norand_bed.9908_bed i= 1"
+[1] "data matrix for refseq_mm9_29Apr2010_IMP_BED_merged_TSS_norand_bed.9908_bed"
+[1] 4286  114
+[1] "m.readDir= p"
+[1] "annot colnumber: 14"
+[1] "guessing strand column ..."
+[1] "strand column predicted to be (+):"
+[1] 14
+[1] "removing annotation columns ..."
+[1] "id= refseq_mm9_29Apr2010_IMP_BED_merged_TSS_norand_bed.DNase1HS_8846_bed i= 2"
+[1] "data matrix for refseq_mm9_29Apr2010_IMP_BED_merged_TSS_norand_bed.DNase1HS_8846_bed"
+[1] 4286  114
+[1] "m.readDir= p"
+[1] "annot colnumber: 14"
+[1] "guessing strand column ..."
+[1] "strand column predicted to be (+):"
+[1] 14
+[1] "removing annotation columns ..."
+
+html.plot.igb.links
+
+[1] "id= refseq_mm9_29Apr2010_IMP_BED_merged_TSS_norand_bed.9908_bed"
+[1] "centerBins= 100"
+[1] "annot.colnumber = 14"
+[1] "annot:"
+[1] "refseq_mm9_29Apr2010_IMP_BED_merged_TSS_norand_bed.partition_qt.igb.subcluster_4.txt written."
+[1] "html output written."
+
+profile.plot
+
+[1] "title= 1_max_5_partition \ncluster: 4 rows: 4286"
+[1] "final ymax= 0.01"
+
+profile.plotPlot
+
+[1] "plotRegionStrand: TRUE"
+[1] "plotReadStrand: TRUE"
+[1] "readDirs: p" "readDirs: p"
+[1] "PlotRegionStrandOnY: TRUE"
+[1] "refseq_mm9_29Apr2010_IMP_BED_merged_TSS_norand_bed.9908_bed"          "refseq_mm9_29Apr2010_IMP_BED_merged_TSS_norand_bed.DNase1HS_8846_bed"
+[1] "y-axis adjusted to:"
+[1] -0.01  0.01
+[1] "id= refseq_mm9_29Apr2010_IMP_BED_merged_TSS_norand_bed.9908_bed i= 1"
+[1] "data matrix for refseq_mm9_29Apr2010_IMP_BED_merged_TSS_norand_bed.9908_bed"
+[1] 4286  114
+[1] "m.readDir= p"
+[1] "annot colnumber: 14"
+[1] "guessing strand column ..."
+[1] "strand column predicted to be (+):"
+[1] 14
+[1] "removing annotation columns ..."
+[1] "id= refseq_mm9_29Apr2010_IMP_BED_merged_TSS_norand_bed.DNase1HS_8846_bed i= 2"
+[1] "data matrix for refseq_mm9_29Apr2010_IMP_BED_merged_TSS_norand_bed.DNase1HS_8846_bed"
+[1] 4286  114
+[1] "m.readDir= p"
+[1] "annot colnumber: 14"
+[1] "guessing strand column ..."
+[1] "strand column predicted to be (+):"
+[1] 14
+[1] "removing annotation columns ..."
+
+profile.plotPlot
+
+[1] "plotRegionStrand: TRUE"
+[1] "plotReadStrand: TRUE"
+[1] "readDirs: p" "readDirs: p"
+[1] "PlotRegionStrandOnY: TRUE"
+[1] "refseq_mm9_29Apr2010_IMP_BED_merged_TSS_norand_bed.9908_bed"          "refseq_mm9_29Apr2010_IMP_BED_merged_TSS_norand_bed.DNase1HS_8846_bed"
+[1] "y-axis adjusted to:"
+[1] -0.01  0.01
+[1] "id= refseq_mm9_29Apr2010_IMP_BED_merged_TSS_norand_bed.9908_bed i= 1"
+[1] "data matrix for refseq_mm9_29Apr2010_IMP_BED_merged_TSS_norand_bed.9908_bed"
+[1] 4286  114
+[1] "m.readDir= p"
+[1] "annot colnumber: 14"
+[1] "guessing strand column ..."
+[1] "strand column predicted to be (+):"
+[1] 14
+[1] "removing annotation columns ..."
+[1] "id= refseq_mm9_29Apr2010_IMP_BED_merged_TSS_norand_bed.DNase1HS_8846_bed i= 2"
+[1] "data matrix for refseq_mm9_29Apr2010_IMP_BED_merged_TSS_norand_bed.DNase1HS_8846_bed"
+[1] 4286  114
+[1] "m.readDir= p"
+[1] "annot colnumber: 14"
+[1] "guessing strand column ..."
+[1] "strand column predicted to be (+):"
+[1] 14
+[1] "removing annotation columns ..."
+
+html.plot.igb.links
+
+[1] "id= refseq_mm9_29Apr2010_IMP_BED_merged_TSS_norand_bed.9908_bed"
+[1] "centerBins= 100"
+[1] "annot.colnumber = 14"
+[1] "annot:"
+[1] "refseq_mm9_29Apr2010_IMP_BED_merged_TSS_norand_bed.partition_qt.igb.subcluster_4.txt written."
+[1] "html output written."
+[1] "sortindex:"
+ num [1:4286] 0.00309 0.00273 0.00255 0.00383 0.0031 ...
+NULL
+ num [1:4286] 0.00273 0.0031 0.00401 0.00292 0.00256 ...
+NULL
+[1] "cluster index:"
+ num [1:21428] 3 5 2 3 4 4 3 3 3 3 ...
+NULL
+ num [1:4286] 5 5 5 5 5 5 5 5 5 5 ...
+NULL
+[1] "title= 1_max_5_partition"
+[1] "j= 5"
+[1] "size= 4286"
+
+profile.boxplot
+
+[1] "profileymax= 0.01"
+[1] "plotwidth= 400"
+[1] "final ymax= 0.01"
+[1] 4286   20
+[1] 4286   20
+[1] 4286   20
+[1] 4286   20
+
+profile.plot
+
+[1] "title= 1_max_5_partition \ncluster: 5 rows: 4286"
+[1] "final ymax= 0.01"
+
+profile.plotPlot
+
+[1] "plotRegionStrand: TRUE"
+[1] "plotReadStrand: TRUE"
+[1] "readDirs: p" "readDirs: p"
+[1] "PlotRegionStrandOnY: TRUE"
+[1] "refseq_mm9_29Apr2010_IMP_BED_merged_TSS_norand_bed.9908_bed"          "refseq_mm9_29Apr2010_IMP_BED_merged_TSS_norand_bed.DNase1HS_8846_bed"
+[1] "y-axis adjusted to:"
+[1] -0.01  0.01
+[1] "id= refseq_mm9_29Apr2010_IMP_BED_merged_TSS_norand_bed.9908_bed i= 1"
+[1] "data matrix for refseq_mm9_29Apr2010_IMP_BED_merged_TSS_norand_bed.9908_bed"
+[1] 4286  114
+[1] "m.readDir= p"
+[1] "annot colnumber: 14"
+[1] "guessing strand column ..."
+[1] "strand column predicted to be (+):"
+[1] 14
+[1] "removing annotation columns ..."
+[1] "id= refseq_mm9_29Apr2010_IMP_BED_merged_TSS_norand_bed.DNase1HS_8846_bed i= 2"
+[1] "data matrix for refseq_mm9_29Apr2010_IMP_BED_merged_TSS_norand_bed.DNase1HS_8846_bed"
+[1] 4286  114
+[1] "m.readDir= p"
+[1] "annot colnumber: 14"
+[1] "guessing strand column ..."
+[1] "strand column predicted to be (+):"
+[1] 14
+[1] "removing annotation columns ..."
+
+profile.plotPlot
+
+[1] "plotRegionStrand: TRUE"
+[1] "plotReadStrand: TRUE"
+[1] "readDirs: p" "readDirs: p"
+[1] "PlotRegionStrandOnY: TRUE"
+[1] "refseq_mm9_29Apr2010_IMP_BED_merged_TSS_norand_bed.9908_bed"          "refseq_mm9_29Apr2010_IMP_BED_merged_TSS_norand_bed.DNase1HS_8846_bed"
+[1] "y-axis adjusted to:"
+[1] -0.01  0.01
+[1] "id= refseq_mm9_29Apr2010_IMP_BED_merged_TSS_norand_bed.9908_bed i= 1"
+[1] "data matrix for refseq_mm9_29Apr2010_IMP_BED_merged_TSS_norand_bed.9908_bed"
+[1] 4286  114
+[1] "m.readDir= p"
+[1] "annot colnumber: 14"
+[1] "guessing strand column ..."
+[1] "strand column predicted to be (+):"
+[1] 14
+[1] "removing annotation columns ..."
+[1] "id= refseq_mm9_29Apr2010_IMP_BED_merged_TSS_norand_bed.DNase1HS_8846_bed i= 2"
+[1] "data matrix for refseq_mm9_29Apr2010_IMP_BED_merged_TSS_norand_bed.DNase1HS_8846_bed"
+[1] 4286  114
+[1] "m.readDir= p"
+[1] "annot colnumber: 14"
+[1] "guessing strand column ..."
+[1] "strand column predicted to be (+):"
+[1] 14
+[1] "removing annotation columns ..."
+
+html.plot.igb.links
+
+[1] "id= refseq_mm9_29Apr2010_IMP_BED_merged_TSS_norand_bed.9908_bed"
+[1] "centerBins= 100"
+[1] "annot.colnumber = 14"
+[1] "annot:"
+[1] "refseq_mm9_29Apr2010_IMP_BED_merged_TSS_norand_bed.partition_qt.igb.subcluster_5.txt written."
+[1] "html output written."
+
+profile.plot
+
+[1] "title= 1_max_5_partition \ncluster: 5 rows: 4286"
+[1] "final ymax= 0.01"
+
+profile.plotPlot
+
+[1] "plotRegionStrand: TRUE"
+[1] "plotReadStrand: TRUE"
+[1] "readDirs: p" "readDirs: p"
+[1] "PlotRegionStrandOnY: TRUE"
+[1] "refseq_mm9_29Apr2010_IMP_BED_merged_TSS_norand_bed.9908_bed"          "refseq_mm9_29Apr2010_IMP_BED_merged_TSS_norand_bed.DNase1HS_8846_bed"
+[1] "y-axis adjusted to:"
+[1] -0.01  0.01
+[1] "id= refseq_mm9_29Apr2010_IMP_BED_merged_TSS_norand_bed.9908_bed i= 1"
+[1] "data matrix for refseq_mm9_29Apr2010_IMP_BED_merged_TSS_norand_bed.9908_bed"
+[1] 4286  114
+[1] "m.readDir= p"
+[1] "annot colnumber: 14"
+[1] "guessing strand column ..."
+[1] "strand column predicted to be (+):"
+[1] 14
+[1] "removing annotation columns ..."
+[1] "id= refseq_mm9_29Apr2010_IMP_BED_merged_TSS_norand_bed.DNase1HS_8846_bed i= 2"
+[1] "data matrix for refseq_mm9_29Apr2010_IMP_BED_merged_TSS_norand_bed.DNase1HS_8846_bed"
+[1] 4286  114
+[1] "m.readDir= p"
+[1] "annot colnumber: 14"
+[1] "guessing strand column ..."
+[1] "strand column predicted to be (+):"
+[1] 14
+[1] "removing annotation columns ..."
+
+profile.plotPlot
+
+[1] "plotRegionStrand: TRUE"
+[1] "plotReadStrand: TRUE"
+[1] "readDirs: p" "readDirs: p"
+[1] "PlotRegionStrandOnY: TRUE"
+[1] "refseq_mm9_29Apr2010_IMP_BED_merged_TSS_norand_bed.9908_bed"          "refseq_mm9_29Apr2010_IMP_BED_merged_TSS_norand_bed.DNase1HS_8846_bed"
+[1] "y-axis adjusted to:"
+[1] -0.01  0.01
+[1] "id= refseq_mm9_29Apr2010_IMP_BED_merged_TSS_norand_bed.9908_bed i= 1"
+[1] "data matrix for refseq_mm9_29Apr2010_IMP_BED_merged_TSS_norand_bed.9908_bed"
+[1] 4286  114
+[1] "m.readDir= p"
+[1] "annot colnumber: 14"
+[1] "guessing strand column ..."
+[1] "strand column predicted to be (+):"
+[1] 14
+[1] "removing annotation columns ..."
+[1] "id= refseq_mm9_29Apr2010_IMP_BED_merged_TSS_norand_bed.DNase1HS_8846_bed i= 2"
+[1] "data matrix for refseq_mm9_29Apr2010_IMP_BED_merged_TSS_norand_bed.DNase1HS_8846_bed"
+[1] 4286  114
+[1] "m.readDir= p"
+[1] "annot colnumber: 14"
+[1] "guessing strand column ..."
+[1] "strand column predicted to be (+):"
+[1] 14
+[1] "removing annotation columns ..."
+
+html.plot.igb.links
+
+[1] "id= refseq_mm9_29Apr2010_IMP_BED_merged_TSS_norand_bed.9908_bed"
+[1] "centerBins= 100"
+[1] "annot.colnumber = 14"
+[1] "annot:"
+[1] "refseq_mm9_29Apr2010_IMP_BED_merged_TSS_norand_bed.partition_qt.igb.subcluster_5.txt written."
+[1] "html output written."
+
+html.summary.region
+
+[1] "convert -resize 100x100 refseq_mm9_29Apr2010_IMP_BED_merged_TSS_norand_bed.partition_qt.subcluster_4.mean.profile.jpeg refseq_mm9_29Apr2010_IMP_BED_merged_TSS_norand_bed.partition_qt.subcluster_4.mean.profile.png"
+[1] "convert -resize 100x100 refseq_mm9_29Apr2010_IMP_BED_merged_TSS_norand_bed.partition_qt.subcluster_3.mean.profile.jpeg refseq_mm9_29Apr2010_IMP_BED_merged_TSS_norand_bed.partition_qt.subcluster_3.mean.profile.png"
+[1] "convert -resize 100x100 refseq_mm9_29Apr2010_IMP_BED_merged_TSS_norand_bed.partition_qt.subcluster_2.mean.profile.jpeg refseq_mm9_29Apr2010_IMP_BED_merged_TSS_norand_bed.partition_qt.subcluster_2.mean.profile.png"
+[1] "convert -resize 100x100 refseq_mm9_29Apr2010_IMP_BED_merged_TSS_norand_bed.partition_qt.subcluster_1.mean.profile.jpeg refseq_mm9_29Apr2010_IMP_BED_merged_TSS_norand_bed.partition_qt.subcluster_1.mean.profile.png"
+[1] "html output written."
+[1] "refseq_mm9_29Apr2010_IMP_BED_merged_TSS_norand_bed.9908_bed"
+
+profile.plot
+
+[1] "title= 9908_bed"
+[1] "final ymax= 0.01"
+
+profile.plotPlot
+
+[1] "plotRegionStrand: TRUE"
+[1] "plotReadStrand: TRUE"
+[1] "readDirs: p" "readDirs: p"
+[1] "PlotRegionStrandOnY: TRUE"
+[1] "refseq_mm9_29Apr2010_IMP_BED_merged_TSS_norand_bed.9908_bed"
+[1] "y-axis adjusted to:"
+[1] -0.01  0.01
+[1] "id= refseq_mm9_29Apr2010_IMP_BED_merged_TSS_norand_bed.9908_bed i= 1"
+[1] "data matrix for refseq_mm9_29Apr2010_IMP_BED_merged_TSS_norand_bed.9908_bed"
+[1] 21428   114
+[1] "m.readDir= p"
+[1] "annot colnumber: 14"
+[1] "guessing strand column ..."
+[1] "strand column predicted to be (+):"
+[1] 14
+[1] "removing annotation columns ..."
+
+profile.plotPlot
+
+[1] "plotRegionStrand: TRUE"
+[1] "plotReadStrand: TRUE"
+[1] "readDirs: p" "readDirs: p"
+[1] "PlotRegionStrandOnY: TRUE"
+[1] "refseq_mm9_29Apr2010_IMP_BED_merged_TSS_norand_bed.9908_bed"
+[1] "y-axis adjusted to:"
+[1] -0.01  0.01
+[1] "id= refseq_mm9_29Apr2010_IMP_BED_merged_TSS_norand_bed.9908_bed i= 1"
+[1] "data matrix for refseq_mm9_29Apr2010_IMP_BED_merged_TSS_norand_bed.9908_bed"
+[1] 21428   114
+[1] "m.readDir= p"
+[1] "annot colnumber: 14"
+[1] "guessing strand column ..."
+[1] "strand column predicted to be (+):"
+[1] 14
+[1] "removing annotation columns ..."
+
+profile.plot
+
+[1] "title= 9908_bed"
+[1] "final ymax= 0.01"
+
+profile.plotPlot
+
+[1] "plotRegionStrand: TRUE"
+[1] "plotReadStrand: TRUE"
+[1] "readDirs: p" "readDirs: p"
+[1] "PlotRegionStrandOnY: TRUE"
+[1] "refseq_mm9_29Apr2010_IMP_BED_merged_TSS_norand_bed.9908_bed"
+[1] "y-axis adjusted to:"
+[1] -0.01  0.01
+[1] "id= refseq_mm9_29Apr2010_IMP_BED_merged_TSS_norand_bed.9908_bed i= 1"
+[1] "data matrix for refseq_mm9_29Apr2010_IMP_BED_merged_TSS_norand_bed.9908_bed"
+[1] 21428   114
+[1] "m.readDir= p"
+[1] "annot colnumber: 14"
+[1] "guessing strand column ..."
+[1] "strand column predicted to be (+):"
+[1] 14
+[1] "removing annotation columns ..."
+
+profile.plotPlot
+
+[1] "plotRegionStrand: TRUE"
+[1] "plotReadStrand: TRUE"
+[1] "readDirs: p" "readDirs: p"
+[1] "PlotRegionStrandOnY: TRUE"
+[1] "refseq_mm9_29Apr2010_IMP_BED_merged_TSS_norand_bed.9908_bed"
+[1] "y-axis adjusted to:"
+[1] -0.01  0.01
+[1] "id= refseq_mm9_29Apr2010_IMP_BED_merged_TSS_norand_bed.9908_bed i= 1"
+[1] "data matrix for refseq_mm9_29Apr2010_IMP_BED_merged_TSS_norand_bed.9908_bed"
+[1] 21428   114
+[1] "m.readDir= p"
+[1] "annot colnumber: 14"
+[1] "guessing strand column ..."
+[1] "strand column predicted to be (+):"
+[1] 14
+[1] "removing annotation columns ..."
+
+profile.boxplot
+
+[1] "profileymax= 0.01"
+[1] "plotwidth= 400"
+[1] "final ymax= 0.01"
+[1] 21428    20
+[1] 21428    20
+[1] "refseq_mm9_29Apr2010_IMP_BED_merged_TSS_norand_bed.DNase1HS_8846_bed"
+
+profile.plot
+
+[1] "title= DNase1HS_8846_bed"
+[1] "final ymax= 0.01"
+
+profile.plotPlot
+
+[1] "plotRegionStrand: TRUE"
+[1] "plotReadStrand: TRUE"
+[1] "readDirs: p" "readDirs: p"
+[1] "PlotRegionStrandOnY: TRUE"
+[1] "refseq_mm9_29Apr2010_IMP_BED_merged_TSS_norand_bed.DNase1HS_8846_bed"
+[1] "y-axis adjusted to:"
+[1] -0.01  0.01
+[1] "id= refseq_mm9_29Apr2010_IMP_BED_merged_TSS_norand_bed.DNase1HS_8846_bed i= 1"
+[1] "data matrix for refseq_mm9_29Apr2010_IMP_BED_merged_TSS_norand_bed.DNase1HS_8846_bed"
+[1] 21428   114
+[1] "m.readDir= p"
+[1] "annot colnumber: 14"
+[1] "guessing strand column ..."
+[1] "strand column predicted to be (+):"
+[1] 14
+[1] "removing annotation columns ..."
+
+profile.plotPlot
+
+[1] "plotRegionStrand: TRUE"
+[1] "plotReadStrand: TRUE"
+[1] "readDirs: p" "readDirs: p"
+[1] "PlotRegionStrandOnY: TRUE"
+[1] "refseq_mm9_29Apr2010_IMP_BED_merged_TSS_norand_bed.DNase1HS_8846_bed"
+[1] "y-axis adjusted to:"
+[1] -0.01  0.01
+[1] "id= refseq_mm9_29Apr2010_IMP_BED_merged_TSS_norand_bed.DNase1HS_8846_bed i= 1"
+[1] "data matrix for refseq_mm9_29Apr2010_IMP_BED_merged_TSS_norand_bed.DNase1HS_8846_bed"
+[1] 21428   114
+[1] "m.readDir= p"
+[1] "annot colnumber: 14"
+[1] "guessing strand column ..."
+[1] "strand column predicted to be (+):"
+[1] 14
+[1] "removing annotation columns ..."
+
+profile.plot
+
+[1] "title= DNase1HS_8846_bed"
+[1] "final ymax= 0.01"
+
+profile.plotPlot
+
+[1] "plotRegionStrand: TRUE"
+[1] "plotReadStrand: TRUE"
+[1] "readDirs: p" "readDirs: p"
+[1] "PlotRegionStrandOnY: TRUE"
+[1] "refseq_mm9_29Apr2010_IMP_BED_merged_TSS_norand_bed.DNase1HS_8846_bed"
+[1] "y-axis adjusted to:"
+[1] -0.01  0.01
+[1] "id= refseq_mm9_29Apr2010_IMP_BED_merged_TSS_norand_bed.DNase1HS_8846_bed i= 1"
+[1] "data matrix for refseq_mm9_29Apr2010_IMP_BED_merged_TSS_norand_bed.DNase1HS_8846_bed"
+[1] 21428   114
+[1] "m.readDir= p"
+[1] "annot colnumber: 14"
+[1] "guessing strand column ..."
+[1] "strand column predicted to be (+):"
+[1] 14
+[1] "removing annotation columns ..."
+
+profile.plotPlot
+
+[1] "plotRegionStrand: TRUE"
+[1] "plotReadStrand: TRUE"
+[1] "readDirs: p" "readDirs: p"
+[1] "PlotRegionStrandOnY: TRUE"
+[1] "refseq_mm9_29Apr2010_IMP_BED_merged_TSS_norand_bed.DNase1HS_8846_bed"
+[1] "y-axis adjusted to:"
+[1] -0.01  0.01
+[1] "id= refseq_mm9_29Apr2010_IMP_BED_merged_TSS_norand_bed.DNase1HS_8846_bed i= 1"
+[1] "data matrix for refseq_mm9_29Apr2010_IMP_BED_merged_TSS_norand_bed.DNase1HS_8846_bed"
+[1] 21428   114
+[1] "m.readDir= p"
+[1] "annot colnumber: 14"
+[1] "guessing strand column ..."
+[1] "strand column predicted to be (+):"
+[1] 14
+[1] "removing annotation columns ..."
+
+profile.boxplot
+
+[1] "profileymax= 0.01"
+[1] "plotwidth= 400"
+[1] "final ymax= 0.01"
+[1] 21428    20
+[1] 21428    20
+
+html.summary.read
+
+[1] "hreads.cluster.html output written."
+
+ html.summary.all
+

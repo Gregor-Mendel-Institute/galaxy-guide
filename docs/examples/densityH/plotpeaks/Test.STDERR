@@ -1,0 +1,31 @@
+Loading required package: geneplotter
+Loading required package: Biobase
+Loading required package: BiocGenerics
+Loading required package: methods
+
+Attaching package: ‘BiocGenerics’
+
+The following object(s) are masked from ‘package:stats’:
+
+    xtabs
+
+The following object(s) are masked from ‘package:base’:
+
+    anyDuplicated, cbind, colnames, duplicated, eval, Filter, Find,
+    get, intersect, lapply, Map, mapply, mget, order, paste, pmax,
+    pmax.int, pmin, pmin.int, Position, rbind, Reduce, rep.int,
+    rownames, sapply, setdiff, table, tapply, union, unique
+
+Welcome to Bioconductor
+
+    Vignettes contain introductory material; view with
+    'browseVignettes()'. To cite Bioconductor, see
+    'citation("Biobase")', and for packages 'citation("pkgname")'.
+
+Loading required package: annotate
+Loading required package: AnnotationDbi
+Loading required package: lattice
+Loading required package: RColorBrewer
+plot_density_heatmap.R m="/groups/csf-ngs/wfsys/galaxy/database/files/045/dataset_45438.dat" a="1" s="max" ct="partition_qt" ti="1_max_5_partition" y="0.01" r="+2500,-2500" l1="50" l2="0" u="0" cb="100" sc="trimlog2" qtt="0.9" cn="10" rgyx="TRUE" rgst="TRUE" rast="TRUE" rdir="p,m" 
+KernSmooth 2.23 loaded
+Copyright M. P. Wand 1997-2009

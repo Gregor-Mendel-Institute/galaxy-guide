@@ -1,0 +1,104 @@
+[1] "READING DATA"
+[1] "reading input"
+[1] "reading mm9"
+[1] "DIMENSIONS"
+[1] "dim input:"
+[1] 4796    6
+[1] "dim mm9:"
+[1] 21428     6
+[1] "starting analysis: overview"
+null device 
+          1 
+[1] "Done: Percentage_assignedGenes.jpg"
+null device 
+          1 
+[1] "Done: AssignedGenes_percentage.pdf"
+null device 
+          1 
+[1] "Done: Percentage_assignedGenes2.jpg"
+null device 
+          1 
+[1] "Done: AssignedGenes_stacked.pdf"
+null device 
+          1 
+[1] "Done: Percentage_assignedGenes3.jpg"
+null device 
+          1 
+[1] "Done: AssignedGenes_percentage_stacked.pdf"
+[1] "Starting: Classes"
+
+         core_assigned_peak     core_gene_genebody_peak 
+                        433                        2488 
+         core_gene_TSS_peak non-core_gene_assigned_peak 
+                        442                         755 
+            unassigned_peak 
+                        678 
+[1] "NA removed:"
+                            [,1]
+core_assigned_peak           433
+core_gene_genebody_peak     2488
+core_gene_TSS_peak           442
+non-core_gene_assigned_peak  755
+unassigned_peak              678
+ int [1:5, 1] 433 2488 442 755 678
+ - attr(*, "dimnames")=List of 2
+  ..$ : chr [1:5] "core_assigned_peak" "core_gene_genebody_peak" "core_gene_TSS_peak" "non-core_gene_assigned_peak" ...
+  ..$ : NULL
+NULL
+[1] "counts-table written"
+null device 
+          1 
+[1] "Done: barplotgeneclass.jpg"
+null device 
+          1 
+[1] "Done: Barplot_geneclass.pdf"
+null device 
+          1 
+[1] "Done: pie_geneclass.jpg"
+null device 
+          1 
+[1] "Done: Piechart_geneclass.pdf"
+[1] "Starting: Peaks per Gene"
+[1] "freq_pPG written"
+null device 
+          1 
+null device 
+          1 
+[1] "Done: plot_peaksPerGene.jpg"
+[1] "Starting: tables"
+[1] "input_ppg_ord_u written"
+[1] "Starting: by category"
+[1] "counts_1 written"
+null device 
+          1 
+[1] "Done: peaksPerGene_cl1.jpg"
+null device 
+          1 
+[1] "Done: peaksPerGene_cl1.pdf"
+null device 
+          1 
+[1] "Done: peaksPerGene_cl2.jpg"
+null device 
+          1 
+[1] "Done: peaksPerGene_cl2.pdf"
+null device 
+          1 
+null device 
+          1 
+null device 
+          1 
+null device 
+          1 
+null device 
+          1 
+null device 
+          1 
+null device 
+          1 
+null device 
+          1 
+null device 
+          1 
+null device 
+          1 
+[1] "html output written: peakstogenes_assignment.html"
